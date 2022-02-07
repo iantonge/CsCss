@@ -1,4 +1,5 @@
-﻿using CsCss.Values.Color.Hsl;
+﻿using CsCss.Values.Color;
+using CsCss.Values.Color.Hsl;
 
 namespace CsCss
 {
