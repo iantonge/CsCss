@@ -1,4 +1,4 @@
-﻿using CsCss.Values.Numeric.LengthPercentage.Length;
+﻿using CsCss.Values.Numeric.Length;
 
 namespace CsCss
 {

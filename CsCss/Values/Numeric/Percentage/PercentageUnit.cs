@@ -1,4 +1,4 @@
-﻿namespace CsCss.Values.Numeric.LengthPercentage.Percentage
+﻿namespace CsCss.Values.Numeric.Percentage
 {
     public class PercentageUnit : Unit
     {

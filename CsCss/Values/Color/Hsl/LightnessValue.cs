@@ -1,4 +1,4 @@
-﻿using CsCss.Values.Numeric.LengthPercentage.Percentage;
+﻿using CsCss.Values.Numeric.Percentage;
 using System;
 using System.Collections.Generic;
 using System.Linq;

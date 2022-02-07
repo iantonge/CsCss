@@ -1,4 +1,4 @@
-﻿using CsCss.Values.Numeric.LengthPercentage.Percentage;
+﻿using CsCss.Values.Numeric.Percentage;
 
 namespace CsCss.Values.Color.Hsl
 {

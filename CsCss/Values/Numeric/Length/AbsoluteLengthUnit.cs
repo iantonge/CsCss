@@ -1,4 +1,4 @@
-﻿namespace CsCss.Values.Numeric.LengthPercentage.Length
+﻿namespace CsCss.Values.Numeric.Length
 {
     public class AbsoluteLengthUnit : LengthUnit
     {
