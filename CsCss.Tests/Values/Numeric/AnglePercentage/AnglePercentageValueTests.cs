@@ -1,5 +1,6 @@
 ﻿using CsCss.Values.Numeric.Angle;
 using CsCss.Values.Numeric.AnglePercentage;
+using CsCss.Values.Numeric.Calc;
 using CsCss.Values.Numeric.Percentage;
 using Xunit;
 
@@ -30,8 +31,9 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
         {
             var anglePercentage1 = Statics.Calc(5.Percent() + 5.Deg());
             var anglePercentage2 = Statics.Calc(10.Percent() + 10.Deg());
-            var product = anglePercentage1 + anglePercentage2;
-            Assert.Equal("calc(5% + 5deg) + calc(10% + 10deg)", product.ToString());
+            var sum = anglePercentage1 + anglePercentage2;
+            Assert.Equal("calc(5% + 5deg) + calc(10% + 10deg)", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
         }
 
         [Fact]
@@ -41,6 +43,7 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
             var calcSum = 10.Percent() + 10.Deg();
             var sum = anglePercentage + calcSum;
             Assert.Equal("calc(5% + 5deg) + 10% + 10deg", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
         }
 
         [Fact]
@@ -48,8 +51,29 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
         {
             var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
             var calcProduct = (10.Percent() + 5.Deg()) * 10;
-            var product = anglePercentage + calcProduct;
-            Assert.Equal("calc(5% + 5deg) + (10% + 5deg) * 10", product.ToString());
+            var sum = anglePercentage + calcProduct;
+            Assert.Equal("calc(5% + 5deg) + (10% + 5deg) * 10", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
+        }
+
+        [Fact]
+        public void CanBeAddedToCalcSum()
+        {
+            var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
+            var calcSum = 10.Percent() + 10.Deg();
+            var sum = calcSum + anglePercentage;
+            Assert.Equal("10% + 10deg + calc(5% + 5deg)", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
+        }
+
+        [Fact]
+        public void CanBeAddedToCalcProduct()
+        {
+            var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
+            var calcProduct = (10.Percent() + 5.Deg()) * 10;
+            var sum = calcProduct + anglePercentage;
+            Assert.Equal("(10% + 5deg) * 10 + calc(5% + 5deg)", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
         }
 
         [Fact]
@@ -57,8 +81,9 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
         {
             var anglePercentage1 = Statics.Calc(5.Percent() + 5.Deg());
             var anglePercentage2 = Statics.Calc(10.Percent() + 10.Deg());
-            var product = anglePercentage1 - anglePercentage2;
-            Assert.Equal("calc(5% + 5deg) - calc(10% + 10deg)", product.ToString());
+            var sum = anglePercentage1 - anglePercentage2;
+            Assert.Equal("calc(5% + 5deg) - calc(10% + 10deg)", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
         }
 
         [Fact]
@@ -68,6 +93,7 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
             var calcSum = 10.Percent() + 10.Deg();
             var sum = anglePercentage - calcSum;
             Assert.Equal("calc(5% + 5deg) - 10% + 10deg", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
         }
 
         [Fact]
@@ -75,8 +101,29 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
         {
             var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
             var calcProduct = (10.Percent() + 5.Deg()) * 10;
-            var product = anglePercentage - calcProduct;
-            Assert.Equal("calc(5% + 5deg) - (10% + 5deg) * 10", product.ToString());
+            var sum = anglePercentage - calcProduct;
+            Assert.Equal("calc(5% + 5deg) - (10% + 5deg) * 10", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
+        }
+
+        [Fact]
+        public void CanBeSubtractedFromCalcSum()
+        {
+            var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
+            var calcSum = 10.Percent() + 10.Deg();
+            var sum = calcSum - anglePercentage;
+            Assert.Equal("10% + 10deg - calc(5% + 5deg)", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
+        }
+
+        [Fact]
+        public void CanBeSubtractedFromCalcProduct()
+        {
+            var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
+            var calcProduct = (10.Percent() + 5.Deg()) * 10;
+            var sum = calcProduct - anglePercentage;
+            Assert.Equal("(10% + 5deg) * 10 - calc(5% + 5deg)", sum.ToString());
+            Assert.Equal(typeof(CalcSum<AnglePercentageValue>), sum.GetType());
         }
 
         [Fact]
@@ -85,6 +132,7 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
             var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
             var product = 2 * anglePercentage;
             Assert.Equal("2 * calc(5% + 5deg)", product.ToString());
+            Assert.Equal(typeof(CalcProduct<AnglePercentageValue>), product.GetType());
         }
 
         [Fact]
@@ -93,6 +141,7 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
             var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
             var product = 2.5 * anglePercentage;
             Assert.Equal("2.5 * calc(5% + 5deg)", product.ToString());
+            Assert.Equal(typeof(CalcProduct<AnglePercentageValue>), product.GetType());
         }
 
         [Fact]
@@ -101,6 +150,7 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
             var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
             var product = anglePercentage * 2;
             Assert.Equal("calc(5% + 5deg) * 2", product.ToString());
+            Assert.Equal(typeof(CalcProduct<AnglePercentageValue>), product.GetType());
         }
 
         [Fact]
@@ -109,6 +159,7 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
             var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
             var product = anglePercentage * 2.5;
             Assert.Equal("calc(5% + 5deg) * 2.5", product.ToString());
+            Assert.Equal(typeof(CalcProduct<AnglePercentageValue>), product.GetType());
         }
 
         [Fact]
@@ -117,6 +168,7 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
             var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
             var product = anglePercentage / 2;
             Assert.Equal("calc(5% + 5deg) / 2", product.ToString());
+            Assert.Equal(typeof(CalcProduct<AnglePercentageValue>), product.GetType());
         }
 
         [Fact]
@@ -125,6 +177,7 @@ namespace CsCss.Tests.Values.Numeric.AnglePercentage
             var anglePercentage = Statics.Calc(5.Percent() + 5.Deg());
             var product = anglePercentage / 2.5;
             Assert.Equal("calc(5% + 5deg) / 2.5", product.ToString());
+            Assert.Equal(typeof(CalcProduct<AnglePercentageValue>), product.GetType());
         }
     }
 }
