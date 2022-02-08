@@ -1,6 +1,6 @@
 ﻿using CsCss.Values.Numeric.Angle;
 
-namespace CsCss.Values.Color
+namespace CsCss.Values.Color.Function
 {
     public sealed class HueValue
     {

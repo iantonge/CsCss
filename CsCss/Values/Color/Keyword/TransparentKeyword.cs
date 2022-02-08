@@ -4,6 +4,6 @@
     {
         private TransparentKeyword() : base("transparent") { }
 
-        internal static readonly TransparentKeyword CurrentColor = new TransparentKeyword();
+        internal static readonly TransparentKeyword Transparent = new TransparentKeyword();
     }
 }

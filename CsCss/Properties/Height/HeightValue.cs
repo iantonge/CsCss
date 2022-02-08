@@ -9,7 +9,7 @@ namespace CsCss.Properties.Height
     {
         private HeightValue(string value) : base(value) { }
 
-        public static implicit operator HeightValue(GlobalTextValue value)
+        public static implicit operator HeightValue(GlobalKeyword value)
         {
             return new HeightValue(value.ToString());
         }
@@ -29,7 +29,7 @@ namespace CsCss.Properties.Height
             return new HeightValue(value.ToString());
         }
 
-        public static implicit operator HeightValue(AutoKeywordTextValue value)
+        public static implicit operator HeightValue(AutoKeyword value)
         {
             return new HeightValue(value.ToString());
         }

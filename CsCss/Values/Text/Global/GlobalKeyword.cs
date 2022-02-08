@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CsCss.Values.Text.Global
 {
-    public abstract class GlobalTextValue : TextValue
+    public abstract class GlobalKeyword : TextValue
     {
-        protected GlobalTextValue(string v) : base(v)
+        protected GlobalKeyword(string v) : base(v)
         {
         }
     }

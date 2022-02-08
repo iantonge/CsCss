@@ -1,6 +1,6 @@
 ﻿using CsCss.Values.Numeric.Percentage;
 
-namespace CsCss.Values.Color.Rgb
+namespace CsCss.Values.Color.Function
 {
     public sealed class AlphaValue
     {

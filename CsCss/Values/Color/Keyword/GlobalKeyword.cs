@@ -6,7 +6,7 @@ namespace CsCss.Values.Color.Keyword
     {
         private GlobalKeyword(string v) : base(v) { }
 
-        public static implicit operator GlobalKeyword(GlobalTextValue value)
+        public static implicit operator GlobalKeyword(Text.Global.GlobalKeyword value)
         {
             return new GlobalKeyword(value.ToString());
         }

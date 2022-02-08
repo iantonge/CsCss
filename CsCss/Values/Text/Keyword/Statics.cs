@@ -4,9 +4,9 @@ namespace CsCss
 {
     public static partial class Statics
     {
-        public static readonly AutoKeywordTextValue Auto = AutoKeywordTextValue.Auto;
-        public static readonly FixedKeywordTextValue Fixed = FixedKeywordTextValue.Fixed;
-        public static readonly LocalKeywordTextValue Local = LocalKeywordTextValue.Local;
-        public static readonly ScrollKeywordTextValue Scroll = ScrollKeywordTextValue.Scroll;
+        public static readonly AutoKeyword Auto = AutoKeyword.Auto;
+        public static readonly FixedKeyword Fixed = FixedKeyword.Fixed;
+        public static readonly LocalKeyword Local = LocalKeyword.Local;
+        public static readonly ScrollKeyword Scroll = ScrollKeyword.Scroll;
     }
 }

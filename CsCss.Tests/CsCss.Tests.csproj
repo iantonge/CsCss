@@ -24,4 +24,8 @@
     <ProjectReference Include="..\CsCss\CsCss.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Values\Text\Global\" />
+  </ItemGroup>
+
 </Project>
