@@ -1,6 +1,4 @@
-﻿using CsCss.Values.Text.Global;
-
-namespace CsCss.Values.Color.Keyword
+﻿namespace CsCss.Values.Color.Keyword
 {
     public sealed class GlobalKeyword : ColorKeyword
     {
