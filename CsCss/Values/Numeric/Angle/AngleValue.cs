@@ -22,10 +22,16 @@ namespace CsCss.Values.Numeric.Angle
         public static CalcSum<AnglePercentageValue> operator +(AngleValue a, CalcSum<PercentageValue> b)
             => new CalcSum<AnglePercentageValue>(a.ToString() + " + " + b.ToString());
 
+        public static CalcSum<AnglePercentageValue> operator +(AngleValue a, CalcSum<AnglePercentageValue> b)
+            => new CalcSum<AnglePercentageValue>(a.ToString() + " + " + b.ToString());
+
         public static CalcSum<AngleValue> operator +(AngleValue a, CalcProduct<AngleValue> b)
             => new CalcSum<AngleValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<AnglePercentageValue> operator +(AngleValue a, CalcProduct<PercentageValue> b)
+            => new CalcSum<AnglePercentageValue>(a.ToString() + " + " + b.ToString());
+
+        public static CalcSum<AnglePercentageValue> operator +(AngleValue a, CalcProduct<AnglePercentageValue> b)
             => new CalcSum<AnglePercentageValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<AnglePercentageValue> operator +(PercentageValue a, AngleValue b)
@@ -37,10 +43,16 @@ namespace CsCss.Values.Numeric.Angle
         public static CalcSum<AnglePercentageValue> operator +(CalcSum<PercentageValue> a, AngleValue b)
             => new CalcSum<AnglePercentageValue>(a.ToString() + " + " + b.ToString());
 
+        public static CalcSum<AnglePercentageValue> operator +(CalcSum<AnglePercentageValue> a, AngleValue b)
+            => new CalcSum<AnglePercentageValue>(a.ToString() + " + " + b.ToString());
+
         public static CalcSum<AngleValue> operator +(CalcProduct<AngleValue> a, AngleValue b)
             => new CalcSum<AngleValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<AnglePercentageValue> operator +(CalcProduct<PercentageValue> a, AngleValue b)
+            => new CalcSum<AnglePercentageValue>(a.ToString() + " + " + b.ToString());
+
+        public static CalcSum<AnglePercentageValue> operator +(CalcProduct<AnglePercentageValue> a, AngleValue b)
             => new CalcSum<AnglePercentageValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<AngleValue> operator -(AngleValue a, AngleValue b)
@@ -55,10 +67,16 @@ namespace CsCss.Values.Numeric.Angle
         public static CalcSum<AnglePercentageValue> operator -(AngleValue a, CalcSum<PercentageValue> b)
             => new CalcSum<AnglePercentageValue>(a.ToString() + " - " + b.ToString());
 
+        public static CalcSum<AnglePercentageValue> operator -(AngleValue a, CalcSum<AnglePercentageValue> b)
+            => new CalcSum<AnglePercentageValue>(a.ToString() + " - " + b.ToString());
+
         public static CalcSum<AngleValue> operator -(AngleValue a, CalcProduct<AngleValue> b)
             => new CalcSum<AngleValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcSum<AnglePercentageValue> operator -(AngleValue a, CalcProduct<PercentageValue> b)
+            => new CalcSum<AnglePercentageValue>(a.ToString() + " - " + b.ToString());
+
+        public static CalcSum<AnglePercentageValue> operator -(AngleValue a, CalcProduct<AnglePercentageValue> b)
             => new CalcSum<AnglePercentageValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcSum<AnglePercentageValue> operator -(PercentageValue a, AngleValue b)
@@ -70,10 +88,16 @@ namespace CsCss.Values.Numeric.Angle
         public static CalcSum<AnglePercentageValue> operator -(CalcSum<PercentageValue> a, AngleValue b)
             => new CalcSum<AnglePercentageValue>(a.ToString() + " - " + b.ToString());
 
+        public static CalcSum<AnglePercentageValue> operator -(CalcSum<AnglePercentageValue> a, AngleValue b)
+            => new CalcSum<AnglePercentageValue>(a.ToString() + " - " + b.ToString());
+
         public static CalcSum<AngleValue> operator -(CalcProduct<AngleValue> a, AngleValue b)
             => new CalcSum<AngleValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcSum<AnglePercentageValue> operator -(CalcProduct<PercentageValue> a, AngleValue b)
+            => new CalcSum<AnglePercentageValue>(a.ToString() + " - " + b.ToString());
+
+        public static CalcSum<AnglePercentageValue> operator -(CalcProduct<AnglePercentageValue> a, AngleValue b)
             => new CalcSum<AnglePercentageValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcProduct<AngleValue> operator *(AngleValue a, int b)
