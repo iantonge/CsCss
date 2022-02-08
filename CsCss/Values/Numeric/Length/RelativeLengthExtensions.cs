@@ -69,12 +69,12 @@ namespace CsCss
         }
         public static LengthValue VMin(this double input)
         {
-            return new LengthValue(input, RelativeLengthUnit.Vh);
+            return new LengthValue(input, RelativeLengthUnit.VMin);
         }
 
         public static LengthValue VMin(this int input)
         {
-            return new LengthValue(input, RelativeLengthUnit.Vh);
+            return new LengthValue(input, RelativeLengthUnit.VMin);
         }
         public static LengthValue VMax(this double input)
         {

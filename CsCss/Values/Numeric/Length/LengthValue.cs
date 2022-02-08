@@ -22,10 +22,16 @@ namespace CsCss.Values.Numeric.Length
         public static CalcSum<LengthPercentageValue> operator +(LengthValue a, CalcSum<PercentageValue> b)
             => new CalcSum<LengthPercentageValue>(a.ToString() + " + " + b.ToString());
 
+        public static CalcSum<LengthPercentageValue> operator +(LengthValue a, CalcSum<LengthPercentageValue> b)
+            => new CalcSum<LengthPercentageValue>(a.ToString() + " + " + b.ToString());
+
         public static CalcSum<LengthValue> operator +(LengthValue a, CalcProduct<LengthValue> b)
             => new CalcSum<LengthValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<LengthPercentageValue> operator +(LengthValue a, CalcProduct<PercentageValue> b)
+            => new CalcSum<LengthPercentageValue>(a.ToString() + " + " + b.ToString());
+
+        public static CalcSum<LengthPercentageValue> operator +(LengthValue a, CalcProduct<LengthPercentageValue> b)
             => new CalcSum<LengthPercentageValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<LengthPercentageValue> operator +(PercentageValue a, LengthValue b)
@@ -37,10 +43,16 @@ namespace CsCss.Values.Numeric.Length
         public static CalcSum<LengthPercentageValue> operator +(CalcSum<PercentageValue> a, LengthValue b)
             => new CalcSum<LengthPercentageValue>(a.ToString() + " + " + b.ToString());
 
+        public static CalcSum<LengthPercentageValue> operator +(CalcSum<LengthPercentageValue> a, LengthValue b)
+            => new CalcSum<LengthPercentageValue>(a.ToString() + " + " + b.ToString());
+
         public static CalcSum<LengthValue> operator +(CalcProduct<LengthValue> a, LengthValue b)
             => new CalcSum<LengthValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<LengthPercentageValue> operator +(CalcProduct<PercentageValue> a, LengthValue b)
+            => new CalcSum<LengthPercentageValue>(a.ToString() + " + " + b.ToString());
+
+        public static CalcSum<LengthPercentageValue> operator +(CalcProduct<LengthPercentageValue> a, LengthValue b)
             => new CalcSum<LengthPercentageValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<LengthValue> operator -(LengthValue a, LengthValue b)
@@ -55,10 +67,16 @@ namespace CsCss.Values.Numeric.Length
         public static CalcSum<LengthPercentageValue> operator -(LengthValue a, CalcSum<PercentageValue> b)
             => new CalcSum<LengthPercentageValue>(a.ToString() + " - " + b.ToString());
 
+        public static CalcSum<LengthPercentageValue> operator -(LengthValue a, CalcSum<LengthPercentageValue> b)
+            => new CalcSum<LengthPercentageValue>(a.ToString() + " - " + b.ToString());
+
         public static CalcSum<LengthValue> operator -(LengthValue a, CalcProduct<LengthValue> b)
             => new CalcSum<LengthValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcSum<LengthPercentageValue> operator -(LengthValue a, CalcProduct<PercentageValue> b)
+            => new CalcSum<LengthPercentageValue>(a.ToString() + " - " + b.ToString());
+
+        public static CalcSum<LengthPercentageValue> operator -(LengthValue a, CalcProduct<LengthPercentageValue> b)
             => new CalcSum<LengthPercentageValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcSum<LengthPercentageValue> operator -(PercentageValue a, LengthValue b)
@@ -70,10 +88,16 @@ namespace CsCss.Values.Numeric.Length
         public static CalcSum<LengthPercentageValue> operator -(CalcSum<PercentageValue> a, LengthValue b)
             => new CalcSum<LengthPercentageValue>(a.ToString() + " - " + b.ToString());
 
+        public static CalcSum<LengthPercentageValue> operator -(CalcSum<LengthPercentageValue> a, LengthValue b)
+            => new CalcSum<LengthPercentageValue>(a.ToString() + " - " + b.ToString());
+
         public static CalcSum<LengthValue> operator -(CalcProduct<LengthValue> a, LengthValue b)
             => new CalcSum<LengthValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcSum<LengthPercentageValue> operator -(CalcProduct<PercentageValue> a, LengthValue b)
+            => new CalcSum<LengthPercentageValue>(a.ToString() + " - " + b.ToString());
+
+        public static CalcSum<LengthPercentageValue> operator -(CalcProduct<LengthPercentageValue> a, LengthValue b)
             => new CalcSum<LengthPercentageValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcProduct<LengthValue> operator *(LengthValue a, int b)
