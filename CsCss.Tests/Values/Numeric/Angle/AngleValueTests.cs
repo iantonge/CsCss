@@ -284,7 +284,7 @@ namespace CsCss.Tests.Values.Numeric.Angle
         }
 
         [Fact]
-        public void CanBeSubtractedToPercentageValue()
+        public void CanBeSubtractedFromPercentageValue()
         {
             var angle = 5.Deg();
             var percentage = 10.Percent();
@@ -296,7 +296,7 @@ namespace CsCss.Tests.Values.Numeric.Angle
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcSumOfAngleValue()
+        public void CanBeSubtractedFromCalcSumOfAngleValue()
         {
             var angle = 5.Deg();
             var calcSum = 10.Deg() + 1.Rad();
@@ -308,7 +308,7 @@ namespace CsCss.Tests.Values.Numeric.Angle
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcSumOfPercentageValue()
+        public void CanBeSubtractedFromCalcSumOfPercentageValue()
         {
             var angle = 5.Deg();
             var calcSum = 10.Percent() + 1.Percent();
@@ -320,7 +320,7 @@ namespace CsCss.Tests.Values.Numeric.Angle
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcSumOfAnglePercentageValue()
+        public void CanBeSubtractedFromCalcSumOfAnglePercentageValue()
         {
             var angle = 5.Deg();
             var calcSum = 10.Percent() + 15.Deg();
@@ -332,7 +332,7 @@ namespace CsCss.Tests.Values.Numeric.Angle
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcProductOfAngleValue()
+        public void CanBeSubtractedFromCalcProductOfAngleValue()
         {
             var angle = 5.Deg();
             var calcProdct = 10.Deg() * 3;
@@ -344,7 +344,7 @@ namespace CsCss.Tests.Values.Numeric.Angle
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcProductOfPercentageValue()
+        public void CanBeSubtractedFromCalcProductOfPercentageValue()
         {
             var angle = 5.Deg();
             var calcProdct = 10.Percent() * 3;
@@ -356,7 +356,7 @@ namespace CsCss.Tests.Values.Numeric.Angle
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcProductOfAnglePercentageValue()
+        public void CanBeSubtractedFromCalcProductOfAnglePercentageValue()
         {
             var angle = 5.Deg();
             var calcSum = (10.Percent() + 15.Deg()) * 2;

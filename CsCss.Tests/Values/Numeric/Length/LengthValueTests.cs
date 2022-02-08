@@ -284,7 +284,7 @@ namespace CsCss.Tests.Values.Numeric.Length
         }
 
         [Fact]
-        public void CanBeSubtractedToPercentageValue()
+        public void CanBeSubtractedFromPercentageValue()
         {
             var Length = 5.Px();
             var percentage = 10.Percent();
@@ -296,7 +296,7 @@ namespace CsCss.Tests.Values.Numeric.Length
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcSumOfLengthValue()
+        public void CanBeSubtractedFromCalcSumOfLengthValue()
         {
             var Length = 5.Px();
             var calcSum = 10.Px() + 1.Cm();
@@ -308,7 +308,7 @@ namespace CsCss.Tests.Values.Numeric.Length
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcSumOfPercentageValue()
+        public void CanBeSubtractedFromCalcSumOfPercentageValue()
         {
             var Length = 5.Px();
             var calcSum = 10.Percent() + 1.Percent();
@@ -320,7 +320,7 @@ namespace CsCss.Tests.Values.Numeric.Length
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcSumOfLengthPercentageValue()
+        public void CanBeSubtractedFromCalcSumOfLengthPercentageValue()
         {
             var Length = 5.Px();
             var calcSum = 10.Percent() + 15.Px();
@@ -332,7 +332,7 @@ namespace CsCss.Tests.Values.Numeric.Length
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcProductOfLengthValue()
+        public void CanBeSubtractedFromCalcProductOfLengthValue()
         {
             var Length = 5.Px();
             var calcProdct = 10.Px() * 3;
@@ -344,7 +344,7 @@ namespace CsCss.Tests.Values.Numeric.Length
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcProductOfPercentageValue()
+        public void CanBeSubtractedFromCalcProductOfPercentageValue()
         {
             var Length = 5.Px();
             var calcProdct = 10.Percent() * 3;
@@ -356,7 +356,7 @@ namespace CsCss.Tests.Values.Numeric.Length
         }
 
         [Fact]
-        public void CanBeSubtractedToCalcProductOfLengthPercentageValue()
+        public void CanBeSubtractedFromCalcProductOfLengthPercentageValue()
         {
             var Length = 5.Px();
             var calcSum = (10.Percent() + 15.Px()) * 2;

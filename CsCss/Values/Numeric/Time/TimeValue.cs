@@ -22,10 +22,16 @@ namespace CsCss.Values.Numeric.Time
         public static CalcSum<TimePercentageValue> operator +(TimeValue a, CalcSum<PercentageValue> b)
             => new CalcSum<TimePercentageValue>(a.ToString() + " + " + b.ToString());
 
+        public static CalcSum<TimePercentageValue> operator +(TimeValue a, CalcSum<TimePercentageValue> b)
+            => new CalcSum<TimePercentageValue>(a.ToString() + " + " + b.ToString());
+
         public static CalcSum<TimeValue> operator +(TimeValue a, CalcProduct<TimeValue> b)
             => new CalcSum<TimeValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<TimePercentageValue> operator +(TimeValue a, CalcProduct<PercentageValue> b)
+            => new CalcSum<TimePercentageValue>(a.ToString() + " + " + b.ToString());
+
+        public static CalcSum<TimePercentageValue> operator +(TimeValue a, CalcProduct<TimePercentageValue> b)
             => new CalcSum<TimePercentageValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<TimePercentageValue> operator +(PercentageValue a, TimeValue b)
@@ -37,10 +43,16 @@ namespace CsCss.Values.Numeric.Time
         public static CalcSum<TimePercentageValue> operator +(CalcSum<PercentageValue> a, TimeValue b)
             => new CalcSum<TimePercentageValue>(a.ToString() + " + " + b.ToString());
 
+        public static CalcSum<TimePercentageValue> operator +(CalcSum<TimePercentageValue> a, TimeValue b)
+            => new CalcSum<TimePercentageValue>(a.ToString() + " + " + b.ToString());
+
         public static CalcSum<TimeValue> operator +(CalcProduct<TimeValue> a, TimeValue b)
             => new CalcSum<TimeValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<TimePercentageValue> operator +(CalcProduct<PercentageValue> a, TimeValue b)
+            => new CalcSum<TimePercentageValue>(a.ToString() + " + " + b.ToString());
+
+        public static CalcSum<TimePercentageValue> operator +(CalcProduct<TimePercentageValue> a, TimeValue b)
             => new CalcSum<TimePercentageValue>(a.ToString() + " + " + b.ToString());
 
         public static CalcSum<TimeValue> operator -(TimeValue a, TimeValue b)
@@ -55,10 +67,16 @@ namespace CsCss.Values.Numeric.Time
         public static CalcSum<TimePercentageValue> operator -(TimeValue a, CalcSum<PercentageValue> b)
             => new CalcSum<TimePercentageValue>(a.ToString() + " - " + b.ToString());
 
+        public static CalcSum<TimePercentageValue> operator -(TimeValue a, CalcSum<TimePercentageValue> b)
+            => new CalcSum<TimePercentageValue>(a.ToString() + " - " + b.ToString());
+
         public static CalcSum<TimeValue> operator -(TimeValue a, CalcProduct<TimeValue> b)
             => new CalcSum<TimeValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcSum<TimePercentageValue> operator -(TimeValue a, CalcProduct<PercentageValue> b)
+            => new CalcSum<TimePercentageValue>(a.ToString() + " - " + b.ToString());
+
+        public static CalcSum<TimePercentageValue> operator -(TimeValue a, CalcProduct<TimePercentageValue> b)
             => new CalcSum<TimePercentageValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcSum<TimePercentageValue> operator -(PercentageValue a, TimeValue b)
@@ -70,10 +88,16 @@ namespace CsCss.Values.Numeric.Time
         public static CalcSum<TimePercentageValue> operator -(CalcSum<PercentageValue> a, TimeValue b)
             => new CalcSum<TimePercentageValue>(a.ToString() + " - " + b.ToString());
 
+        public static CalcSum<TimePercentageValue> operator -(CalcSum<TimePercentageValue> a, TimeValue b)
+            => new CalcSum<TimePercentageValue>(a.ToString() + " - " + b.ToString());
+
         public static CalcSum<TimeValue> operator -(CalcProduct<TimeValue> a, TimeValue b)
             => new CalcSum<TimeValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcSum<TimePercentageValue> operator -(CalcProduct<PercentageValue> a, TimeValue b)
+            => new CalcSum<TimePercentageValue>(a.ToString() + " - " + b.ToString());
+
+        public static CalcSum<TimePercentageValue> operator -(CalcProduct<TimePercentageValue> a, TimeValue b)
             => new CalcSum<TimePercentageValue>(a.ToString() + " - " + b.ToString());
 
         public static CalcProduct<TimeValue> operator *(TimeValue a, int b)

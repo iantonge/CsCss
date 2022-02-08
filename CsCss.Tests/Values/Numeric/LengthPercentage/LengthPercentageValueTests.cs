@@ -57,6 +57,26 @@ namespace CsCss.Tests.Values.Numeric.LengthPercentage
         }
 
         [Fact]
+        public void CanBeAdddedToCalcSum()
+        {
+            var lengthPercentage = Statics.Calc(5.Percent() + 5.Cm());
+            var calcSum = 10.Percent() + 10.Cm();
+            var sum = calcSum + lengthPercentage;
+            Assert.Equal("10% + 10cm + calc(5% + 5cm)", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthPercentageValue>), sum.GetType());
+        }
+
+        [Fact]
+        public void CanBeAddedToCalcProduct()
+        {
+            var lengthPercentage = Statics.Calc(5.Percent() + 5.Cm());
+            var calcProduct = (10.Percent() + 5.Cm()) * 10;
+            var sum = calcProduct + lengthPercentage;
+            Assert.Equal("(10% + 5cm) * 10 + calc(5% + 5cm)", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthPercentageValue>), sum.GetType());
+        }
+
+        [Fact]
         public void CanSubtractLengthPercentage()
         {
             var lengthPercentage1 = Statics.Calc(5.Percent() + 5.Cm());
@@ -83,6 +103,26 @@ namespace CsCss.Tests.Values.Numeric.LengthPercentage
             var calcProduct = (10.Percent() + 5.Cm()) * 10;
             var sum = lengthPercentage - calcProduct;
             Assert.Equal("calc(5% + 5cm) - (10% + 5cm) * 10", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthPercentageValue>), sum.GetType());
+        }
+
+        [Fact]
+        public void CanBeSubtractedFromCalcSum()
+        {
+            var lengthPercentage = Statics.Calc(5.Percent() + 5.Cm());
+            var calcSum = 10.Percent() + 10.Cm();
+            var sum = calcSum - lengthPercentage;
+            Assert.Equal("10% + 10cm - calc(5% + 5cm)", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthPercentageValue>), sum.GetType());
+        }
+
+        [Fact]
+        public void CanBeSubtractedFromCalcProduct()
+        {
+            var lengthPercentage = Statics.Calc(5.Percent() + 5.Cm());
+            var calcProduct = (10.Percent() + 5.Cm()) * 10;
+            var sum = calcProduct - lengthPercentage;
+            Assert.Equal("(10% + 5cm) * 10 - calc(5% + 5cm)", sum.ToString());
             Assert.Equal(typeof(CalcSum<LengthPercentageValue>), sum.GetType());
         }
 

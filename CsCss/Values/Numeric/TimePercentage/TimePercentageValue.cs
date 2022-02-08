@@ -1,6 +1,6 @@
 ﻿using CsCss.Values.Numeric.Calc;
-using CsCss.Values.Numeric.Length;
 using CsCss.Values.Numeric.Percentage;
+using CsCss.Values.Numeric.Time;
 
 namespace CsCss.Values.Numeric.TimePercentage
 {
@@ -8,7 +8,7 @@ namespace CsCss.Values.Numeric.TimePercentage
     {
         internal TimePercentageValue(string v) : base(v) { }
 
-        public static implicit operator TimePercentageValue(LengthValue value)
+        public static implicit operator TimePercentageValue(TimeValue value)
         {
             return new TimePercentageValue(value.ToString());
         }

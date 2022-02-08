@@ -13,6 +13,7 @@ namespace CsCss
         {
             return new LengthValue(input, RelativeLengthUnit.Em);
         }
+
         public static LengthValue Ex(this double input)
         {
             return new LengthValue(input, RelativeLengthUnit.Ex);
@@ -22,6 +23,7 @@ namespace CsCss
         {
             return new LengthValue(input, RelativeLengthUnit.Ex);
         }
+
         public static LengthValue Ch(this double input)
         {
             return new LengthValue(input, RelativeLengthUnit.Ch);
@@ -31,6 +33,7 @@ namespace CsCss
         {
             return new LengthValue(input, RelativeLengthUnit.Ch);
         }
+
         public static LengthValue Rem(this double input)
         {
             return new LengthValue(input, RelativeLengthUnit.Rem);
@@ -40,6 +43,7 @@ namespace CsCss
         {
             return new LengthValue(input, RelativeLengthUnit.Rem);
         }
+
         public static LengthValue Lh(this double input)
         {
             return new LengthValue(input, RelativeLengthUnit.Lh);
@@ -49,6 +53,7 @@ namespace CsCss
         {
             return new LengthValue(input, RelativeLengthUnit.Lh);
         }
+
         public static LengthValue Vw(this double input)
         {
             return new LengthValue(input, RelativeLengthUnit.Vw);
@@ -58,6 +63,7 @@ namespace CsCss
         {
             return new LengthValue(input, RelativeLengthUnit.Vw);
         }
+
         public static LengthValue Vh(this double input)
         {
             return new LengthValue(input, RelativeLengthUnit.Vh);
@@ -67,6 +73,7 @@ namespace CsCss
         {
             return new LengthValue(input, RelativeLengthUnit.Vh);
         }
+
         public static LengthValue VMin(this double input)
         {
             return new LengthValue(input, RelativeLengthUnit.VMin);
@@ -76,6 +83,7 @@ namespace CsCss
         {
             return new LengthValue(input, RelativeLengthUnit.VMin);
         }
+
         public static LengthValue VMax(this double input)
         {
             return new LengthValue(input, RelativeLengthUnit.VMax);

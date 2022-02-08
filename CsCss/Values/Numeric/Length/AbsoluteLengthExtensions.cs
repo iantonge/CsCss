@@ -22,6 +22,7 @@ namespace CsCss
         {
             return new LengthValue(input, AbsoluteLengthUnit.Mm);
         }
+
         public static LengthValue Q(this double input)
         {
             return new LengthValue(input, AbsoluteLengthUnit.Q);
@@ -31,6 +32,7 @@ namespace CsCss
         {
             return new LengthValue(input, AbsoluteLengthUnit.Q);
         }
+
         public static LengthValue In(this double input)
         {
             return new LengthValue(input, AbsoluteLengthUnit.In);
@@ -49,6 +51,7 @@ namespace CsCss
         {
             return new LengthValue(input, AbsoluteLengthUnit.Pc);
         }
+
         public static LengthValue Pt(this double input)
         {
             return new LengthValue(input, AbsoluteLengthUnit.Pt);
@@ -58,6 +61,7 @@ namespace CsCss
         {
             return new LengthValue(input, AbsoluteLengthUnit.Pt);
         }
+
         public static LengthValue Px(this double input)
         {
             return new LengthValue(input, AbsoluteLengthUnit.Px);
