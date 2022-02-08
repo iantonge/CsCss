@@ -1,5 +1,5 @@
-﻿using CsCss.Values.Numeric.Calc;
-using CsCss.Values.Numeric.Length;
+﻿using CsCss.Values.Numeric.Angle;
+using CsCss.Values.Numeric.Calc;
 using CsCss.Values.Numeric.Percentage;
 
 namespace CsCss.Values.Numeric.AnglePercentage
@@ -8,7 +8,7 @@ namespace CsCss.Values.Numeric.AnglePercentage
     {
         internal AnglePercentageValue(string v) : base(v) { }
 
-        public static implicit operator AnglePercentageValue(LengthValue value)
+        public static implicit operator AnglePercentageValue(AngleValue value)
         {
             return new AnglePercentageValue(value.ToString());
         }
