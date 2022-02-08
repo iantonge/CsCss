@@ -1,9 +1,9 @@
 namespace CsCss.Values.Color.Named
 {
-    public sealed class HoneyDewColor : NamedColor
+    public sealed class HoneydewColor : NamedColor
     {
-        private HoneyDewColor() : base("honeydew") { }
+        private HoneydewColor() : base("honeydew") { }
 
-        internal static readonly HoneyDewColor HoneyDew = new HoneyDewColor();
+        internal static readonly HoneydewColor Honeydew = new HoneydewColor();
     }
 }

@@ -1,9 +1,9 @@
 namespace CsCss.Values.Color.Named
 {
-    public sealed class SeaShellColor : NamedColor
+    public sealed class SeashellColor : NamedColor
     {
-        private SeaShellColor() : base("seashell") { }
+        private SeashellColor() : base("seashell") { }
 
-        internal static readonly SeaShellColor SeaShell = new SeaShellColor();
+        internal static readonly SeashellColor Seashell = new SeashellColor();
     }
 }

@@ -16,8 +16,9 @@ namespace CsCss
         public static readonly BlueColor Blue = BlueColor.Blue;
         public static readonly BlueVioletColor BlueViolet = BlueVioletColor.BlueViolet;
         public static readonly BrownColor Brown = BrownColor.Brown;
-        public static readonly BurlyWoodColor BurlyWood = BurlyWoodColor.BurlyWood;
+        public static readonly BurlywoodColor Burlywood = BurlywoodColor.Burlywood;
         public static readonly CadetBlueColor CadetBlue = CadetBlueColor.CadetBlue;
+        public static readonly ChartreuseColor Chartreuse = ChartreuseColor.Chartreuse;
         public static readonly ChocolateColor Chocolate = ChocolateColor.Chocolate;
         public static readonly CoralColor Coral = CoralColor.Coral;
         public static readonly CornflowerBlueColor CornflowerBlue = CornflowerBlueColor.CornflowerBlue;
@@ -26,7 +27,7 @@ namespace CsCss
         public static readonly CyanColor Cyan = CyanColor.Cyan;
         public static readonly DarkBlueColor DarkBlue = DarkBlueColor.DarkBlue;
         public static readonly DarkCyanColor DarkCyan = DarkCyanColor.DarkCyan;
-        public static readonly DarkGoldenRodColor DarkGoldenRod = DarkGoldenRodColor.DarkGoldenRod;
+        public static readonly DarkGoldenrodColor DarkGoldenrod = DarkGoldenrodColor.DarkGoldenrod;
         public static readonly DarkGrayColor DarkGray = DarkGrayColor.DarkGray;
         public static readonly DarkGreenColor DarkGreen = DarkGreenColor.DarkGreen;
         public static readonly DarkKhakiColor DarkKhaki = DarkKhakiColor.DarkKhaki;
@@ -45,18 +46,18 @@ namespace CsCss
         public static readonly DeepSkyBlueColor DeepSkyBlue = DeepSkyBlueColor.DeepSkyBlue;
         public static readonly DimGrayColor DimGray = DimGrayColor.DimGray;
         public static readonly DodgerBlueColor DodgerBlue = DodgerBlueColor.DodgerBlue;
-        public static readonly FireBrickColor FireBrick = FireBrickColor.FireBrick;
+        public static readonly FirebrickColor Firebrick = FirebrickColor.Firebrick;
         public static readonly FloralWhiteColor FloralWhite = FloralWhiteColor.FloralWhite;
         public static readonly ForestGreenColor ForestGreen = ForestGreenColor.ForestGreen;
         public static readonly FuchsiaColor Fuchsia = FuchsiaColor.Fuchsia;
         public static readonly GainsboroColor Gainsboro = GainsboroColor.Gainsboro;
         public static readonly GhostWhiteColor GhostWhite = GhostWhiteColor.GhostWhite;
         public static readonly GoldColor Gold = GoldColor.Gold;
-        public static readonly GoldenRodColor GoldenRod = GoldenRodColor.GoldenRod;
+        public static readonly GoldenrodColor Goldenrod = GoldenrodColor.Goldenrod;
         public static readonly GrayColor Gray = GrayColor.Gray;
         public static readonly GreenColor Green = GreenColor.Green;
         public static readonly GreenYellowColor GreenYellow = GreenYellowColor.GreenYellow;
-        public static readonly HoneyDewColor HoneyDew = HoneyDewColor.HoneyDew;
+        public static readonly HoneydewColor Honeydew = HoneydewColor.Honeydew;
         public static readonly HotPinkColor HotPink = HotPinkColor.HotPink;
         public static readonly IndianRedColor IndianRed = IndianRedColor.IndianRed;
         public static readonly IndigoColor Indigo = IndigoColor.Indigo;
@@ -69,7 +70,7 @@ namespace CsCss
         public static readonly LightBlueColor LightBlue = LightBlueColor.LightBlue;
         public static readonly LightCoralColor LightCoral = LightCoralColor.LightCoral;
         public static readonly LightCyanColor LightCyan = LightCyanColor.LightCyan;
-        public static readonly LightGoldenRodYellowColor LightGoldenRodYellow = LightGoldenRodYellowColor.LightGoldenRodYellow;
+        public static readonly LightGoldenrodYellowColor LightGoldenrodYellow = LightGoldenrodYellowColor.LightGoldenrodYellow;
         public static readonly LightGrayColor LightGray = LightGrayColor.LightGray;
         public static readonly LightGreenColor LightGreen = LightGreenColor.LightGreen;
         public static readonly LightPinkColor LightPink = LightPinkColor.LightPink;
@@ -84,7 +85,7 @@ namespace CsCss
         public static readonly LinenColor Linen = LinenColor.Linen;
         public static readonly MagentaColor Magenta = MagentaColor.Magenta;
         public static readonly MaroonColor Maroon = MaroonColor.Maroon;
-        public static readonly MediumAquaMarineColor MediumAquaMarine = MediumAquaMarineColor.MediumAquaMarine;
+        public static readonly MediumAquamarineColor MediumAquamarine = MediumAquamarineColor.MediumAquamarine;
         public static readonly MediumBlueColor MediumBlue = MediumBlueColor.MediumBlue;
         public static readonly MediumOrchidColor MediumOrchid = MediumOrchidColor.MediumOrchid;
         public static readonly MediumPurpleColor MediumPurple = MediumPurpleColor.MediumPurple;
@@ -105,7 +106,7 @@ namespace CsCss
         public static readonly OrangeColor Orange = OrangeColor.Orange;
         public static readonly OrangeRedColor OrangeRed = OrangeRedColor.OrangeRed;
         public static readonly OrchidColor Orchid = OrchidColor.Orchid;
-        public static readonly PaleGoldenRodColor PaleGoldenRod = PaleGoldenRodColor.PaleGoldenRod;
+        public static readonly PaleGoldenrodColor PaleGoldenrod = PaleGoldenrodColor.PaleGoldenrod;
         public static readonly PaleGreenColor PaleGreen = PaleGreenColor.PaleGreen;
         public static readonly PaleTurquoiseColor PaleTurquoise = PaleTurquoiseColor.PaleTurquoise;
         public static readonly PaleVioletRedColor PaleVioletRed = PaleVioletRedColor.PaleVioletRed;
@@ -123,7 +124,7 @@ namespace CsCss
         public static readonly SalmonColor Salmon = SalmonColor.Salmon;
         public static readonly SandyBrownColor SandyBrown = SandyBrownColor.SandyBrown;
         public static readonly SeaGreenColor SeaGreen = SeaGreenColor.SeaGreen;
-        public static readonly SeaShellColor SeaShell = SeaShellColor.SeaShell;
+        public static readonly SeashellColor Seashell = SeashellColor.Seashell;
         public static readonly SiennaColor Sienna = SiennaColor.Sienna;
         public static readonly SilverColor Silver = SilverColor.Silver;
         public static readonly SkyBlueColor SkyBlue = SkyBlueColor.SkyBlue;

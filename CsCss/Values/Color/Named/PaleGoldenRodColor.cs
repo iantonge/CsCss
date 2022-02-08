@@ -1,9 +1,9 @@
 namespace CsCss.Values.Color.Named
 {
-    public sealed class PaleGoldenRodColor : NamedColor
+    public sealed class PaleGoldenrodColor : NamedColor
     {
-        private PaleGoldenRodColor() : base("palegoldenrod") { }
+        private PaleGoldenrodColor() : base("palegoldenrod") { }
 
-        internal static readonly PaleGoldenRodColor PaleGoldenRod = new PaleGoldenRodColor();
+        internal static readonly PaleGoldenrodColor PaleGoldenrod = new PaleGoldenrodColor();
     }
 }

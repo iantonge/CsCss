@@ -1,9 +1,9 @@
 namespace CsCss.Values.Color.Named
 {
-    public sealed class FireBrickColor : NamedColor
+    public sealed class FirebrickColor : NamedColor
     {
-        private FireBrickColor() : base("firebrick") { }
+        private FirebrickColor() : base("firebrick") { }
 
-        internal static readonly FireBrickColor FireBrick = new FireBrickColor();
+        internal static readonly FirebrickColor Firebrick = new FirebrickColor();
     }
 }

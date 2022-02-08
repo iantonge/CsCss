@@ -1,9 +1,9 @@
 namespace CsCss.Values.Color.Named
 {
-    public sealed class MediumAquaMarineColor : NamedColor
+    public sealed class MediumAquamarineColor : NamedColor
     {
-        private MediumAquaMarineColor() : base("mediumaquamarine") { }
+        private MediumAquamarineColor() : base("mediumaquamarine") { }
 
-        internal static readonly MediumAquaMarineColor MediumAquaMarine = new MediumAquaMarineColor();
+        internal static readonly MediumAquamarineColor MediumAquamarine = new MediumAquamarineColor();
     }
 }

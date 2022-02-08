@@ -1,9 +1,9 @@
 namespace CsCss.Values.Color.Named
 {
-    public sealed class BurlyWoodColor : NamedColor
+    public sealed class BurlywoodColor : NamedColor
     {
-        private BurlyWoodColor() : base("burlywood") { }
+        private BurlywoodColor() : base("burlywood") { }
 
-        internal static readonly BurlyWoodColor BurlyWood = new BurlyWoodColor();
+        internal static readonly BurlywoodColor Burlywood = new BurlywoodColor();
     }
 }
