@@ -1,6 +1,6 @@
-﻿namespace CsCss.Values.Color.Named
+namespace CsCss.Values.Color.Named
 {
-    public sealed class DarkOliveGreenColor: NamedColor
+    public sealed class DarkOliveGreenColor : NamedColor
     {
         private DarkOliveGreenColor() : base("darkolivegreen") { }
 

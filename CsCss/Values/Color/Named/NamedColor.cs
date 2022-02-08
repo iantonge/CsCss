@@ -2,6 +2,6 @@
 {
     public class NamedColor : ColorValue
     {
-        public NamedColor(string v) : base(v) { }
+        internal NamedColor(string v) : base(v) { }
     }
 }

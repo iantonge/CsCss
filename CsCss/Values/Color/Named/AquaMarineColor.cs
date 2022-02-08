@@ -1,9 +1,9 @@
-﻿namespace CsCss.Values.Color.Named
+namespace CsCss.Values.Color.Named
 {
-    public sealed class AquaMarineColor: NamedColor
+    public sealed class AquamarineColor : NamedColor
     {
-        private AquaMarineColor() : base("aquamarine") { }
+        private AquamarineColor() : base("aquamarine") { }
 
-        internal static readonly AquaMarineColor AquaMarine = new AquaMarineColor();
+        internal static readonly AquamarineColor Aquamarine = new AquamarineColor();
     }
 }

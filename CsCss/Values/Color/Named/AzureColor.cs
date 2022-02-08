@@ -1,6 +1,6 @@
-﻿namespace CsCss.Values.Color.Named
+namespace CsCss.Values.Color.Named
 {
-    public sealed class AzureColor: NamedColor
+    public sealed class AzureColor : NamedColor
     {
         private AzureColor() : base("azure") { }
 
