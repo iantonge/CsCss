@@ -1,4 +1,6 @@
-﻿using Xunit;
+﻿using CsCss.Values.Numeric.Calc;
+using CsCss.Values.Numeric.Length;
+using Xunit;
 
 namespace CsCss.Tests.Values.Numeric.Calc
 {
@@ -9,8 +11,9 @@ namespace CsCss.Tests.Values.Numeric.Calc
         {
             var calcSum = 5.Px() + 5.Cm();
             var calcProduct = 10.Px() * 10;
-            var product = calcSum + calcProduct;
-            Assert.Equal("5px + 5cm + 10px * 10", product.ToString());
+            var sum = calcSum + calcProduct;
+            Assert.Equal("5px + 5cm + 10px * 10", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthValue>), sum.GetType());
         }
 
         [Fact]
@@ -20,6 +23,17 @@ namespace CsCss.Tests.Values.Numeric.Calc
             var calcSum2 = 5.Cm() + 10.Cm();
             var sum = calcSum1 + calcSum2;
             Assert.Equal("5px + 10px + 5cm + 10cm", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthValue>), sum.GetType());
+        }
+
+        [Fact]
+        public void CanBeAddedToCalcProduct()
+        {
+            var calcSum = 5.Px() + 5.Cm();
+            var calcProduct = 10.Px() * 10;
+            var sum = calcProduct + calcSum;
+            Assert.Equal("10px * 10 + 5px + 5cm", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthValue>), sum.GetType());
         }
 
         [Fact]
@@ -27,8 +41,9 @@ namespace CsCss.Tests.Values.Numeric.Calc
         {
             var calcSum = 5.Px() + 5.Cm();
             var calcProduct = 10.Px() * 10;
-            var product = calcSum - calcProduct;
-            Assert.Equal("5px + 5cm - 10px * 10", product.ToString());
+            var sum = calcSum - calcProduct;
+            Assert.Equal("5px + 5cm - 10px * 10", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthValue>), sum.GetType());
         }
 
         [Fact]
@@ -38,6 +53,17 @@ namespace CsCss.Tests.Values.Numeric.Calc
             var calcSum2 = 10.Px() + 10.Cm();
             var sum = calcSum1 - calcSum2;
             Assert.Equal("5px + 5cm - 10px + 10cm", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthValue>), sum.GetType());
+        }
+
+        [Fact]
+        public void CanBeSubtractedFromCalcProduct()
+        {
+            var calcSum = 5.Px() + 5.Cm();
+            var calcProduct = 10.Px() * 10;
+            var sum = calcProduct - calcSum;
+            Assert.Equal("10px * 10 - 5px + 5cm", sum.ToString());
+            Assert.Equal(typeof(CalcSum<LengthValue>), sum.GetType());
         }
 
         [Fact]
@@ -46,6 +72,7 @@ namespace CsCss.Tests.Values.Numeric.Calc
             var calcSum = 5.Px() + 5.Cm();
             var product = 2 * calcSum;
             Assert.Equal("2 * (5px + 5cm)", product.ToString());
+            Assert.Equal(typeof(CalcProduct<LengthValue>), product.GetType());
         }
 
         [Fact]
@@ -54,6 +81,7 @@ namespace CsCss.Tests.Values.Numeric.Calc
             var calcSum = 5.Px() + 5.Cm();
             var product = 2.5 * calcSum;
             Assert.Equal("2.5 * (5px + 5cm)", product.ToString());
+            Assert.Equal(typeof(CalcProduct<LengthValue>), product.GetType());
         }
 
         [Fact]
@@ -62,6 +90,7 @@ namespace CsCss.Tests.Values.Numeric.Calc
             var calcSum = 5.Px() + 5.Cm();
             var product = calcSum * 2;
             Assert.Equal("(5px + 5cm) * 2", product.ToString());
+            Assert.Equal(typeof(CalcProduct<LengthValue>), product.GetType());
         }
 
         [Fact]
@@ -70,6 +99,7 @@ namespace CsCss.Tests.Values.Numeric.Calc
             var calcSum = 5.Px() + 5.Cm();
             var product = calcSum * 2.5;
             Assert.Equal("(5px + 5cm) * 2.5", product.ToString());
+            Assert.Equal(typeof(CalcProduct<LengthValue>), product.GetType());
         }
 
         [Fact]
@@ -78,6 +108,7 @@ namespace CsCss.Tests.Values.Numeric.Calc
             var calcSum = 5.Px() + 5.Cm();
             var product = calcSum / 2;
             Assert.Equal("(5px + 5cm) / 2", product.ToString());
+            Assert.Equal(typeof(CalcProduct<LengthValue>), product.GetType());
         }
 
         [Fact]
@@ -86,6 +117,7 @@ namespace CsCss.Tests.Values.Numeric.Calc
             var calcSum = 5.Px() + 5.Cm();
             var product = calcSum / 2.5;
             Assert.Equal("(5px + 5cm) / 2.5", product.ToString());
+            Assert.Equal(typeof(CalcProduct<LengthValue>), product.GetType());
         }
     }
 }
