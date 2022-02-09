@@ -2,8 +2,6 @@
 {
     public abstract class Keyword : TextValue
     {
-        protected Keyword(string v) : base(v)
-        {
-        }
+        protected Keyword(string v) : base(v) { }
     }
 }
