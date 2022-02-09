@@ -4,7 +4,7 @@ namespace CsCss
 {
     public static partial class Statics
     {
-        public static readonly CurrentColorKeyword CurrentColor = CurrentColorKeyword.CurrentColor;
-        public static readonly TransparentKeyword Transparent = TransparentKeyword.Transparent;
+        public static readonly ColorKeyword CurrentColor = ColorKeyword.CurrentColor;
+        public static readonly ColorKeyword Transparent = ColorKeyword.Transparent;
     }
 }

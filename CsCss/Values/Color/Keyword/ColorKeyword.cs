@@ -1,9 +1,17 @@
-﻿namespace CsCss.Values.Color.Keyword
+﻿using CsCss.Values.Text.Global;
+
+namespace CsCss.Values.Color.Keyword
 {
-    public abstract class ColorKeyword : ColorValue
+    public sealed class ColorKeyword : ColorValue
     {
-        public ColorKeyword(string v) : base(v)
+        private ColorKeyword(string v) : base(v) { }
+
+        internal static readonly ColorKeyword Transparent = new ColorKeyword("transparent");
+        internal static readonly ColorKeyword CurrentColor = new ColorKeyword("currentcolor");
+
+        public static implicit operator ColorKeyword(GlobalKeyword value)
         {
+            return new ColorKeyword(value.ToString());
         }
     }
 }

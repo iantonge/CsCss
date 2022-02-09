@@ -2,7 +2,7 @@
 {
     public class ColorValue : Value
     {
-        internal ColorValue(string v) : base(v) { }
+        protected ColorValue(string v) : base(v) { }
 
         public static implicit operator ColorValue(int value)
         {
