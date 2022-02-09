@@ -4,9 +4,9 @@ namespace CsCss
 {
     public static partial class Statics
     {
-        public static readonly InheritKeyword Inherit = InheritKeyword.Inherit;
-        public static readonly InitialKeyword Initial = InitialKeyword.Initial;
-        public static readonly RevertKeyword Revert = RevertKeyword.Revert;
-        public static readonly UnsetKeyword Unset = UnsetKeyword.Unset;
+        public static readonly GlobalKeyword Inherit = GlobalKeyword.Inherit;
+        public static readonly GlobalKeyword Initial = GlobalKeyword.Initial;
+        public static readonly GlobalKeyword Revert = GlobalKeyword.Revert;
+        public static readonly GlobalKeyword Unset = GlobalKeyword.Unset;
     }
 }

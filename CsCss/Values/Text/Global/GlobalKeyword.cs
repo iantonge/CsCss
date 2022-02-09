@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CsCss.Values.Text.Global
+﻿namespace CsCss.Values.Text.Global
 {
-    public abstract class GlobalKeyword : TextValue
+    public sealed class GlobalKeyword : TextValue
     {
-        protected GlobalKeyword(string v) : base(v)
-        {
-        }
+        private GlobalKeyword(string v) : base(v) { }
+
+        internal static readonly GlobalKeyword Inherit = new GlobalKeyword("inherit");
+        internal static readonly GlobalKeyword Initial = new GlobalKeyword("initial");
+        internal static readonly GlobalKeyword Revert = new GlobalKeyword("revert");
+        internal static readonly GlobalKeyword Unset = new GlobalKeyword("unset");
     }
 }
