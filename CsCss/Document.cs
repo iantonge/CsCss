@@ -30,7 +30,7 @@ namespace CsCss
             foreach (var style in StyleRules)
             {
                 sb.Append(style.selector);
-                sb.Append(": {");
+                sb.Append(" {");
                 foreach (var declaration in style.declarations.ToStrings())
                 {
                     sb.Append("\n    ");
@@ -39,6 +39,7 @@ namespace CsCss
                 }
                 sb.Append("\n}\n");
             }
+            sb.Remove(sb.Length - 1, 1);
             return sb.ToString();
         }
     }
