@@ -1,5 +1,5 @@
 ﻿using CsCss.Values.Color.Function;
-using CsCss.Values.Numeric.Percentage;
+using CsCss.Values.Percentage;
 
 namespace CsCss
 {

@@ -1,4 +1,4 @@
-﻿using CsCss.Values.Text.Global;
+﻿using CsCss.Values.Global;
 
 namespace CsCss.Values.Color
 {

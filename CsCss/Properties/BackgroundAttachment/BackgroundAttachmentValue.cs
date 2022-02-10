@@ -1,6 +1,6 @@
 ﻿using CsCss.Values;
-using CsCss.Values.Text.Global;
-using CsCss.Values.Text.Keyword;
+using CsCss.Values.Global;
+using CsCss.Values.General;
 
 namespace CsCss.Properties.BackgroundAttachment
 {

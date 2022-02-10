@@ -1,11 +1,11 @@
 ﻿using CsCss.Values;
-using CsCss.Values.Numeric.FitContent;
-using CsCss.Values.Numeric.Length;
-using CsCss.Values.Numeric.LengthPercentage;
-using CsCss.Values.Numeric.Percentage;
-using CsCss.Values.Text.Global;
-using CsCss.Values.Text.Keyword;
-using CsCss.Values.Text.Keyword.Sizing;
+using CsCss.Values.Sizing;
+using CsCss.Values.Length;
+using CsCss.Values.LengthPercentage;
+using CsCss.Values.Percentage;
+using CsCss.Values.Global;
+using CsCss.Values.General;
+using CsCss.Values.Sizing;
 
 namespace CsCss.Properties.Height
 {

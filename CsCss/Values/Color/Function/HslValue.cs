@@ -1,4 +1,4 @@
-﻿using CsCss.Values.Numeric.Percentage;
+﻿using CsCss.Values.Percentage;
 
 namespace CsCss.Values.Color.Function
 {

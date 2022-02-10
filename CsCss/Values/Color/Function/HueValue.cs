@@ -1,4 +1,4 @@
-﻿using CsCss.Values.Numeric.Angle;
+﻿using CsCss.Values.Angle;
 
 namespace CsCss.Values.Color.Function
 {
