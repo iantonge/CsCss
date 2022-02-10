@@ -2,7 +2,7 @@
 
 namespace CsCss.Values.Sizing
 {
-    public sealed class FitContentKeyword : Keyword
+    public sealed class FitContentKeyword : Value
     {
         private FitContentKeyword() : base("fit-content") { }
 

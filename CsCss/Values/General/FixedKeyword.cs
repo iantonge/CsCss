@@ -1,6 +1,6 @@
 ﻿namespace CsCss.Values.General
 {
-    public sealed class FixedKeyword : Keyword
+    public sealed class FixedKeyword : Value
     {
         private FixedKeyword() : base("fixed") {}
 

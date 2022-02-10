@@ -1,6 +1,6 @@
 ﻿namespace CsCss.Values.General
 {
-    public sealed class AutoKeyword : Keyword
+    public sealed class AutoKeyword : Value
     {
         private AutoKeyword() : base("auto") { }
 

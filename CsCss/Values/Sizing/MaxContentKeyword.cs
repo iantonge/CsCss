@@ -2,7 +2,7 @@
 
 namespace CsCss.Values.Sizing
 {
-    public sealed class MaxContentKeyword : Keyword
+    public sealed class MaxContentKeyword : Value
     {
         private MaxContentKeyword() : base("max-content") { }
 

@@ -1,6 +1,6 @@
 ﻿namespace CsCss.Values.General
 {
-    public sealed class ScrollKeyword : Keyword
+    public sealed class ScrollKeyword : Value
     {
         private ScrollKeyword() : base("scroll") {}
 

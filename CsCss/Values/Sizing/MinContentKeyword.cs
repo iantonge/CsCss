@@ -1,8 +1,6 @@
-﻿using CsCss.Values.General;
-
-namespace CsCss.Values.Sizing
+﻿namespace CsCss.Values.Sizing
 {
-    public sealed class MinContentKeyword : Keyword
+    public sealed class MinContentKeyword : Value
     {
         private MinContentKeyword() : base("min-content") { }
 
