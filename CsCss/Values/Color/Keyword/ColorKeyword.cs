@@ -8,10 +8,5 @@ namespace CsCss.Values.Color.Keyword
 
         internal static readonly ColorKeyword Transparent = new ColorKeyword("transparent");
         internal static readonly ColorKeyword CurrentColor = new ColorKeyword("currentcolor");
-
-        public static implicit operator ColorKeyword(GlobalKeyword value)
-        {
-            return new ColorKeyword(value.ToString());
-        }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace CsCss.Values.Color
+﻿using CsCss.Values.Text.Global;
+
+namespace CsCss.Values.Color
 {
     public class ColorValue : Value
     {
@@ -7,6 +9,11 @@
         public static implicit operator ColorValue(int value)
         {
             return new ColorValue("#" + value.ToString("X"));
+        }
+
+        public static implicit operator ColorValue(GlobalKeyword value)
+        {
+            return new ColorValue(value.ToString());
         }
     }
 }

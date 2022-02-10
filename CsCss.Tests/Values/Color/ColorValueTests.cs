@@ -11,5 +11,12 @@ namespace CsCss.Tests.Values.Color
             ColorValue colorValue = 0xFFFFFF;
             Assert.Equal("#FFFFFF", colorValue.ToString());
         }
+
+        [Fact]
+        public void CanConvertFromGlobalKeyword()
+        {
+            ColorValue colorValue = Statics.Unset;
+            Assert.Equal("unset", colorValue.ToString());
+        }
     }
 }

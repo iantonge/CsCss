@@ -28,7 +28,9 @@ namespace CsCss.Properties.BackgroundAttachment
             return new BackgroundAttachmentValue(value.ToString());
         }
 
-        internal static BackgroundAttachmentValue With(params BackgroundAttachmentValue[] values)
-            => new BackgroundAttachmentValue(string.Join(", ", values.Select(v => v.ToString())));
+        public static implicit operator BackgroundAttachmentValue(BackgroundAttachmentValue[] values)
+        {
+            return new BackgroundAttachmentValue(string.Join(", ", values.Select(v => v.ToString())));
+        }
     }
 }
