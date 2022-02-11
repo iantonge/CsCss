@@ -5,7 +5,6 @@ using CsCss.Values.LengthPercentage;
 using CsCss.Values.Percentage;
 using CsCss.Values.Global;
 using CsCss.Values.General;
-using CsCss.Values.Sizing;
 
 namespace CsCss.Properties.Height
 {
