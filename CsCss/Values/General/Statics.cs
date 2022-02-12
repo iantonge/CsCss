@@ -7,6 +7,7 @@ namespace CsCss
         public static readonly AutoKeyword Auto = AutoKeyword.Auto;
         public static readonly FixedKeyword Fixed = FixedKeyword.Fixed;
         public static readonly LocalKeyword Local = LocalKeyword.Local;
+        public static readonly NoneKeyword None = NoneKeyword.None;
         public static readonly ScrollKeyword Scroll = ScrollKeyword.Scroll;
     }
 }
