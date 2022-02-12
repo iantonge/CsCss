@@ -3,7 +3,7 @@ using CsCss.Values.LengthPercentage;
 
 namespace CsCss.Values.Gradient
 {
-    internal sealed class ColorStop : GradientParameter
+    internal sealed class ColorStop : ColorStopItem
     {
         internal ColorStop(ColorValue color) : base(color.ToString()) { }
 

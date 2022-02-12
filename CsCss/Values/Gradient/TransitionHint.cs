@@ -2,7 +2,7 @@
 
 namespace CsCss.Values.Gradient
 {
-    internal class TransitionHint : GradientParameter
+    internal class TransitionHint : ColorStopItem
     {
         public TransitionHint(LengthPercentageValue value) : base(value.ToString()) { }
     }

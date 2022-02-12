@@ -31,7 +31,7 @@ namespace CsCss.Values.Gradient
     {
         private readonly string function;
         private readonly GradientDirection? direction;
-        private List<GradientParameter> parameters = new List<GradientParameter>();
+        private List<ColorStopItem> parameters = new List<ColorStopItem>();
 
         internal LinearGradientBuilder(string function) 
         {
@@ -44,7 +44,7 @@ namespace CsCss.Values.Gradient
             this.direction = direction;
         }
 
-        private LinearGradientBuilder(string function, GradientDirection? direction, List<GradientParameter> parameters)
+        private LinearGradientBuilder(string function, GradientDirection? direction, List<ColorStopItem> parameters)
         {
             this.function = function;
             this.direction = direction;

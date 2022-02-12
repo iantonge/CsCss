@@ -1,10 +1,10 @@
 ﻿namespace CsCss.Values.Gradient
 {
-    internal abstract class GradientParameter
+    internal abstract class ColorStopItem
     {
         private readonly string value;
 
-        protected GradientParameter(string v)
+        protected ColorStopItem(string v)
         {
             value = v;
         }

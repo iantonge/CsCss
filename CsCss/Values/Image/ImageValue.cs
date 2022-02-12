@@ -1,4 +1,5 @@
-﻿using CsCss.Values.Url;
+﻿using CsCss.Values.Gradient;
+using CsCss.Values.Url;
 
 namespace CsCss.Values.Image
 {
@@ -7,6 +8,11 @@ namespace CsCss.Values.Image
         internal ImageValue(string v) : base(v) { }
 
         public static implicit operator ImageValue(UrlValue value)
+        {
+            return new ImageValue(value.ToString());
+        }
+
+        public static implicit operator ImageValue(GradientValue value)
         {
             return new ImageValue(value.ToString());
         }
