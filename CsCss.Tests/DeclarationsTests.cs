@@ -12,7 +12,7 @@ namespace CsCss.Tests
             var declarations = new Declarations()
             {
                 [Height] = 10.Px(),
-                [Color] = Red 
+                [Color] = Red
             };
 
             var expected = new List<string>()
