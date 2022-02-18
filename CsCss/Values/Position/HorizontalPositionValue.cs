@@ -6,10 +6,5 @@
 
         internal static readonly HorizontalPositionValue Left = new HorizontalPositionValue("left");
         internal static readonly HorizontalPositionValue Right = new HorizontalPositionValue("right");
-
-        public static implicit operator HorizontalPositionValue(CenterPositionValue value)
-        {
-            return new HorizontalPositionValue(value.ToString());
-        }
     }
 }
