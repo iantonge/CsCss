@@ -13,6 +13,24 @@ namespace CsCss
         public static readonly GradientDirection ToLeftBottom = GradientDirection.ToLeftBottom;
         public static readonly GradientDirection ToLeft = GradientDirection.ToLeft;
 
+        public static readonly RadialGradientShape Circle = RadialGradientShape.Circle;
+        public static readonly RadialGradientShape Ellipse = RadialGradientShape.Ellipse;
+
+        public static readonly RadialGradientSize ClosestSide = RadialGradientSize.ClosestSide;
+        public static readonly RadialGradientSize FarthestSide = RadialGradientSize.FarthestSide;
+        public static readonly RadialGradientSize ClosestCorner = RadialGradientSize.ClosestCorner;
+        public static readonly RadialGradientSize FarthestCorner = RadialGradientSize.FarthestCorner;
+
+        public static RadialGradientBuilder BuildRadialGradient()
+        {
+            return new RadialGradientBuilder("radial-gradient");
+        }
+
+        public static RadialGradientBuilder BuildRepeatingRadialGradient()
+        {
+            return new RadialGradientBuilder("repeating-radial-gradient");
+        }
+
         public static ILinearGradientBuilderWithoutStops BuildLinearGradient()
         {
             return new LinearGradientBuilder("linear-gradient");
