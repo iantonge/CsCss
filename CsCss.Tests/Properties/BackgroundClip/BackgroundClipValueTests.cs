@@ -18,5 +18,12 @@ namespace CsCss.Tests.Properties.BackgroundClip
             BackgroundClipValue converted = Statics.ContentBox;
             Assert.Equal("content-box", converted.ToString());
         }
+
+        [Fact]
+        public void CanConvertFromTextKeyword()
+        {
+            BackgroundClipValue converted = Statics.Text;
+            Assert.Equal("text", converted.ToString());
+        }
     }
 }

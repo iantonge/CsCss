@@ -9,5 +9,6 @@ namespace CsCss
         public static readonly LocalKeyword Local = LocalKeyword.Local;
         public static readonly NoneKeyword None = NoneKeyword.None;
         public static readonly ScrollKeyword Scroll = ScrollKeyword.Scroll;
+        public static readonly TextKeyword Text = TextKeyword.Text;
     }
 }
