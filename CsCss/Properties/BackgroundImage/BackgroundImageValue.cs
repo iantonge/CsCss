@@ -2,7 +2,6 @@
 using CsCss.Values.General;
 using CsCss.Values.Global;
 using CsCss.Values.Gradient;
-using CsCss.Values.Image;
 using CsCss.Values.Url;
 
 namespace CsCss.Properties.BackgroundImage
@@ -26,19 +25,9 @@ namespace CsCss.Properties.BackgroundImage
             return new BackgroundImageValue(value.ToString());
         }
 
-        public static implicit operator BackgroundImageValue(ImageValue value)
-        {
-            return new BackgroundImageValue(value.ToString());
-        }
-
-        public static implicit operator BackgroundImageValue(ImageSetValue value)
-        {
-            return new BackgroundImageValue(value.ToString());
-        }
-
         public static implicit operator BackgroundImageValue(GradientValue value)
         {
-            return new ImageValue(value.ToString());
+            return new BackgroundImageValue(value.ToString());
         }
     }
 }

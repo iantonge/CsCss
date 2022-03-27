@@ -32,13 +32,5 @@ namespace CsCss.Tests.Properties.BackgroundAttachment
             BackgroundAttachmentValue backgroundAttachmentValue = Statics.Scroll;
             Assert.Equal("scroll", backgroundAttachmentValue.ToString());
         }
-
-        [Fact]
-        public void CanConvertFromArray()
-        {
-            BackgroundAttachmentValue backgroundAttachmentValue = 
-                new BackgroundAttachmentValue[] { Statics.Fixed, Statics.Local, Statics.Scroll };
-            Assert.Equal("fixed, local, scroll", backgroundAttachmentValue.ToString());
-        }
     }
 }

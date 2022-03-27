@@ -114,8 +114,6 @@ namespace CsCss.Tests.Values.Position
             Assert.Equal("center center", position.ToString());
         }
 
-        ////////////////
-
         [Fact]
         public void CanConvertHorizontalAndVerticalWithOffsets()
         {
