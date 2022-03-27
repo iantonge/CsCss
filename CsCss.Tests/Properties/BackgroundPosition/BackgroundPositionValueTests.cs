@@ -6,6 +6,13 @@ namespace CsCss.Tests.Properties.BackgroundPosition
     public class BackgroundPositionValueTests
     {
         [Fact]
+        public void CanConvertFromGlobalKeyword()
+        {
+            BackgroundPositionValue converted = Statics.Initial;
+            Assert.Equal("initial", converted.ToString());
+        }
+
+        [Fact]
         public void CanConvertFromLength()
         {
             BackgroundPositionValue converted = 10.Px();
