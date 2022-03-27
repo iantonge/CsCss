@@ -5,6 +5,8 @@ namespace CsCss
 {
     public static partial class Statics
     {
+        public static readonly ContainKeyword Contain = ContainKeyword.Contain;
+        public static readonly CoverKeyword Cover = CoverKeyword.Cover;
         public static readonly MaxContentKeyword MaxContent = MaxContentKeyword.MaxContent;
         public static readonly MinContentKeyword MinContent = MinContentKeyword.MinContent;
         // GOTCHA: FitContent can be a both a function and a keyword

@@ -1,4 +1,5 @@
 ﻿using CsCss.Values.Box;
+using CsCss.Values.General;
 using Xunit;
 
 namespace CsCss.Tests.Values.Box
@@ -30,7 +31,7 @@ namespace CsCss.Tests.Values.Box
         public void RendersTextKeyword()
         {
             Assert.Equal("text", Statics.Text.ToString());
-            Assert.Equal(typeof(BoxKeyword), Statics.Text.GetType());
+            Assert.Equal(typeof(TextKeyword), Statics.Text.GetType());
         }
     }
 }

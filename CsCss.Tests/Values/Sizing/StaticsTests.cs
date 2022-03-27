@@ -6,6 +6,20 @@ namespace CsCss.Tests.Values.Sizing
     public class StaticsTests
     {
         [Fact]
+        public void RendersContainKeyword()
+        {
+            Assert.Equal("contain", Statics.Contain.ToString());
+            Assert.Equal(typeof(ContainKeyword), Statics.Contain.GetType());
+        }
+
+        [Fact]
+        public void RendersCoverKeyword()
+        {
+            Assert.Equal("cover", Statics.Cover.ToString());
+            Assert.Equal(typeof(CoverKeyword), Statics.Cover.GetType());
+        }
+
+        [Fact]
         public void RendersFitContentKeyword()
         {
             Assert.Equal("fit-content", Statics.FitContent().ToString());
