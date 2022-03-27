@@ -1,14 +1,14 @@
-﻿using CsCss.Values.Gradient;
+﻿using CsCss.Values.Gradient.Linear;
 using Xunit;
 
 namespace CsCss.Tests.Values.Gradient
 {
-    public class GradientDirectionTests
+    public class LinearGradientDirectionTests
     {
         [Fact]
         public void CanConvertFromAngle()
         {
-            GradientDirection gradientDirection = 10.Deg();
+            LinearGradientDirection gradientDirection = 10.Deg();
             Assert.Equal("10deg", gradientDirection.ToString());
         }
     }

@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Properties\BackgroundImage\" />
     <Folder Include="Values\Url\" />
   </ItemGroup>
 

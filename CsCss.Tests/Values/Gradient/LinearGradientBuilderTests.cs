@@ -21,7 +21,8 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildLinearGradientWithDirection()
         {
-            var gradient = Statics.BuildLinearGradient(Statics.ToRightTop)
+            var gradient = Statics.BuildLinearGradient()
+                .WithDirection(Statics.ToRightTop)
                 .WithColorStop(Statics.Red)
                 .WithColorStop(Statics.Green)
                 .WithColorStop(Statics.Blue)
@@ -34,7 +35,8 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildLinearGradientTransitionHints()
         {
-            var gradient = Statics.BuildLinearGradient(Statics.ToRightTop)
+            var gradient = Statics.BuildLinearGradient()
+                .WithDirection(Statics.ToRightTop)
                 .WithColorStop(Statics.Red)
                 .WithTransitionHint(20.Percent())
                 .WithColorStop(Statics.Green)
@@ -63,7 +65,8 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildRepeatingLinearGradientWithDirection()
         {
-            var gradient = Statics.BuildRepeatingLinearGradient(Statics.ToRightTop)
+            var gradient = Statics.BuildRepeatingLinearGradient()
+                .WithDirection(Statics.ToRightTop)
                 .WithColorStop(Statics.Red)
                 .WithColorStop(Statics.Green)
                 .WithColorStop(Statics.Blue)
@@ -76,7 +79,8 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildRepeatingLinearGradientTransitionHints()
         {
-            var gradient = Statics.BuildRepeatingLinearGradient(Statics.ToRightTop)
+            var gradient = Statics.BuildRepeatingLinearGradient()
+                .WithDirection(Statics.ToRightTop)
                 .WithColorStop(Statics.Red)
                 .WithTransitionHint(20.Percent())
                 .WithColorStop(Statics.Green)

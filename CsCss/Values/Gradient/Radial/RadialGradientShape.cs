@@ -1,4 +1,4 @@
-﻿namespace CsCss.Values.Gradient
+﻿namespace CsCss.Values.Gradient.Radial
 {
     public sealed class RadialGradientShape : Value
     {

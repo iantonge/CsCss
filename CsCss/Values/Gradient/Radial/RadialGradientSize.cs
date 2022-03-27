@@ -1,8 +1,4 @@
-﻿using CsCss.Values.Length;
-using CsCss.Values.LengthPercentage;
-using CsCss.Values.Percentage;
-
-namespace CsCss.Values.Gradient
+﻿namespace CsCss.Values.Gradient.Radial
 {
     public sealed class RadialGradientSize : Value
     {
