@@ -16,28 +16,28 @@ namespace CsCss.Tests.Properties.BorderColor
         public void RendersBorderTop()
         {
             Assert.Equal("border-top-color", Statics.BorderTopColor.ToString());
-            Assert.Equal(typeof(BorderColorProperty), Statics.BorderTopColor.GetType());
+            Assert.Equal(typeof(DirectionalBorderColorProperty), Statics.BorderTopColor.GetType());
         }
 
         [Fact]
         public void RendersBorderBottom()
         {
             Assert.Equal("border-bottom-color", Statics.BorderBottomColor.ToString());
-            Assert.Equal(typeof(BorderColorProperty), Statics.BorderBottomColor.GetType());
+            Assert.Equal(typeof(DirectionalBorderColorProperty), Statics.BorderBottomColor.GetType());
         }
 
         [Fact]
         public void RendersBorderLeft()
         {
             Assert.Equal("border-left-color", Statics.BorderLeftColor.ToString());
-            Assert.Equal(typeof(BorderColorProperty), Statics.BorderLeftColor.GetType());
+            Assert.Equal(typeof(DirectionalBorderColorProperty), Statics.BorderLeftColor.GetType());
         }
 
         [Fact]
         public void RendersBorderRight()
         {
             Assert.Equal("border-right-color", Statics.BorderRightColor.ToString());
-            Assert.Equal(typeof(BorderColorProperty), Statics.BorderRightColor.GetType());
+            Assert.Equal(typeof(DirectionalBorderColorProperty), Statics.BorderRightColor.GetType());
         }
     }
 }

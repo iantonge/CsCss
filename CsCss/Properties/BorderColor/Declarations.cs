@@ -8,5 +8,10 @@ namespace CsCss
         {
             set => declarations.Add((property, value));
         }
+
+        public DirectionalBorderColorValue this[DirectionalBorderColorProperty property]
+        {
+            set => declarations.Add((property, value));
+        }
     }
 }
