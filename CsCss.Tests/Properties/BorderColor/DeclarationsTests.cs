@@ -1,19 +1,19 @@
 ﻿using System.Linq;
 using Xunit;
 
-namespace CsCss.Tests.Properties.Border
+namespace CsCss.Tests.Properties.BorderColor
 {
     public class DeclarationsTests
     {
         [Fact]
-        public void CanSetBorder()
+        public void CanSetBorderColor()
         {
             var declarations = new Declarations()
             {
-                [Statics.Border] = Statics.Red
+                [Statics.BorderColor] = Statics.Red
             };
 
-            Assert.Equal("border: red", declarations.ToStrings().Single());
+            Assert.Equal("border-color: red", declarations.ToStrings().Single());
         }
 
         [Fact]
@@ -21,10 +21,10 @@ namespace CsCss.Tests.Properties.Border
         {
             var declarations = new Declarations()
             {
-                [Statics.BorderTop] = Statics.Red
+                [Statics.BorderTopColor] = Statics.Red
             };
 
-            Assert.Equal("border-top: red", declarations.ToStrings().Single());
+            Assert.Equal("border-top-color: red", declarations.ToStrings().Single());
         }
 
         [Fact]
@@ -32,10 +32,10 @@ namespace CsCss.Tests.Properties.Border
         {
             var declarations = new Declarations()
             {
-                [Statics.BorderBottom] = Statics.Red
+                [Statics.BorderBottomColor] = Statics.Red
             };
 
-            Assert.Equal("border-bottom: red", declarations.ToStrings().Single());
+            Assert.Equal("border-bottom-color: red", declarations.ToStrings().Single());
         }
 
         [Fact]
@@ -43,10 +43,10 @@ namespace CsCss.Tests.Properties.Border
         {
             var declarations = new Declarations()
             {
-                [Statics.BorderLeft] = Statics.Red
+                [Statics.BorderLeftColor] = Statics.Red
             };
 
-            Assert.Equal("border-left: red", declarations.ToStrings().Single());
+            Assert.Equal("border-left-color: red", declarations.ToStrings().Single());
         }
 
         [Fact]
@@ -54,10 +54,10 @@ namespace CsCss.Tests.Properties.Border
         {
             var declarations = new Declarations()
             {
-                [Statics.BorderRight] = Statics.Red
+                [Statics.BorderRightColor] = Statics.Red
             };
 
-            Assert.Equal("border-right: red", declarations.ToStrings().Single());
+            Assert.Equal("border-right-color: red", declarations.ToStrings().Single());
         }
     }
 }
