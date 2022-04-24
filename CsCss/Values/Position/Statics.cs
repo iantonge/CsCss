@@ -9,5 +9,6 @@ namespace CsCss
         public static readonly HorizontalPositionValue Right = HorizontalPositionValue.Right;
         public static readonly VerticalPositionValue Top = VerticalPositionValue.Top;
         public static readonly VerticalPositionValue Bottom = VerticalPositionValue.Bottom;
+        public static readonly BothPositionValue Both = BothPositionValue.Both;
     }
 }
