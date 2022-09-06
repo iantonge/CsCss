@@ -8,14 +8,14 @@ namespace CsCss.Tests.Properties.BorderColor
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            BorderColorValue converted = Statics.Initial;
+            BorderColorValue converted = Keywords.Initial;
             Assert.Equal("initial", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromSingleColorValue()
         {
-            BorderColorValue converted = Statics.Red;
+            BorderColorValue converted = Keywords.Red;
             Assert.Equal("red", converted.ToString());
         }
 
@@ -29,21 +29,21 @@ namespace CsCss.Tests.Properties.BorderColor
         [Fact]
         public void CanConvertFromDoubleColorValue()
         {
-            BorderColorValue converted = (Statics.Red, 0xFFFFFF);
+            BorderColorValue converted = (Keywords.Red, 0xFFFFFF);
             Assert.Equal("red #FFFFFF", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromTripleColorValue()
         {
-            BorderColorValue converted = (Statics.Red, 0xFFFFFF, Statics.Rgb(25.Percent(), 50.Percent(), 75.Percent()));
+            BorderColorValue converted = (Keywords.Red, 0xFFFFFF, Functions.Rgb(25.Percent(), 50.Percent(), 75.Percent()));
             Assert.Equal("red #FFFFFF rgb(25%,50%,75%)", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromQuadrupleColorValue()
         {
-            BorderColorValue converted = (Statics.Red, 0xFFFFFF, Statics.Rgb(25.Percent(), 50.Percent(), 75.Percent()), Statics.Transparent);
+            BorderColorValue converted = (Keywords.Red, 0xFFFFFF, Functions.Rgb(25.Percent(), 50.Percent(), 75.Percent()), Keywords.Transparent);
             Assert.Equal("red #FFFFFF rgb(25%,50%,75%) transparent", converted.ToString());
         }
     }

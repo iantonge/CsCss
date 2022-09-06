@@ -8,8 +8,8 @@ namespace CsCss.Tests.Values.General
         [Fact]
         public void RendersLocalKeyword()
         {
-            Assert.Equal("local", Statics.Local.ToString());
-            Assert.Equal(typeof(LocalKeyword), Statics.Local.GetType());
+            Assert.Equal("local", Keywords.Local.ToString());
+            Assert.Equal(typeof(LocalKeyword), Keywords.Local.GetType());
         }
     }
 }

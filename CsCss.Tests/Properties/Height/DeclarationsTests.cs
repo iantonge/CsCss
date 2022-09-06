@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.Height
         {
             var declarations = new Declarations()
             {
-                [Statics.Height] = 10.Px()
+                [Keywords.Height] = 10.Px()
             };
 
             Assert.Equal("height: 10px", declarations.ToStrings().Single());

@@ -3,13 +3,13 @@ using Xunit;
 
 namespace CsCss.Tests.Properties.BackgroundRepeat
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void RendersBackgroundRepeat()
         {
-            Assert.Equal("background-repeat", Statics.BackgroundRepeat.ToString());
-            Assert.Equal(typeof(BackgroundRepeatProperty), Statics.BackgroundRepeat.GetType());
+            Assert.Equal("background-repeat", Keywords.BackgroundRepeat.ToString());
+            Assert.Equal(typeof(BackgroundRepeatProperty), Keywords.BackgroundRepeat.GetType());
         }
     }
 }

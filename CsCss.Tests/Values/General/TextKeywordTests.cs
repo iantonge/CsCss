@@ -8,8 +8,8 @@ namespace CsCss.Tests.Values.General
         [Fact]
         public void RendersTextKeyword()
         {
-            Assert.Equal("text", Statics.Text.ToString());
-            Assert.Equal(typeof(TextKeyword), Statics.Text.GetType());
+            Assert.Equal("text", Keywords.Text.ToString());
+            Assert.Equal(typeof(TextKeyword), Keywords.Text.GetType());
         }
     }
 }

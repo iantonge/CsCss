@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.Color
         {
             var declarations = new Declarations()
             {
-                [Statics.Color] = 0xFFFFFF
+                [Keywords.Color] = 0xFFFFFF
             };
 
             Assert.Equal("color: #FFFFFF", declarations.ToStrings().Single());

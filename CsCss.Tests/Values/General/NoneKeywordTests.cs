@@ -8,8 +8,8 @@ namespace CsCss.Tests.Values.General
         [Fact]
         public void RendersNoneKeyword()
         {
-            Assert.Equal("none", Statics.None.ToString());
-            Assert.Equal(typeof(NoneKeyword), Statics.None.GetType());
+            Assert.Equal("none", Keywords.None.ToString());
+            Assert.Equal(typeof(NoneKeyword), Keywords.None.GetType());
         }
     }
 }

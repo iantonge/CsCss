@@ -3,24 +3,24 @@ using Xunit;
 
 namespace CsCss.Tests.Values.Position
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void CanRenderPositions()
         {
-            CenterPositionValue center = Statics.Center;
+            CenterPositionValue center = Keywords.Center;
             Assert.Equal("center", center.ToString());
 
-            HorizontalPositionValue left = Statics.Left;
+            HorizontalPositionValue left = Keywords.Left;
             Assert.Equal("left", left.ToString());
 
-            HorizontalPositionValue right = Statics.Right;
+            HorizontalPositionValue right = Keywords.Right;
             Assert.Equal("right", right.ToString());
 
-            VerticalPositionValue top = Statics.Top;
+            VerticalPositionValue top = Keywords.Top;
             Assert.Equal("top", top.ToString());
 
-            VerticalPositionValue bottom = Statics.Bottom;
+            VerticalPositionValue bottom = Keywords.Bottom;
             Assert.Equal("bottom", bottom.ToString());
         }
     }

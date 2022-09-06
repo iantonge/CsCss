@@ -3,13 +3,13 @@ using Xunit;
 
 namespace CsCss.Tests.Properties.BackgroundPosition
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void RendersBackgroundPosition()
         {
-            Assert.Equal("background-position", Statics.BackgroundPosition.ToString());
-            Assert.Equal(typeof(BackgroundPositionProperty), Statics.BackgroundPosition.GetType());
+            Assert.Equal("background-position", Keywords.BackgroundPosition.ToString());
+            Assert.Equal(typeof(BackgroundPositionProperty), Keywords.BackgroundPosition.GetType());
         }
     }
 }

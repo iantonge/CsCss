@@ -3,13 +3,13 @@ using Xunit;
 
 namespace CsCss.Tests.Properties.BackgroundAttachment
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void RendersBackgroundAttachment()
         {
-            Assert.Equal("background-attachment", Statics.BackgroundAttachment.ToString());
-            Assert.Equal(typeof(BackgroundAttachmentProperty), Statics.BackgroundAttachment.GetType());
+            Assert.Equal("background-attachment", Keywords.BackgroundAttachment.ToString());
+            Assert.Equal(typeof(BackgroundAttachmentProperty), Keywords.BackgroundAttachment.GetType());
         }
     }
 }

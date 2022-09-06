@@ -1,5 +1,5 @@
 ﻿using Xunit;
-using static CsCss.Statics;
+using static CsCss.Keywords;
 
 namespace CsCss.Tests
 {

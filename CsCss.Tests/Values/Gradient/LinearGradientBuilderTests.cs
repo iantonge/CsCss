@@ -8,10 +8,10 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildLinearGradientWithColorStopLengths()
         {
-            var gradient = Statics.BuildLinearGradient()
-                .WithColorStop(Statics.Red)
-                .WithColorStop(Statics.Green, 15.Px())
-                .WithColorStop(Statics.Blue, 15.Px(), 20.Percent())
+            var gradient = Functions.BuildLinearGradient()
+                .WithColorStop(Keywords.Red)
+                .WithColorStop(Keywords.Green, 15.Px())
+                .WithColorStop(Keywords.Blue, 15.Px(), 20.Percent())
                 .Build();
 
             Assert.Equal("linear-gradient(red,green 15px,blue 15px 20%)", gradient.ToString());
@@ -21,11 +21,11 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildLinearGradientWithDirection()
         {
-            var gradient = Statics.BuildLinearGradient()
-                .WithDirection(Statics.ToRightTop)
-                .WithColorStop(Statics.Red)
-                .WithColorStop(Statics.Green)
-                .WithColorStop(Statics.Blue)
+            var gradient = Functions.BuildLinearGradient()
+                .WithDirection(Keywords.ToRightTop)
+                .WithColorStop(Keywords.Red)
+                .WithColorStop(Keywords.Green)
+                .WithColorStop(Keywords.Blue)
                 .Build();
 
             Assert.Equal("linear-gradient(to right top,red,green,blue)", gradient.ToString());
@@ -35,14 +35,14 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildLinearGradientTransitionHints()
         {
-            var gradient = Statics.BuildLinearGradient()
-                .WithDirection(Statics.ToRightTop)
-                .WithColorStop(Statics.Red)
+            var gradient = Functions.BuildLinearGradient()
+                .WithDirection(Keywords.ToRightTop)
+                .WithColorStop(Keywords.Red)
                 .WithTransitionHint(20.Percent())
-                .WithColorStop(Statics.Green)
-                .WithColorStop(Statics.Blue)
+                .WithColorStop(Keywords.Green)
+                .WithColorStop(Keywords.Blue)
                 .WithTransitionHint(80.Percent())
-                .WithColorStop(Statics.Yellow)
+                .WithColorStop(Keywords.Yellow)
                 .Build();
 
             Assert.Equal("linear-gradient(to right top,red,20%,green,blue,80%,yellow)", gradient.ToString());
@@ -52,10 +52,10 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildRepeatingLinearGradientWithColorStopLengths()
         {
-            var gradient = Statics.BuildRepeatingLinearGradient()
-                .WithColorStop(Statics.Red)
-                .WithColorStop(Statics.Green, 15.Px())
-                .WithColorStop(Statics.Blue, 15.Px(), 20.Percent())
+            var gradient = Functions.BuildRepeatingLinearGradient()
+                .WithColorStop(Keywords.Red)
+                .WithColorStop(Keywords.Green, 15.Px())
+                .WithColorStop(Keywords.Blue, 15.Px(), 20.Percent())
                 .Build();
 
             Assert.Equal("repeating-linear-gradient(red,green 15px,blue 15px 20%)", gradient.ToString());
@@ -65,11 +65,11 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildRepeatingLinearGradientWithDirection()
         {
-            var gradient = Statics.BuildRepeatingLinearGradient()
-                .WithDirection(Statics.ToRightTop)
-                .WithColorStop(Statics.Red)
-                .WithColorStop(Statics.Green)
-                .WithColorStop(Statics.Blue)
+            var gradient = Functions.BuildRepeatingLinearGradient()
+                .WithDirection(Keywords.ToRightTop)
+                .WithColorStop(Keywords.Red)
+                .WithColorStop(Keywords.Green)
+                .WithColorStop(Keywords.Blue)
                 .Build();
 
             Assert.Equal("repeating-linear-gradient(to right top,red,green,blue)", gradient.ToString());
@@ -79,14 +79,14 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void CanBuildRepeatingLinearGradientTransitionHints()
         {
-            var gradient = Statics.BuildRepeatingLinearGradient()
-                .WithDirection(Statics.ToRightTop)
-                .WithColorStop(Statics.Red)
+            var gradient = Functions.BuildRepeatingLinearGradient()
+                .WithDirection(Keywords.ToRightTop)
+                .WithColorStop(Keywords.Red)
                 .WithTransitionHint(20.Percent())
-                .WithColorStop(Statics.Green)
-                .WithColorStop(Statics.Blue)
+                .WithColorStop(Keywords.Green)
+                .WithColorStop(Keywords.Blue)
                 .WithTransitionHint(80.Percent())
-                .WithColorStop(Statics.Yellow)
+                .WithColorStop(Keywords.Yellow)
                 .Build();
 
             Assert.Equal("repeating-linear-gradient(to right top,red,20%,green,blue,80%,yellow)", gradient.ToString());

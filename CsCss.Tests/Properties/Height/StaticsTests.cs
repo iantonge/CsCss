@@ -3,13 +3,13 @@ using Xunit;
 
 namespace CsCss.Tests.Properties.Height
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void RendersBackgroundAttachment()
         {
-            Assert.Equal("height", Statics.Height.ToString());
-            Assert.Equal(typeof(HeightProperty), Statics.Height.GetType());
+            Assert.Equal("height", Keywords.Height.ToString());
+            Assert.Equal(typeof(HeightProperty), Keywords.Height.GetType());
         }
     }
 }

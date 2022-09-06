@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.BackgroundSize
         {
             var declarations = new Declarations()
             {
-                [Statics.BackgroundSize] = Statics.Contain
+                [Keywords.BackgroundSize] = Keywords.Contain
             };
 
             Assert.Equal("background-size: contain", declarations.ToStrings().Single());

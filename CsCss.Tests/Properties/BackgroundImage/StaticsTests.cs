@@ -3,13 +3,13 @@ using Xunit;
 
 namespace CsCss.Tests.Properties.BackgroundImage
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void RendersBackgroundImage()
         {
-            Assert.Equal("background-image", Statics.BackgroundImage.ToString());
-            Assert.Equal(typeof(BackgroundImageProperty), Statics.BackgroundImage.GetType());
+            Assert.Equal("background-image", Keywords.BackgroundImage.ToString());
+            Assert.Equal(typeof(BackgroundImageProperty), Keywords.BackgroundImage.GetType());
         }
     }
 }

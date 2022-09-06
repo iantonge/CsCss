@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.Border
         {
             var declarations = new Declarations()
             {
-                [Statics.Border] = Statics.Red
+                [Keywords.Border] = Keywords.Red
             };
 
             Assert.Equal("border: red", declarations.ToStrings().Single());
@@ -21,7 +21,7 @@ namespace CsCss.Tests.Properties.Border
         {
             var declarations = new Declarations()
             {
-                [Statics.BorderTop] = Statics.Red
+                [Keywords.BorderTop] = Keywords.Red
             };
 
             Assert.Equal("border-top: red", declarations.ToStrings().Single());
@@ -32,7 +32,7 @@ namespace CsCss.Tests.Properties.Border
         {
             var declarations = new Declarations()
             {
-                [Statics.BorderBottom] = Statics.Red
+                [Keywords.BorderBottom] = Keywords.Red
             };
 
             Assert.Equal("border-bottom: red", declarations.ToStrings().Single());
@@ -43,7 +43,7 @@ namespace CsCss.Tests.Properties.Border
         {
             var declarations = new Declarations()
             {
-                [Statics.BorderLeft] = Statics.Red
+                [Keywords.BorderLeft] = Keywords.Red
             };
 
             Assert.Equal("border-left: red", declarations.ToStrings().Single());
@@ -54,7 +54,7 @@ namespace CsCss.Tests.Properties.Border
         {
             var declarations = new Declarations()
             {
-                [Statics.BorderRight] = Statics.Red
+                [Keywords.BorderRight] = Keywords.Red
             };
 
             Assert.Equal("border-right: red", declarations.ToStrings().Single());

@@ -3,13 +3,13 @@ using Xunit;
 
 namespace CsCss.Tests.Properties.BackgroundClip
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void RendersBackgroundRepeat()
         {
-            Assert.Equal("background-clip", Statics.BackgroundClip.ToString());
-            Assert.Equal(typeof(BackgroundClipProperty), Statics.BackgroundClip.GetType());
+            Assert.Equal("background-clip", Keywords.BackgroundClip.ToString());
+            Assert.Equal(typeof(BackgroundClipProperty), Keywords.BackgroundClip.GetType());
         }
     }
 }

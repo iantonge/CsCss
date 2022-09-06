@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.BackgroundPosition
         {
             var declarations = new Declarations()
             {
-                [Statics.BackgroundPosition] = 10.Px()
+                [Keywords.BackgroundPosition] = 10.Px()
             };
 
             Assert.Equal("background-position: 10px", declarations.ToStrings().Single());

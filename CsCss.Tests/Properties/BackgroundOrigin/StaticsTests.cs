@@ -3,13 +3,13 @@ using Xunit;
 
 namespace CsCss.Tests.Properties.BackgroundOrigin
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void RendersBackgroundOrigin()
         {
-            Assert.Equal("background-origin", Statics.BackgroundOrigin.ToString());
-            Assert.Equal(typeof(BackgroundOriginProperty), Statics.BackgroundOrigin.GetType());
+            Assert.Equal("background-origin", Keywords.BackgroundOrigin.ToString());
+            Assert.Equal(typeof(BackgroundOriginProperty), Keywords.BackgroundOrigin.GetType());
         }
     }
 }

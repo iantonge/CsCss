@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.BackgroundAttachment
         {
             var declarations = new Declarations()
             {
-                [Statics.BackgroundAttachment] = Statics.Scroll
+                [Keywords.BackgroundAttachment] = Keywords.Scroll
             };
 
             Assert.Equal("background-attachment: scroll", declarations.ToStrings().Single());

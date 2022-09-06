@@ -8,30 +8,30 @@ namespace CsCss.Tests.Properties.BackgroundImage
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            BackgroundImageValue backgroundImageValue = Statics.Initial;
+            BackgroundImageValue backgroundImageValue = Keywords.Initial;
             Assert.Equal("initial", backgroundImageValue.ToString());
         }
 
         [Fact]
         public void CanConvertFromNoneKeyword()
         {
-            BackgroundImageValue backgroundImageValue = Statics.None;
+            BackgroundImageValue backgroundImageValue = Keywords.None;
             Assert.Equal("none", backgroundImageValue.ToString());
         }
 
         [Fact]
         public void CanConvertFromUrl()
         {
-            BackgroundImageValue backgroundImageValue = Statics.Url("path");
+            BackgroundImageValue backgroundImageValue = Functions.Url("path");
             Assert.Equal("url('path')", backgroundImageValue.ToString());
         }
 
         [Fact]
         public void CanConvertFromGradient()
         {
-            BackgroundImageValue backgroundImageValue = Statics.BuildLinearGradient()
-                .WithColorStop(Statics.Red)
-                .WithColorStop(Statics.Blue)
+            BackgroundImageValue backgroundImageValue = Functions.BuildLinearGradient()
+                .WithColorStop(Keywords.Red)
+                .WithColorStop(Keywords.Blue)
                 .Build();
             Assert.Equal("linear-gradient(red,blue)", backgroundImageValue.ToString());
         }

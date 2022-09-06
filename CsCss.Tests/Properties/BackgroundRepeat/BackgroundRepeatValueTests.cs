@@ -10,14 +10,14 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         [Fact]
         public void CanConvertFromKeyword()
         {
-            BackgroundRepeatValue converted = Statics.RepeatX;
+            BackgroundRepeatValue converted = Keywords.RepeatX;
             Assert.Equal("repeat-x", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromKeywordTuple()
         {
-            BackgroundRepeatValue converted = (Statics.Space, Statics.NoRepeat);
+            BackgroundRepeatValue converted = (Keywords.Space, Keywords.NoRepeat);
             Assert.Equal("space no-repeat", converted.ToString());
         }
 
@@ -26,7 +26,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var exception = Assert.Throws<ArgumentException>(() =>
             {
-                BackgroundRepeatValue converted = (Statics.RepeatX, Statics.NoRepeat);
+                BackgroundRepeatValue converted = (Keywords.RepeatX, Keywords.NoRepeat);
             });
             Assert.Equal("RepeatX may only be used with the one-value syntax", exception.Message);
         }
@@ -36,7 +36,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var exception = Assert.Throws<ArgumentException>(() =>
             {
-                BackgroundRepeatValue converted = (Statics.NoRepeat, Statics.RepeatX);
+                BackgroundRepeatValue converted = (Keywords.NoRepeat, Keywords.RepeatX);
             });
             Assert.Equal("RepeatX may only be used with the one-value syntax", exception.Message);
         }
@@ -46,7 +46,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var exception = Assert.Throws<ArgumentException>(() =>
             {
-                BackgroundRepeatValue converted = (Statics.RepeatY, Statics.NoRepeat);
+                BackgroundRepeatValue converted = (Keywords.RepeatY, Keywords.NoRepeat);
             });
             Assert.Equal("RepeatY may only be used with the one-value syntax", exception.Message);
         }
@@ -56,7 +56,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var exception = Assert.Throws<ArgumentException>(() =>
             {
-                BackgroundRepeatValue converted = (Statics.NoRepeat, Statics.RepeatY);
+                BackgroundRepeatValue converted = (Keywords.NoRepeat, Keywords.RepeatY);
             });
             Assert.Equal("RepeatY may only be used with the one-value syntax", exception.Message);
         }

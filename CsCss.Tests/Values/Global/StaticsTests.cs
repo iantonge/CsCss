@@ -3,34 +3,34 @@ using Xunit;
 
 namespace CsCss.Tests.Values.Text.Global
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void RendersInheritKeyword()
         {
-            Assert.Equal("inherit", Statics.Inherit.ToString());
-            Assert.Equal(typeof(GlobalKeyword), Statics.Inherit.GetType());
+            Assert.Equal("inherit", Keywords.Inherit.ToString());
+            Assert.Equal(typeof(GlobalKeyword), Keywords.Inherit.GetType());
         }
 
         [Fact]
         public void RendersInitialKeyword()
         {
-            Assert.Equal("initial", Statics.Initial.ToString());
-            Assert.Equal(typeof(GlobalKeyword), Statics.Initial.GetType());
+            Assert.Equal("initial", Keywords.Initial.ToString());
+            Assert.Equal(typeof(GlobalKeyword), Keywords.Initial.GetType());
         }
 
         [Fact]
         public void RendersRevertKeyword()
         {
-            Assert.Equal("revert", Statics.Revert.ToString());
-            Assert.Equal(typeof(GlobalKeyword), Statics.Revert.GetType());
+            Assert.Equal("revert", Keywords.Revert.ToString());
+            Assert.Equal(typeof(GlobalKeyword), Keywords.Revert.GetType());
         }
 
         [Fact]
         public void RendersUnsetKeyword()
         {
-            Assert.Equal("unset", Statics.Unset.ToString());
-            Assert.Equal(typeof(GlobalKeyword), Statics.Unset.GetType());
+            Assert.Equal("unset", Keywords.Unset.ToString());
+            Assert.Equal(typeof(GlobalKeyword), Keywords.Unset.GetType());
         }
     }
 }

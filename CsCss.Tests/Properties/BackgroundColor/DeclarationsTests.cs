@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.BackgroundColor
         {
             var declarations = new Declarations()
             {
-                [Statics.BackgroundColor] = 0xFFFFFF
+                [Keywords.BackgroundColor] = 0xFFFFFF
             };
 
             Assert.Equal("background-color: #FFFFFF", declarations.ToStrings().Single());

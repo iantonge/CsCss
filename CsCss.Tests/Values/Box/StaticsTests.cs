@@ -4,34 +4,34 @@ using Xunit;
 
 namespace CsCss.Tests.Values.Box
 {
-    public class StaticsTests
+    public class KeywordsTests
     {
         [Fact]
         public void RendersBorderBoxKeyword()
         {
-            Assert.Equal("border-box", Statics.BorderBox.ToString());
-            Assert.Equal(typeof(BoxKeyword), Statics.BorderBox.GetType());
+            Assert.Equal("border-box", Keywords.BorderBox.ToString());
+            Assert.Equal(typeof(BoxKeyword), Keywords.BorderBox.GetType());
         }
 
         [Fact]
         public void RendersPaddingBoxKeyword()
         {
-            Assert.Equal("padding-box", Statics.PaddingBox.ToString());
-            Assert.Equal(typeof(BoxKeyword), Statics.PaddingBox.GetType());
+            Assert.Equal("padding-box", Keywords.PaddingBox.ToString());
+            Assert.Equal(typeof(BoxKeyword), Keywords.PaddingBox.GetType());
         }
 
         [Fact]
         public void RendersContentBoxKeyword()
         {
-            Assert.Equal("content-box", Statics.ContentBox.ToString());
-            Assert.Equal(typeof(BoxKeyword), Statics.ContentBox.GetType());
+            Assert.Equal("content-box", Keywords.ContentBox.ToString());
+            Assert.Equal(typeof(BoxKeyword), Keywords.ContentBox.GetType());
         }
 
         [Fact]
         public void RendersTextKeyword()
         {
-            Assert.Equal("text", Statics.Text.ToString());
-            Assert.Equal(typeof(TextKeyword), Statics.Text.GetType());
+            Assert.Equal("text", Keywords.Text.ToString());
+            Assert.Equal(typeof(TextKeyword), Keywords.Text.GetType());
         }
     }
 }
