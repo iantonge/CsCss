@@ -8,8 +8,8 @@ namespace CsCss.Tests.Values.General
         [Fact]
         public void RendersScrollKeyword()
         {
-            Assert.Equal("scroll", Keywords.Scroll.ToString());
-            Assert.Equal(typeof(ScrollKeyword), Keywords.Scroll.GetType());
+            Assert.Equal("scroll", Scroll.ToString());
+            Assert.Equal(typeof(ScrollKeyword), Scroll.GetType());
         }
     }
 }

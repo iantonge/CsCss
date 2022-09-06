@@ -8,7 +8,7 @@ namespace CsCss.Tests.Properties.BackgroundPosition
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            BackgroundPositionValue converted = Keywords.Initial;
+            BackgroundPositionValue converted = Initial;
             Assert.Equal("initial", converted.ToString());
         }
 
@@ -99,203 +99,203 @@ namespace CsCss.Tests.Properties.BackgroundPosition
         [Fact]
         public void CanConvertFromPosition()
         {
-            BackgroundPositionValue converted = Keywords.Left;
+            BackgroundPositionValue converted = Left;
             Assert.Equal("left", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromHorizontalAndVertical()
         {
-            BackgroundPositionValue converted = (Keywords.Left, Keywords.Top);
+            BackgroundPositionValue converted = (Left, Top);
             Assert.Equal("left top", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromVerticalAndHorizontal()
         {
-            BackgroundPositionValue converted = (Keywords.Top, Keywords.Left);
+            BackgroundPositionValue converted = (Top, Left);
             Assert.Equal("top left", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterAndVertical()
         {
-            BackgroundPositionValue converted = (Keywords.Center, Keywords.Top);
+            BackgroundPositionValue converted = (Center, Top);
             Assert.Equal("center top", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterAndHorizontal()
         {
-            BackgroundPositionValue converted = (Keywords.Center, Keywords.Left);
+            BackgroundPositionValue converted = (Center, Left);
             Assert.Equal("center left", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromHorizontalAndCenter()
         {
-            BackgroundPositionValue converted = (Keywords.Left, Keywords.Center);
+            BackgroundPositionValue converted = (Left, Center);
             Assert.Equal("left center", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromVerticalAndCenter()
         {
-            BackgroundPositionValue converted = (Keywords.Top, Keywords.Center);
+            BackgroundPositionValue converted = (Top, Center);
             Assert.Equal("top center", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterAndCenter()
         {
-            BackgroundPositionValue converted = (Keywords.Center, Keywords.Center);
+            BackgroundPositionValue converted = (Center, Center);
             Assert.Equal("center center", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromHorizontalWithLengthAndVertical()
         {
-            BackgroundPositionValue converted = (Keywords.Left, 10.Px(), Keywords.Top);
+            BackgroundPositionValue converted = (Left, 10.Px(), Top);
             Assert.Equal("left 10px top", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromVerticalWithLengthAndHorizontal()
         {
-            BackgroundPositionValue converted = (Keywords.Top, 10.Px(), Keywords.Left);
+            BackgroundPositionValue converted = (Top, 10.Px(), Left);
             Assert.Equal("top 10px left", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromHorizontalWithLengthAndCenter()
         {
-            BackgroundPositionValue converted = (Keywords.Left, 10.Px(), Keywords.Center);
+            BackgroundPositionValue converted = (Left, 10.Px(), Center);
             Assert.Equal("left 10px center", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromVerticalWithLengthAndCenter()
         {
-            BackgroundPositionValue converted = (Keywords.Top, 10.Px(), Keywords.Center);
+            BackgroundPositionValue converted = (Top, 10.Px(), Center);
             Assert.Equal("top 10px center", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterWithLengthAndHorizontal()
         {
-            BackgroundPositionValue converted = (Keywords.Center, 10.Px(), Keywords.Left);
+            BackgroundPositionValue converted = (Center, 10.Px(), Left);
             Assert.Equal("center 10px left", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterWithLengthAndVertical()
         {
-            BackgroundPositionValue converted = (Keywords.Center, 10.Px(), Keywords.Top);
+            BackgroundPositionValue converted = (Center, 10.Px(), Top);
             Assert.Equal("center 10px top", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterWithLengthAndCenter()
         {
-            BackgroundPositionValue converted = (Keywords.Center, 10.Px(), Keywords.Center);
+            BackgroundPositionValue converted = (Center, 10.Px(), Center);
             Assert.Equal("center 10px center", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromHorizontalAndVerticalWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Left, Keywords.Top, 10.Px());
+            BackgroundPositionValue converted = (Left, Top, 10.Px());
             Assert.Equal("left top 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromVerticalAndHorizontalWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Top, Keywords.Left, 10.Px());
+            BackgroundPositionValue converted = (Top, Left, 10.Px());
             Assert.Equal("top left 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromHorizontalAndCenterWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Left, Keywords.Center, 10.Px());
+            BackgroundPositionValue converted = (Left, Center, 10.Px());
             Assert.Equal("left center 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromVerticalAndCenterWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Top, Keywords.Center, 10.Px());
+            BackgroundPositionValue converted = (Top, Center, 10.Px());
             Assert.Equal("top center 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterAndHorizontalWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Center, Keywords.Left, 10.Px());
+            BackgroundPositionValue converted = (Center, Left, 10.Px());
             Assert.Equal("center left 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterAndVerticalWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Center, Keywords.Top, 10.Px());
+            BackgroundPositionValue converted = (Center, Top, 10.Px());
             Assert.Equal("center top 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterAndCenterWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Center, Keywords.Center, 10.Px());
+            BackgroundPositionValue converted = (Center, Center, 10.Px());
             Assert.Equal("center center 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromHorizontalWithLengthAndVerticalWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Left, 10.Percent(), Keywords.Top, 10.Px());
+            BackgroundPositionValue converted = (Left, 10.Percent(), Top, 10.Px());
             Assert.Equal("left 10% top 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromVerticalWithLengthAndHorizontalWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Top, 10.Percent(), Keywords.Left, 10.Px());
+            BackgroundPositionValue converted = (Top, 10.Percent(), Left, 10.Px());
             Assert.Equal("top 10% left 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterWithLengthAndHorizontalWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Center, 10.Percent(), Keywords.Left, 10.Px());
+            BackgroundPositionValue converted = (Center, 10.Percent(), Left, 10.Px());
             Assert.Equal("center 10% left 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterWithLengthAndVerticalWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Center, 10.Percent(), Keywords.Top, 10.Px());
+            BackgroundPositionValue converted = (Center, 10.Percent(), Top, 10.Px());
             Assert.Equal("center 10% top 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromHorizontalWithLengthandCenterWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Left, 10.Percent(), Keywords.Center, 10.Px());
+            BackgroundPositionValue converted = (Left, 10.Percent(), Center, 10.Px());
             Assert.Equal("left 10% center 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromVerticalWithLengthCenterWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Top, 10.Percent(), Keywords.Center, 10.Px());
+            BackgroundPositionValue converted = (Top, 10.Percent(), Center, 10.Px());
             Assert.Equal("top 10% center 10px", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCenterWithLengthAndCenterWithLength()
         {
-            BackgroundPositionValue converted = (Keywords.Center, 10.Percent(), Keywords.Center, 10.Px());
+            BackgroundPositionValue converted = (Center, 10.Percent(), Center, 10.Px());
             Assert.Equal("center 10% center 10px", converted.ToString());
         }
     }

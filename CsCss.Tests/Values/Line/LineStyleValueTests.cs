@@ -8,7 +8,7 @@ namespace CsCss.Tests.Values.Line
         [Fact]
         public void CanConvertFromNoneKeyword()
         {
-            LineStyleValue converted = Keywords.None;
+            LineStyleValue converted = None;
             Assert.Equal("none", converted.ToString());
         }
     }

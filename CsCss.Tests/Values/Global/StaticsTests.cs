@@ -8,29 +8,29 @@ namespace CsCss.Tests.Values.Text.Global
         [Fact]
         public void RendersInheritKeyword()
         {
-            Assert.Equal("inherit", Keywords.Inherit.ToString());
-            Assert.Equal(typeof(GlobalKeyword), Keywords.Inherit.GetType());
+            Assert.Equal("inherit", Inherit.ToString());
+            Assert.Equal(typeof(GlobalKeyword), Inherit.GetType());
         }
 
         [Fact]
         public void RendersInitialKeyword()
         {
-            Assert.Equal("initial", Keywords.Initial.ToString());
-            Assert.Equal(typeof(GlobalKeyword), Keywords.Initial.GetType());
+            Assert.Equal("initial", Initial.ToString());
+            Assert.Equal(typeof(GlobalKeyword), Initial.GetType());
         }
 
         [Fact]
         public void RendersRevertKeyword()
         {
-            Assert.Equal("revert", Keywords.Revert.ToString());
-            Assert.Equal(typeof(GlobalKeyword), Keywords.Revert.GetType());
+            Assert.Equal("revert", Revert.ToString());
+            Assert.Equal(typeof(GlobalKeyword), Revert.GetType());
         }
 
         [Fact]
         public void RendersUnsetKeyword()
         {
-            Assert.Equal("unset", Keywords.Unset.ToString());
-            Assert.Equal(typeof(GlobalKeyword), Keywords.Unset.GetType());
+            Assert.Equal("unset", Unset.ToString());
+            Assert.Equal(typeof(GlobalKeyword), Unset.GetType());
         }
     }
 }

@@ -8,28 +8,28 @@ namespace CsCss.Tests.Properties.BackgroundAttachment
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            BackgroundAttachmentValue backgroundAttachmentValue = Keywords.Initial;
+            BackgroundAttachmentValue backgroundAttachmentValue = Initial;
             Assert.Equal("initial", backgroundAttachmentValue.ToString());
         }
 
         [Fact]
         public void CanConvertFromFixedKeyword()
         {
-            BackgroundAttachmentValue backgroundAttachmentValue = Keywords.Fixed;
+            BackgroundAttachmentValue backgroundAttachmentValue = Fixed;
             Assert.Equal("fixed", backgroundAttachmentValue.ToString());
         }
 
         [Fact]
         public void CanConvertFromLocalKeyword()
         {
-            BackgroundAttachmentValue backgroundAttachmentValue = Keywords.Local;
+            BackgroundAttachmentValue backgroundAttachmentValue = Local;
             Assert.Equal("local", backgroundAttachmentValue.ToString());
         }
 
         [Fact]
         public void CanConvertFromScrollKeyword()
         {
-            BackgroundAttachmentValue backgroundAttachmentValue = Keywords.Scroll;
+            BackgroundAttachmentValue backgroundAttachmentValue = Scroll;
             Assert.Equal("scroll", backgroundAttachmentValue.ToString());
         }
     }

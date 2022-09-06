@@ -8,14 +8,14 @@ namespace CsCss.Tests.Properties.BackgroundOrigin
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            BackgroundOriginValue converted = Keywords.Initial;
+            BackgroundOriginValue converted = Initial;
             Assert.Equal("initial", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromBoxKeyword()
         {
-            BackgroundOriginValue converted = Keywords.ContentBox;
+            BackgroundOriginValue converted = ContentBox;
             Assert.Equal("content-box", converted.ToString());
         }
     }

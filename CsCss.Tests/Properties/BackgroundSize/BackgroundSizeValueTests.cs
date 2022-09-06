@@ -8,28 +8,28 @@ namespace CsCss.Tests.Properties.BackgroundSize
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            BackgroundSizeValue converted = Keywords.Initial;
+            BackgroundSizeValue converted = Initial;
             Assert.Equal("initial", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromAutoKeyword()
         {
-            BackgroundSizeValue converted = Keywords.Auto;
+            BackgroundSizeValue converted = Auto;
             Assert.Equal("auto", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromContainKeyword()
         {
-            BackgroundSizeValue converted = Keywords.Contain;
+            BackgroundSizeValue converted = Contain;
             Assert.Equal("contain", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromCoverKeyword()
         {
-            BackgroundSizeValue converted = Keywords.Cover;
+            BackgroundSizeValue converted = Cover;
             Assert.Equal("cover", converted.ToString());
         }
 
@@ -57,20 +57,20 @@ namespace CsCss.Tests.Properties.BackgroundSize
         [Fact]
         public void CanConvertFromAutoTuple()
         {
-            BackgroundSizeValue converted = (Keywords.Auto, Keywords.Auto);
+            BackgroundSizeValue converted = (Auto, Auto);
             Assert.Equal("auto auto", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromAutoLengthPercentageTuple()
         {
-            BackgroundSizeValue length = (Keywords.Auto, 10.Px());
+            BackgroundSizeValue length = (Auto, 10.Px());
             Assert.Equal("auto 10px", length.ToString());
 
-            BackgroundSizeValue percentage = (Keywords.Auto, 10.Percent());
+            BackgroundSizeValue percentage = (Auto, 10.Percent());
             Assert.Equal("auto 10%", percentage.ToString());
 
-            BackgroundSizeValue lengthPercentage = (Keywords.Auto, Functions.Calc(10.Percent() + 10.Px()));
+            BackgroundSizeValue lengthPercentage = (Auto, Functions.Calc(10.Percent() + 10.Px()));
             Assert.Equal("auto calc(10% + 10px)", lengthPercentage.ToString());
         }
 
@@ -108,13 +108,13 @@ namespace CsCss.Tests.Properties.BackgroundSize
         [Fact]
         public void CanConvertFromLengthPercentageAutoTuple()
         {
-            BackgroundSizeValue length = (10.Px(), Keywords.Auto);
+            BackgroundSizeValue length = (10.Px(), Auto);
             Assert.Equal("10px auto", length.ToString());
 
-            BackgroundSizeValue percentage = (10.Percent(), Keywords.Auto);
+            BackgroundSizeValue percentage = (10.Percent(), Auto);
             Assert.Equal("10% auto", percentage.ToString());
 
-            BackgroundSizeValue lengthPercentage = (Functions.Calc(10.Percent() + 10.Px()), Keywords.Auto);
+            BackgroundSizeValue lengthPercentage = (Functions.Calc(10.Percent() + 10.Px()), Auto);
             Assert.Equal("calc(10% + 10px) auto", lengthPercentage.ToString());
         }
     }

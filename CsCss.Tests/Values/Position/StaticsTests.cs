@@ -8,19 +8,19 @@ namespace CsCss.Tests.Values.Position
         [Fact]
         public void CanRenderPositions()
         {
-            CenterPositionValue center = Keywords.Center;
+            CenterPositionValue center = Center;
             Assert.Equal("center", center.ToString());
 
-            HorizontalPositionValue left = Keywords.Left;
+            HorizontalPositionValue left = Left;
             Assert.Equal("left", left.ToString());
 
-            HorizontalPositionValue right = Keywords.Right;
+            HorizontalPositionValue right = Right;
             Assert.Equal("right", right.ToString());
 
-            VerticalPositionValue top = Keywords.Top;
+            VerticalPositionValue top = Top;
             Assert.Equal("top", top.ToString());
 
-            VerticalPositionValue bottom = Keywords.Bottom;
+            VerticalPositionValue bottom = Bottom;
             Assert.Equal("bottom", bottom.ToString());
         }
     }

@@ -9,14 +9,14 @@ namespace CsCss.Tests.Properties.Border
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            BorderValue converted = Keywords.Initial;
+            BorderValue converted = Initial;
             Assert.Equal("initial", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromLineWidthValue()
         {
-            BorderValue converted = Keywords.Thick;
+            BorderValue converted = Thick;
             Assert.Equal("thick", converted.ToString());
         }
 
@@ -30,21 +30,21 @@ namespace CsCss.Tests.Properties.Border
         [Fact]
         public void CanConvertFromLineStyleValue()
         {
-            BorderValue converted = Keywords.Dashed;
+            BorderValue converted = Dashed;
             Assert.Equal("dashed", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromNoneKeyword()
         {
-            BorderValue converted = Keywords.None;
+            BorderValue converted = None;
             Assert.Equal("none", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromColorValue()
         {
-            BorderValue converted = Keywords.Red;
+            BorderValue converted = Red;
             Assert.Equal("red", converted.ToString());
         }
 
@@ -58,28 +58,28 @@ namespace CsCss.Tests.Properties.Border
         [Fact]
         public void CanConvertFromWidthStyleTuple()
         {
-            BorderValue converted = (10.Px(), Keywords.Dashed);
+            BorderValue converted = (10.Px(), Dashed);
             Assert.Equal("10px dashed", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromWidthColorTuple()
         {
-            BorderValue converted = (10.Px(), Keywords.Red);
+            BorderValue converted = (10.Px(), Red);
             Assert.Equal("10px red", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromWidthStyleColorTuple()
         {
-            BorderValue converted = (10.Px(), Keywords.Dotted, Keywords.Red);
+            BorderValue converted = (10.Px(), Dotted, Red);
             Assert.Equal("10px dotted red", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromStyleColorTuple()
         {
-            BorderValue converted = (Keywords.Dotted, Keywords.Red);
+            BorderValue converted = (Dotted, Red);
             Assert.Equal("dotted red", converted.ToString());
         }
     }

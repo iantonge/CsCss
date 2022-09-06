@@ -8,21 +8,21 @@ namespace CsCss.Tests.Properties.BackgroundClip
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            BackgroundClipValue converted = Keywords.Initial;
+            BackgroundClipValue converted = Initial;
             Assert.Equal("initial", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromBoxKeyword()
         {
-            BackgroundClipValue converted = Keywords.ContentBox;
+            BackgroundClipValue converted = ContentBox;
             Assert.Equal("content-box", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromTextKeyword()
         {
-            BackgroundClipValue converted = Keywords.Text;
+            BackgroundClipValue converted = Text;
             Assert.Equal("text", converted.ToString());
         }
     }

@@ -10,14 +10,14 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         [Fact]
         public void CanConvertFromKeyword()
         {
-            BackgroundRepeatValue converted = Keywords.RepeatX;
+            BackgroundRepeatValue converted = RepeatX;
             Assert.Equal("repeat-x", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromKeywordTuple()
         {
-            BackgroundRepeatValue converted = (Keywords.Space, Keywords.NoRepeat);
+            BackgroundRepeatValue converted = (Space, NoRepeat);
             Assert.Equal("space no-repeat", converted.ToString());
         }
 
@@ -26,7 +26,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var exception = Assert.Throws<ArgumentException>(() =>
             {
-                BackgroundRepeatValue converted = (Keywords.RepeatX, Keywords.NoRepeat);
+                BackgroundRepeatValue converted = (RepeatX, NoRepeat);
             });
             Assert.Equal("RepeatX may only be used with the one-value syntax", exception.Message);
         }
@@ -36,7 +36,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var exception = Assert.Throws<ArgumentException>(() =>
             {
-                BackgroundRepeatValue converted = (Keywords.NoRepeat, Keywords.RepeatX);
+                BackgroundRepeatValue converted = (NoRepeat, RepeatX);
             });
             Assert.Equal("RepeatX may only be used with the one-value syntax", exception.Message);
         }
@@ -46,7 +46,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var exception = Assert.Throws<ArgumentException>(() =>
             {
-                BackgroundRepeatValue converted = (Keywords.RepeatY, Keywords.NoRepeat);
+                BackgroundRepeatValue converted = (RepeatY, NoRepeat);
             });
             Assert.Equal("RepeatY may only be used with the one-value syntax", exception.Message);
         }
@@ -56,7 +56,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var exception = Assert.Throws<ArgumentException>(() =>
             {
-                BackgroundRepeatValue converted = (Keywords.NoRepeat, Keywords.RepeatY);
+                BackgroundRepeatValue converted = (NoRepeat, RepeatY);
             });
             Assert.Equal("RepeatY may only be used with the one-value syntax", exception.Message);
         }

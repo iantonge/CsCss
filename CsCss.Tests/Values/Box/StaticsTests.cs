@@ -9,22 +9,22 @@ namespace CsCss.Tests.Values.Box
         [Fact]
         public void RendersBorderBoxKeyword()
         {
-            Assert.Equal("border-box", Keywords.BorderBox.ToString());
-            Assert.Equal(typeof(BoxKeyword), Keywords.BorderBox.GetType());
+            Assert.Equal("border-box", BorderBox.ToString());
+            Assert.Equal(typeof(BoxKeyword), BorderBox.GetType());
         }
 
         [Fact]
         public void RendersPaddingBoxKeyword()
         {
-            Assert.Equal("padding-box", Keywords.PaddingBox.ToString());
-            Assert.Equal(typeof(BoxKeyword), Keywords.PaddingBox.GetType());
+            Assert.Equal("padding-box", PaddingBox.ToString());
+            Assert.Equal(typeof(BoxKeyword), PaddingBox.GetType());
         }
 
         [Fact]
         public void RendersContentBoxKeyword()
         {
-            Assert.Equal("content-box", Keywords.ContentBox.ToString());
-            Assert.Equal(typeof(BoxKeyword), Keywords.ContentBox.GetType());
+            Assert.Equal("content-box", ContentBox.ToString());
+            Assert.Equal(typeof(BoxKeyword), ContentBox.GetType());
         }
 
         [Fact]

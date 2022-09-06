@@ -8,85 +8,85 @@ namespace CsCss.Tests.Values.Line
         [Fact]
         public void RendersThinKeyword()
         {
-            Assert.Equal("thin", Keywords.Thin.ToString());
-            Assert.Equal(typeof(LineWidthValue), Keywords.Thin.GetType());
+            Assert.Equal("thin", Thin.ToString());
+            Assert.Equal(typeof(LineWidthValue), Thin.GetType());
         }
 
         [Fact]
         public void RendersMediumKeyword()
         {
-            Assert.Equal("medium", Keywords.Medium.ToString());
-            Assert.Equal(typeof(LineWidthValue), Keywords.Medium.GetType());
+            Assert.Equal("medium", Medium.ToString());
+            Assert.Equal(typeof(LineWidthValue), Medium.GetType());
         }
 
         [Fact]
         public void RendersThickKeyword()
         {
-            Assert.Equal("thick", Keywords.Thick.ToString());
-            Assert.Equal(typeof(LineWidthValue), Keywords.Thick.GetType());
+            Assert.Equal("thick", Thick.ToString());
+            Assert.Equal(typeof(LineWidthValue), Thick.GetType());
         }
 
         [Fact]
         public void RendersHiddenKeyword()
         {
-            Assert.Equal("hidden", Keywords.Hidden.ToString());
-            Assert.Equal(typeof(LineStyleValue), Keywords.Hidden.GetType());
+            Assert.Equal("hidden", Hidden.ToString());
+            Assert.Equal(typeof(LineStyleValue), Hidden.GetType());
         }
 
         [Fact]
         public void RendersDottedKeyword()
         {
-            Assert.Equal("dotted", Keywords.Dotted.ToString());
-            Assert.Equal(typeof(LineStyleValue), Keywords.Dotted.GetType());
+            Assert.Equal("dotted", Dotted.ToString());
+            Assert.Equal(typeof(LineStyleValue), Dotted.GetType());
         }
 
         [Fact]
         public void RendersDashedKeyword()
         {
-            Assert.Equal("dashed", Keywords.Dashed.ToString());
-            Assert.Equal(typeof(LineStyleValue), Keywords.Dashed.GetType());
+            Assert.Equal("dashed", Dashed.ToString());
+            Assert.Equal(typeof(LineStyleValue), Dashed.GetType());
         }
 
         [Fact]
         public void RendersSolidKeyword()
         {
-            Assert.Equal("solid", Keywords.Solid.ToString());
-            Assert.Equal(typeof(LineStyleValue), Keywords.Solid.GetType());
+            Assert.Equal("solid", Solid.ToString());
+            Assert.Equal(typeof(LineStyleValue), Solid.GetType());
         }
 
         [Fact]
         public void RendersDoubleKeyword()
         {
-            Assert.Equal("double", Keywords.Double.ToString());
-            Assert.Equal(typeof(LineStyleValue), Keywords.Double.GetType());
+            Assert.Equal("double", Double.ToString());
+            Assert.Equal(typeof(LineStyleValue), Double.GetType());
         }
 
         [Fact]
         public void RendersGrooveKeyword()
         {
-            Assert.Equal("groove", Keywords.Groove.ToString());
-            Assert.Equal(typeof(LineStyleValue), Keywords.Groove.GetType());
+            Assert.Equal("groove", Groove.ToString());
+            Assert.Equal(typeof(LineStyleValue), Groove.GetType());
         }
 
         [Fact]
         public void RendersRidgeKeyword()
         {
-            Assert.Equal("ridge", Keywords.Ridge.ToString());
-            Assert.Equal(typeof(LineStyleValue), Keywords.Ridge.GetType());
+            Assert.Equal("ridge", Ridge.ToString());
+            Assert.Equal(typeof(LineStyleValue), Ridge.GetType());
         }
 
         [Fact]
         public void RendersInsetKeyword()
         {
-            Assert.Equal("inset", Keywords.Inset.ToString());
-            Assert.Equal(typeof(LineStyleValue), Keywords.Inset.GetType());
+            Assert.Equal("inset", Inset.ToString());
+            Assert.Equal(typeof(LineStyleValue), Inset.GetType());
         }
 
         [Fact]
         public void RendersOutsetKeyword()
         {
-            Assert.Equal("outset", Keywords.Outset.ToString());
-            Assert.Equal(typeof(LineStyleValue), Keywords.Outset.GetType());
+            Assert.Equal("outset", Outset.ToString());
+            Assert.Equal(typeof(LineStyleValue), Outset.GetType());
         }
     }
 }

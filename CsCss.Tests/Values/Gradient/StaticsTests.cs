@@ -9,29 +9,29 @@ namespace CsCss.Tests.Values.Gradient
         [Fact]
         public void RendersGradientDirections()
         {
-            Assert.Equal("to left top", Keywords.ToLeftTop.ToString());
-            Assert.Equal(typeof(LinearGradientDirection), Keywords.ToLeftTop.GetType());
+            Assert.Equal("to left top", ToLeftTop.ToString());
+            Assert.Equal(typeof(LinearGradientDirection), ToLeftTop.GetType());
 
-            Assert.Equal("to top", Keywords.ToTop.ToString());
-            Assert.Equal(typeof(LinearGradientDirection), Keywords.ToTop.GetType());
+            Assert.Equal("to top", ToTop.ToString());
+            Assert.Equal(typeof(LinearGradientDirection), ToTop.GetType());
 
-            Assert.Equal("to right top", Keywords.ToRightTop.ToString());
-            Assert.Equal(typeof(LinearGradientDirection), Keywords.ToRightTop.GetType());
+            Assert.Equal("to right top", ToRightTop.ToString());
+            Assert.Equal(typeof(LinearGradientDirection), ToRightTop.GetType());
 
-            Assert.Equal("to right", Keywords.ToRight.ToString());
-            Assert.Equal(typeof(LinearGradientDirection), Keywords.ToRight.GetType());
+            Assert.Equal("to right", ToRight.ToString());
+            Assert.Equal(typeof(LinearGradientDirection), ToRight.GetType());
 
-            Assert.Equal("to right bottom", Keywords.ToRightBottom.ToString());
-            Assert.Equal(typeof(LinearGradientDirection), Keywords.ToRightBottom.GetType());
+            Assert.Equal("to right bottom", ToRightBottom.ToString());
+            Assert.Equal(typeof(LinearGradientDirection), ToRightBottom.GetType());
 
-            Assert.Equal("to bottom", Keywords.ToBottom.ToString());
-            Assert.Equal(typeof(LinearGradientDirection), Keywords.ToBottom.GetType());
+            Assert.Equal("to bottom", ToBottom.ToString());
+            Assert.Equal(typeof(LinearGradientDirection), ToBottom.GetType());
 
-            Assert.Equal("to left bottom", Keywords.ToLeftBottom.ToString());
-            Assert.Equal(typeof(LinearGradientDirection), Keywords.ToLeftBottom.GetType());
+            Assert.Equal("to left bottom", ToLeftBottom.ToString());
+            Assert.Equal(typeof(LinearGradientDirection), ToLeftBottom.GetType());
 
-            Assert.Equal("to left", Keywords.ToLeft.ToString());
-            Assert.Equal(typeof(LinearGradientDirection), Keywords.ToLeft.GetType());
+            Assert.Equal("to left", ToLeft.ToString());
+            Assert.Equal(typeof(LinearGradientDirection), ToLeft.GetType());
         }
     }
 }

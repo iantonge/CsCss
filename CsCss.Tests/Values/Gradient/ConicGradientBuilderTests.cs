@@ -9,9 +9,9 @@ namespace CsCss.Tests.Values.Gradient
         public void CanBuildConicGradientWithColorStopLengths()
         {
             var gradient = Functions.BuildConicGradient()
-                .WithColorStop(Keywords.Red)
-                .WithColorStop(Keywords.Green, 15.Deg())
-                .WithColorStop(Keywords.Blue, 30.Deg(), 25.Percent())
+                .WithColorStop(Red)
+                .WithColorStop(Green, 15.Deg())
+                .WithColorStop(Blue, 30.Deg(), 25.Percent())
                 .Build();
 
             Assert.Equal("conic-gradient(red,green 15deg,blue 30deg 25%)", gradient.ToString());
@@ -23,9 +23,9 @@ namespace CsCss.Tests.Values.Gradient
         {
             var gradient = Functions.BuildConicGradient()
                 .FromAngle(10.Rad())
-                .WithColorStop(Keywords.Red)
-                .WithColorStop(Keywords.Green)
-                .WithColorStop(Keywords.Blue)
+                .WithColorStop(Red)
+                .WithColorStop(Green)
+                .WithColorStop(Blue)
                 .Build();
 
             Assert.Equal("conic-gradient(from 10rad,red,green,blue)", gradient.ToString());
@@ -36,10 +36,10 @@ namespace CsCss.Tests.Values.Gradient
         public void CanBuildConicGradientAtPosition()
         {
             var gradient = Functions.BuildConicGradient()
-                .AtPosition(Keywords.Top)
-                .WithColorStop(Keywords.Red)
-                .WithColorStop(Keywords.Green)
-                .WithColorStop(Keywords.Blue)
+                .AtPosition(Top)
+                .WithColorStop(Red)
+                .WithColorStop(Green)
+                .WithColorStop(Blue)
                 .Build();
 
             Assert.Equal("conic-gradient(at top,red,green,blue)", gradient.ToString());
@@ -51,10 +51,10 @@ namespace CsCss.Tests.Values.Gradient
         {
             var gradient = Functions.BuildConicGradient()
                 .FromAngle(90.Deg())
-                .AtPosition((Keywords.Top, Keywords.Left))
-                .WithColorStop(Keywords.Red)
-                .WithColorStop(Keywords.Green)
-                .WithColorStop(Keywords.Blue)
+                .AtPosition((Top, Left))
+                .WithColorStop(Red)
+                .WithColorStop(Green)
+                .WithColorStop(Blue)
                 .Build();
 
             Assert.Equal("conic-gradient(from 90deg at top left,red,green,blue)", gradient.ToString());

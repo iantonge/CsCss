@@ -8,8 +8,8 @@ namespace CsCss.Tests.Values.General
         [Fact]
         public void RendersFixedKeyword()
         {
-            Assert.Equal("fixed", Keywords.Fixed.ToString());
-            Assert.Equal(typeof(FixedKeyword), Keywords.Fixed.GetType());
+            Assert.Equal("fixed", Fixed.ToString());
+            Assert.Equal(typeof(FixedKeyword), Fixed.GetType());
         }
     }
 }

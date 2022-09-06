@@ -11,5 +11,6 @@ namespace CsCss
         public static readonly NoneKeyword None = NoneKeyword.None;
         public static readonly ScrollKeyword Scroll = ScrollKeyword.Scroll;
         public static readonly TextKeyword Text = TextKeyword.Text;
+        public static readonly NormalKeyword Normal = NormalKeyword.Normal;
     }
 }

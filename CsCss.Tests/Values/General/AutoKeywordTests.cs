@@ -10,8 +10,8 @@ namespace CsCss.Tests.Values.General
         [Fact]
         public void RendersAutoKeyword()
         {
-            Assert.Equal("auto", Keywords.Auto.ToString());
-            Assert.Equal(typeof(AutoKeyword), Keywords.Auto.GetType());
+            Assert.Equal("auto", Auto.ToString());
+            Assert.Equal(typeof(AutoKeyword), Auto.GetType());
         }
     }
 }

@@ -8,14 +8,14 @@ namespace CsCss.Tests.Properties.BorderColor
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            DirectionalBorderColorValue converted = Keywords.Initial;
+            DirectionalBorderColorValue converted = Initial;
             Assert.Equal("initial", converted.ToString());
         }
 
         [Fact]
         public void CanConvertFromColorValue()
         {
-            DirectionalBorderColorValue converted = Keywords.Red;
+            DirectionalBorderColorValue converted = Red;
             Assert.Equal("red", converted.ToString());
         }
 
