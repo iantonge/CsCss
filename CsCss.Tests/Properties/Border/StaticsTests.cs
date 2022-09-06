@@ -15,29 +15,29 @@ namespace CsCss.Tests.Properties.Border
         [Fact]
         public void RendersBorderTop()
         {
-            Assert.Equal("border-top", Keywords.BorderTop.ToString());
-            Assert.Equal(typeof(BorderProperty), Keywords.BorderTop.GetType());
+            Assert.Equal("border-top", BorderTop.ToString());
+            Assert.Equal(typeof(BorderProperty), BorderTop.GetType());
         }
 
         [Fact]
         public void RendersBorderBottom()
         {
-            Assert.Equal("border-bottom", Keywords.BorderBottom.ToString());
-            Assert.Equal(typeof(BorderProperty), Keywords.BorderBottom.GetType());
+            Assert.Equal("border-bottom", BorderBottom.ToString());
+            Assert.Equal(typeof(BorderProperty), BorderBottom.GetType());
         }
 
         [Fact]
         public void RendersBorderLeft()
         {
-            Assert.Equal("border-left", Keywords.BorderLeft.ToString());
-            Assert.Equal(typeof(BorderProperty), Keywords.BorderLeft.GetType());
+            Assert.Equal("border-left", BorderLeft.ToString());
+            Assert.Equal(typeof(BorderProperty), BorderLeft.GetType());
         }
 
         [Fact]
         public void RendersBorderRight()
         {
-            Assert.Equal("border-right", Keywords.BorderRight.ToString());
-            Assert.Equal(typeof(BorderProperty), Keywords.BorderRight.GetType());
+            Assert.Equal("border-right", BorderRight.ToString());
+            Assert.Equal(typeof(BorderProperty), BorderRight.GetType());
         }
     }
 }

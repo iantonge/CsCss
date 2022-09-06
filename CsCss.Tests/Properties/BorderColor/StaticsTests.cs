@@ -15,29 +15,29 @@ namespace CsCss.Tests.Properties.BorderColor
         [Fact]
         public void RendersBorderTop()
         {
-            Assert.Equal("border-top-color", Keywords.BorderTopColor.ToString());
-            Assert.Equal(typeof(DirectionalBorderColorProperty), Keywords.BorderTopColor.GetType());
+            Assert.Equal("border-top-color", BorderTopColor.ToString());
+            Assert.Equal(typeof(DirectionalBorderColorProperty), BorderTopColor.GetType());
         }
 
         [Fact]
         public void RendersBorderBottom()
         {
-            Assert.Equal("border-bottom-color", Keywords.BorderBottomColor.ToString());
-            Assert.Equal(typeof(DirectionalBorderColorProperty), Keywords.BorderBottomColor.GetType());
+            Assert.Equal("border-bottom-color", BorderBottomColor.ToString());
+            Assert.Equal(typeof(DirectionalBorderColorProperty), BorderBottomColor.GetType());
         }
 
         [Fact]
         public void RendersBorderLeft()
         {
-            Assert.Equal("border-left-color", Keywords.BorderLeftColor.ToString());
-            Assert.Equal(typeof(DirectionalBorderColorProperty), Keywords.BorderLeftColor.GetType());
+            Assert.Equal("border-left-color", BorderLeftColor.ToString());
+            Assert.Equal(typeof(DirectionalBorderColorProperty), BorderLeftColor.GetType());
         }
 
         [Fact]
         public void RendersBorderRight()
         {
-            Assert.Equal("border-right-color", Keywords.BorderRightColor.ToString());
-            Assert.Equal(typeof(DirectionalBorderColorProperty), Keywords.BorderRightColor.GetType());
+            Assert.Equal("border-right-color", BorderRightColor.ToString());
+            Assert.Equal(typeof(DirectionalBorderColorProperty), BorderRightColor.GetType());
         }
     }
 }

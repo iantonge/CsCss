@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.BorderColor
         {
             var declarations = new Declarations()
             {
-                [Keywords.BorderColor] = Keywords.Red
+                [Keywords.BorderColor] = Red
             };
 
             Assert.Equal("border-color: red", declarations.ToStrings().Single());
@@ -21,7 +21,7 @@ namespace CsCss.Tests.Properties.BorderColor
         {
             var declarations = new Declarations()
             {
-                [Keywords.BorderTopColor] = Keywords.Red
+                [BorderTopColor] = Red
             };
 
             Assert.Equal("border-top-color: red", declarations.ToStrings().Single());
@@ -32,7 +32,7 @@ namespace CsCss.Tests.Properties.BorderColor
         {
             var declarations = new Declarations()
             {
-                [Keywords.BorderBottomColor] = Keywords.Red
+                [BorderBottomColor] = Red
             };
 
             Assert.Equal("border-bottom-color: red", declarations.ToStrings().Single());
@@ -43,7 +43,7 @@ namespace CsCss.Tests.Properties.BorderColor
         {
             var declarations = new Declarations()
             {
-                [Keywords.BorderLeftColor] = Keywords.Red
+                [BorderLeftColor] = Red
             };
 
             Assert.Equal("border-left-color: red", declarations.ToStrings().Single());
@@ -54,7 +54,7 @@ namespace CsCss.Tests.Properties.BorderColor
         {
             var declarations = new Declarations()
             {
-                [Keywords.BorderRightColor] = Keywords.Red
+                [BorderRightColor] = Red
             };
 
             Assert.Equal("border-right-color: red", declarations.ToStrings().Single());

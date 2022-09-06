@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.BackgroundOrigin
         {
             var declarations = new Declarations()
             {
-                [Keywords.BackgroundOrigin] = Keywords.BorderBox
+                [Keywords.BackgroundOrigin] = BorderBox
             };
 
             Assert.Equal("background-origin: border-box", declarations.ToStrings().Single());

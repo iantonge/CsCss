@@ -8,14 +8,14 @@ namespace CsCss.Tests.Properties.Height
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            HeightValue heightValue = Keywords.Initial;
+            HeightValue heightValue = Initial;
             Assert.Equal("initial", heightValue.ToString());
         }
 
         [Fact]
         public void CanConvertFromAutoKeyword()
         {
-            HeightValue heightValue = Keywords.Auto;
+            HeightValue heightValue = Auto;
             Assert.Equal("auto", heightValue.ToString());
         }
 
@@ -29,14 +29,14 @@ namespace CsCss.Tests.Properties.Height
         [Fact]
         public void CanConvertFromMaxContentKeyword()
         {
-            HeightValue heightValue = Keywords.MaxContent;
+            HeightValue heightValue = MaxContent;
             Assert.Equal("max-content", heightValue.ToString());
         }
 
         [Fact]
         public void CanConvertFromMinContentKeyword()
         {
-            HeightValue heightValue = Keywords.MinContent;
+            HeightValue heightValue = MinContent;
             Assert.Equal("min-content", heightValue.ToString());
         }
 

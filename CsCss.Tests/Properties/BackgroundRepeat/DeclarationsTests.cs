@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var declarations = new Declarations()
             {
-                [Keywords.BackgroundRepeat] = Keywords.Repeat
+                [Keywords.BackgroundRepeat] = Repeat
             };
 
             Assert.Equal("background-repeat: repeat", declarations.ToStrings().Single());
@@ -21,7 +21,7 @@ namespace CsCss.Tests.Properties.BackgroundRepeat
         {
             var declarations = new Declarations()
             {
-                [Keywords.BackgroundRepeat] = (Keywords.Space, Keywords.NoRepeat)
+                [Keywords.BackgroundRepeat] = (Space, NoRepeat)
             };
 
             Assert.Equal("background-repeat: space no-repeat", declarations.ToStrings().Single());

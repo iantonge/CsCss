@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.AccentColor
         {
             var declarations = new Declarations()
             {
-                [Keywords.AccentColor] = Functions.Rgb(150, 50.Percent(), 255)
+                [Keywords.AccentColor] = Rgb(150, 50.Percent(), 255)
             };
 
             Assert.Equal("accent-color: rgb(150,50%,255)", declarations.ToStrings().Single());

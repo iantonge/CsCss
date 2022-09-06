@@ -8,15 +8,15 @@ namespace CsCss.Tests.Values.Sizing
         [Fact]
         public void RendersContainKeyword()
         {
-            Assert.Equal("contain", Keywords.Contain.ToString());
-            Assert.Equal(typeof(ContainKeyword), Keywords.Contain.GetType());
+            Assert.Equal("contain", Contain.ToString());
+            Assert.Equal(typeof(ContainKeyword), Contain.GetType());
         }
 
         [Fact]
         public void RendersCoverKeyword()
         {
-            Assert.Equal("cover", Keywords.Cover.ToString());
-            Assert.Equal(typeof(CoverKeyword), Keywords.Cover.GetType());
+            Assert.Equal("cover", Cover.ToString());
+            Assert.Equal(typeof(CoverKeyword), Cover.GetType());
         }
 
         [Fact]
@@ -29,15 +29,15 @@ namespace CsCss.Tests.Values.Sizing
         [Fact]
         public void RendersMaxContentKeyword()
         {
-            Assert.Equal("max-content", Keywords.MaxContent.ToString());
-            Assert.Equal(typeof(MaxContentKeyword), Keywords.MaxContent.GetType());
+            Assert.Equal("max-content", MaxContent.ToString());
+            Assert.Equal(typeof(MaxContentKeyword), MaxContent.GetType());
         }
 
         [Fact]
         public void RendersMinContentKeyword()
         {
-            Assert.Equal("min-content", Keywords.MinContent.ToString());
-            Assert.Equal(typeof(MinContentKeyword), Keywords.MinContent.GetType());
+            Assert.Equal("min-content", MinContent.ToString());
+            Assert.Equal(typeof(MinContentKeyword), MinContent.GetType());
         }
 
         [Fact]

@@ -10,7 +10,7 @@ namespace CsCss.Tests.Properties.BackgroundClip
         {
             var declarations = new Declarations()
             {
-                [Keywords.BackgroundClip] = Keywords.BorderBox
+                [Keywords.BackgroundClip] = BorderBox
             };
 
             Assert.Equal("background-clip: border-box", declarations.ToStrings().Single());

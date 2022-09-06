@@ -8,20 +8,20 @@ namespace CsCss.Tests.Properties.AccentColor
         [Fact]
         public void CanConvertFromGlobalKeyword()
         {
-            AccentColorValue converted = Keywords.Initial;
+            AccentColorValue converted = Initial;
             Assert.Equal("initial", converted.ToString());
         }
         [Fact]
         public void CanConvertFromAutoKeyword()
         {
-            AccentColorValue converted = Keywords.Auto;
+            AccentColorValue converted = Auto;
             Assert.Equal("auto", converted.ToString());
         }
 
         [Fact]
         public void CanConvertColor()
         {
-            AccentColorValue converted = Keywords.Red;
+            AccentColorValue converted = Red;
             Assert.Equal("red", converted.ToString());
         }
 
