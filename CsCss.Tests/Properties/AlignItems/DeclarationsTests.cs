@@ -6,7 +6,7 @@ namespace CsCss.Tests.Properties.AlignItems
     public class DeclarationsTests
     {
         [Fact]
-        public void CanSetAlignContent()
+        public void CanSetAlignItems()
         {
             var declarations = new Declarations()
             {
