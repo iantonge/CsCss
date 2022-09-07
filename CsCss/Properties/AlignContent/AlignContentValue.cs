@@ -33,6 +33,11 @@ namespace CsCss.Properties.AlignContent
             return new AlignContentValue(value.ToString());
         }
 
+        public static implicit operator AlignContentValue(StretchKeyword value)
+        {
+            return new AlignContentValue(value.ToString());
+        }
+
         public static implicit operator AlignContentValue(CenterPositionValue value)
         {
             return new AlignContentValue(value.ToString());

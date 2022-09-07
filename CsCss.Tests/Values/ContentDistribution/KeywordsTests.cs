@@ -27,12 +27,5 @@ namespace CsCss.Tests.Values.ContentDistribution
             Assert.Equal("space-evenly", SpaceEvenly.ToString());
             Assert.Equal(typeof(ContentDistributionKeyword), SpaceEvenly.GetType());
         }
-
-        [Fact]
-        public void RendersStretchKeyword()
-        {
-            Assert.Equal("stretch", Stretch.ToString());
-            Assert.Equal(typeof(ContentDistributionKeyword), Stretch.GetType());
-        }
     }
 }
