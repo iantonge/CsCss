@@ -1,9 +1,8 @@
-﻿namespace CsCss.Properties.Clear
-{
-    public sealed class ClearProperty : Property
-    {
-        private ClearProperty() : base("clear") { }
+﻿namespace CsCss.Properties.Clear;
 
-        internal static readonly ClearProperty Clear = new ClearProperty();
-    }
+public sealed class ClearProperty : Property
+{
+    private ClearProperty() : base("clear") { }
+
+    internal static readonly ClearProperty Clear = new();
 }

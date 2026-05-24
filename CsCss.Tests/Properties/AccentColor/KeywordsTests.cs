@@ -1,15 +1,14 @@
 ﻿using CsCss.Properties.AccentColor;
 using Xunit;
 
-namespace CsCss.Tests.Properties.AccentColor
+namespace CsCss.Tests.Properties.AccentColor;
+
+public class KeywordsTests
 {
-    public class KeywordsTests
+    [Fact]
+    public void RendersAccentColor()
     {
-        [Fact]
-        public void RendersAccentColor()
-        {
-            Assert.Equal("accent-color", Keywords.AccentColor.ToString());
-            Assert.Equal(typeof(AccentColorProperty), Keywords.AccentColor.GetType());
-        }
+        Assert.Equal("accent-color", Keywords.AccentColor.ToString());
+        Assert.Equal(typeof(AccentColorProperty), Keywords.AccentColor.GetType());
     }
 }

@@ -1,9 +1,8 @@
-﻿namespace CsCss.Values.Position
-{
-    public sealed class CenterPositionValue : PositionValue
-    {
-        private CenterPositionValue(string v) : base(v) { }
+﻿namespace CsCss.Values.Position;
 
-        internal static readonly CenterPositionValue Center = new CenterPositionValue("center");
-    }
+public sealed class CenterPositionValue : PositionValue
+{
+    private CenterPositionValue(string v) : base(v) { }
+
+    internal static readonly CenterPositionValue Center = new("center");
 }

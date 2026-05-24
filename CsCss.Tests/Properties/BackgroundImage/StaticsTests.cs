@@ -1,15 +1,14 @@
 ﻿using CsCss.Properties.BackgroundImage;
 using Xunit;
 
-namespace CsCss.Tests.Properties.BackgroundImage
+namespace CsCss.Tests.Properties.BackgroundImage;
+
+public class KeywordsTests
 {
-    public class KeywordsTests
+    [Fact]
+    public void RendersBackgroundImage()
     {
-        [Fact]
-        public void RendersBackgroundImage()
-        {
-            Assert.Equal("background-image", Keywords.BackgroundImage.ToString());
-            Assert.Equal(typeof(BackgroundImageProperty), Keywords.BackgroundImage.GetType());
-        }
+        Assert.Equal("background-image", Keywords.BackgroundImage.ToString());
+        Assert.Equal(typeof(BackgroundImageProperty), Keywords.BackgroundImage.GetType());
     }
 }

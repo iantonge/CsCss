@@ -2,25 +2,24 @@
 using CsCss.Values.Color;
 using CsCss.Values.Global;
 
-namespace CsCss.Properties.BackgroundColor
+namespace CsCss.Properties.BackgroundColor;
+
+public class BackgroundColorValue : Value
 {
-    public class BackgroundColorValue : Value
+    public BackgroundColorValue(string v) : base(v) { }
+
+    public static implicit operator BackgroundColorValue(GlobalKeyword value)
     {
-        public BackgroundColorValue(string v) : base(v) { }
+        return new BackgroundColorValue(value.ToString());
+    }
 
-        public static implicit operator BackgroundColorValue(GlobalKeyword value)
-        {
-            return new BackgroundColorValue(value.ToString());
-        }
+    public static implicit operator BackgroundColorValue(ColorValue value)
+    {
+        return new BackgroundColorValue(value.ToString());
+    }
 
-        public static implicit operator BackgroundColorValue(ColorValue value)
-        {
-            return new BackgroundColorValue(value.ToString());
-        }
-
-        public static implicit operator BackgroundColorValue(int value)
-        {
-            return new BackgroundColorValue("#" + value.ToString("X"));
-        }
+    public static implicit operator BackgroundColorValue(int value)
+    {
+        return new BackgroundColorValue("#" + value.ToString("X"));
     }
 }

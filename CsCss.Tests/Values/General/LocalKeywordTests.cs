@@ -1,15 +1,14 @@
 ﻿using CsCss.Values.General;
 using Xunit;
 
-namespace CsCss.Tests.Values.General
+namespace CsCss.Tests.Values.General;
+
+public class LocalKeywordTests
 {
-    public class LocalKeywordTests
+    [Fact]
+    public void RendersLocalKeyword()
     {
-        [Fact]
-        public void RendersLocalKeyword()
-        {
-            Assert.Equal("local", Local.ToString());
-            Assert.Equal(typeof(LocalKeyword), Local.GetType());
-        }
+        Assert.Equal("local", Local.ToString());
+        Assert.Equal(typeof(LocalKeyword), Local.GetType());
     }
 }

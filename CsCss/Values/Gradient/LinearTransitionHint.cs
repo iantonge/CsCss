@@ -1,9 +1,8 @@
 ﻿using CsCss.Values.LengthPercentage;
 
-namespace CsCss.Values.Gradient
+namespace CsCss.Values.Gradient;
+
+internal class LinearTransitionHint : LinearColorStopItem
 {
-    internal class LinearTransitionHint : LinearColorStopItem
-    {
-        public LinearTransitionHint(LengthPercentageValue value) : base(value.ToString()) { }
-    }
+    public LinearTransitionHint(LengthPercentageValue value) : base(value.ToString()) { }
 }

@@ -1,15 +1,14 @@
 ﻿using CsCss.Properties.BackgroundOrigin;
 using Xunit;
 
-namespace CsCss.Tests.Properties.BackgroundOrigin
+namespace CsCss.Tests.Properties.BackgroundOrigin;
+
+public class KeywordsTests
 {
-    public class KeywordsTests
+    [Fact]
+    public void RendersBackgroundOrigin()
     {
-        [Fact]
-        public void RendersBackgroundOrigin()
-        {
-            Assert.Equal("background-origin", Keywords.BackgroundOrigin.ToString());
-            Assert.Equal(typeof(BackgroundOriginProperty), Keywords.BackgroundOrigin.GetType());
-        }
+        Assert.Equal("background-origin", Keywords.BackgroundOrigin.ToString());
+        Assert.Equal(typeof(BackgroundOriginProperty), Keywords.BackgroundOrigin.GetType());
     }
 }

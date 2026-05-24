@@ -1,9 +1,8 @@
 ﻿using CsCss.Properties.AlignSelf;
 
-namespace CsCss
+namespace CsCss;
+
+public static partial class Keywords
 {
-    public static partial class Keywords
-    {
-        public static readonly AlignSelfProperty AlignSelf = AlignSelfProperty.AlignSelf;
-    }
+    public static readonly AlignSelfProperty AlignSelf = AlignSelfProperty.AlignSelf;
 }

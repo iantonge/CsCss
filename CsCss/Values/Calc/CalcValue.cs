@@ -1,9 +1,8 @@
-﻿namespace CsCss.Values.Calc
+﻿namespace CsCss.Values.Calc;
+
+public abstract class CalcValue<T> : Value where T : Value
 {
-    public abstract class CalcValue<T> : Value where T : Value
+    protected CalcValue(string v) : base(v)
     {
-        protected CalcValue(string v) : base(v)
-        {
-        }
     }
 }

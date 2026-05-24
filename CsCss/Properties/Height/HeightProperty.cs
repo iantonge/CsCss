@@ -1,9 +1,8 @@
-﻿namespace CsCss.Properties.Height
-{
-    public class HeightProperty : Property
-    {
-        private HeightProperty() : base("height") { }
+﻿namespace CsCss.Properties.Height;
 
-        internal static readonly HeightProperty Height = new HeightProperty();
-    }
+public class HeightProperty : Property
+{
+    private HeightProperty() : base("height") { }
+
+    internal static readonly HeightProperty Height = new();
 }

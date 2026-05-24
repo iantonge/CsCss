@@ -1,28 +1,28 @@
 ﻿using Xunit;
 
-namespace CsCss.Tests
+namespace CsCss.Tests;
+
+public class DocumentTests
 {
-    public class DocumentTests
+    [Fact]
+    public void RendersDocument()
     {
-        [Fact]
-        public void RendersDocument()
+        Document document = new ()
         {
-            var document = new Document()
+            [".my-class"] = new ()
             {
-                [".my-class"] = new Declarations()
-                {
-                    [Height] = 10.Px(),
-                    [Color] = Red
-                }
-            };
+                [Height] = 10.Px(),
+                [Color] = Red
+            }
+        };
 
-            var expected =
-@".my-class {
-    height: 10px;
-    color: red;
-}".Replace("\r\n", "\n");
+        var expected = """
+            .my-class {
+                height: 10px;
+                color: red;
+            }
+            """;
 
-            Assert.Equal(expected, document.ToString());
-        }
+        Assert.Equal(expected, document.ToString());
     }
 }

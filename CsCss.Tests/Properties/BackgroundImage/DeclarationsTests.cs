@@ -1,30 +1,29 @@
 ﻿using System.Linq;
 using Xunit;
 
-namespace CsCss.Tests.Properties.BackgroundImage
+namespace CsCss.Tests.Properties.BackgroundImage;
+
+public class DeclarationsTests
 {
-    public class DeclarationsTests
+    [Fact]
+    public void CanSetBackgroundImageFromKeyword()
     {
-        [Fact]
-        public void CanSetBackgroundImageFromKeyword()
+        var declarations = new Declarations()
         {
-            var declarations = new Declarations()
-            {
-                [Keywords.BackgroundRepeat] = Keywords.Repeat
-            };
+            [Keywords.BackgroundRepeat] = Keywords.Repeat
+        };
 
-            Assert.Equal("background-repeat: repeat", declarations.ToStrings().Single());
-        }
+        Assert.Equal("background-repeat: repeat", declarations.ToStrings().Single());
+    }
 
-        [Fact]
-        public void CanSetBackgroundRepeatFromTuple()
+    [Fact]
+    public void CanSetBackgroundRepeatFromTuple()
+    {
+        var declarations = new Declarations()
         {
-            var declarations = new Declarations()
-            {
-                [Keywords.BackgroundRepeat] = (Keywords.Space, Keywords.NoRepeat)
-            };
+            [Keywords.BackgroundRepeat] = (Keywords.Space, Keywords.NoRepeat)
+        };
 
-            Assert.Equal("background-repeat: space no-repeat", declarations.ToStrings().Single());
-        }
+        Assert.Equal("background-repeat: space no-repeat", declarations.ToStrings().Single());
     }
 }

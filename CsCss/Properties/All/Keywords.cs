@@ -1,9 +1,8 @@
 ﻿using CsCss.Properties.All;
 
-namespace CsCss
+namespace CsCss;
+
+public static partial class Keywords
 {
-    public static partial class Keywords
-    {
-        public static readonly AllProperty All = AllProperty.All;
-    }
+    public static readonly AllProperty All = AllProperty.All;
 }

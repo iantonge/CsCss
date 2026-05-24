@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.BackgroundSize;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public BackgroundSizeValue this[BackgroundSizeProperty property]
     {
-        public BackgroundSizeValue this[BackgroundSizeProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

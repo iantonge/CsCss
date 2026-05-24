@@ -1,46 +1,39 @@
 ﻿using System.Text;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed class Document
 {
-    public sealed class Document
+    internal readonly List<(Selector selector, Declarations declarations)> StyleRules;
+
+    public Document() => StyleRules = new();
+
+    public Document(Document original) => StyleRules = original.StyleRules.ToList();
+
+    public Declarations this[Selector ruleSelector]
     {
-        internal readonly List<(Selector selector, Declarations declarations)> StyleRules;
-
-        public Document()
+        init
         {
-            StyleRules = new List<(Selector, Declarations)>();
+            StyleRules.Add((ruleSelector, value));
         }
+    }
 
-        public Document(Document original)
+    public override string ToString()
+    {
+        StringBuilder sb = new();
+        foreach (var style in StyleRules)
         {
-            StyleRules = original.StyleRules.ToList();
-        }
-
-        public Declarations this[Selector ruleSelector]
-        {
-            init
+            sb.Append(style.selector);
+            sb.Append(" {");
+            foreach (var declaration in style.declarations.ToStrings())
             {
-                StyleRules.Add((ruleSelector, value));
+                sb.Append("\n    ");
+                sb.Append(declaration);
+                sb.Append(";");
             }
+            sb.Append("\n}\n");
         }
-
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            foreach (var style in StyleRules)
-            {
-                sb.Append(style.selector);
-                sb.Append(" {");
-                foreach (var declaration in style.declarations.ToStrings())
-                {
-                    sb.Append("\n    ");
-                    sb.Append(declaration);
-                    sb.Append(";");
-                }
-                sb.Append("\n}\n");
-            }
-            sb.Remove(sb.Length - 1, 1);
-            return sb.ToString();
-        }
+        sb.Remove(sb.Length - 1, 1);
+        return sb.ToString();
     }
 }

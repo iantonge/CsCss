@@ -1,9 +1,8 @@
-﻿namespace CsCss.Properties.Color
-{
-    public sealed class ColorProperty : Property
-    {
-        private ColorProperty() : base("color") { }
+﻿namespace CsCss.Properties.Color;
 
-        internal static readonly ColorProperty Color = new ColorProperty();
-    }
+public sealed class ColorProperty : Property
+{
+    private ColorProperty() : base("color") { }
+
+    internal static readonly ColorProperty Color = new();
 }

@@ -1,9 +1,8 @@
-﻿namespace CsCss.Properties.BorderColor
-{
-    public sealed class BorderColorProperty : Property
-    {
-        private BorderColorProperty() : base("border-color") { }
+﻿namespace CsCss.Properties.BorderColor;
 
-        internal static readonly BorderColorProperty BorderColor = new BorderColorProperty();
-    }
+public sealed class BorderColorProperty : Property
+{
+    private BorderColorProperty() : base("border-color") { }
+
+    internal static readonly BorderColorProperty BorderColor = new();
 }

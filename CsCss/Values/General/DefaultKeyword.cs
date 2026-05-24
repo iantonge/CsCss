@@ -1,9 +1,8 @@
-﻿namespace CsCss.Values.General
-{
-    public sealed class DefaultKeyword : Value
-    {
-        private DefaultKeyword() : base("default") { }
+﻿namespace CsCss.Values.General;
 
-        internal static readonly DefaultKeyword Default = new DefaultKeyword();
-    }
+public sealed class DefaultKeyword : Value
+{
+    private DefaultKeyword() : base("default") { }
+
+    internal static readonly DefaultKeyword Default = new();
 }

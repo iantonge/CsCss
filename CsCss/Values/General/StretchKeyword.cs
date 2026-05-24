@@ -1,9 +1,8 @@
-﻿namespace CsCss.Values.General
-{
-    public sealed class StretchKeyword : Value
-    {
-        private StretchKeyword() : base("stretch") { }
+﻿namespace CsCss.Values.General;
 
-        internal static readonly StretchKeyword Stretch = new StretchKeyword();
-    }
+public sealed class StretchKeyword : Value
+{
+    private StretchKeyword() : base("stretch") { }
+
+    internal static readonly StretchKeyword Stretch = new();
 }

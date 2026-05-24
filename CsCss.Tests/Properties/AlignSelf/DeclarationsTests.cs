@@ -1,19 +1,18 @@
 ﻿using System.Linq;
 using Xunit;
 
-namespace CsCss.Tests.Properties.AlignSelf
-{
-    public class DeclarationsTests
-    {
-        [Fact]
-        public void CanSetAlignSelf()
-        {
-            var declarations = new Declarations()
-            {
-                [Keywords.AlignSelf] = Normal
-            };
+namespace CsCss.Tests.Properties.AlignSelf;
 
-            Assert.Equal("align-self: normal", declarations.ToStrings().Single());
-        }
+public class DeclarationsTests
+{
+    [Fact]
+    public void CanSetAlignSelf()
+    {
+        var declarations = new Declarations()
+        {
+            [Keywords.AlignSelf] = Normal
+        };
+
+        Assert.Equal("align-self: normal", declarations.ToStrings().Single());
     }
 }

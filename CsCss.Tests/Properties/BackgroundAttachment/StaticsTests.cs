@@ -1,15 +1,14 @@
 ﻿using CsCss.Properties.BackgroundAttachment;
 using Xunit;
 
-namespace CsCss.Tests.Properties.BackgroundAttachment
+namespace CsCss.Tests.Properties.BackgroundAttachment;
+
+public class KeywordsTests
 {
-    public class KeywordsTests
+    [Fact]
+    public void RendersBackgroundAttachment()
     {
-        [Fact]
-        public void RendersBackgroundAttachment()
-        {
-            Assert.Equal("background-attachment", Keywords.BackgroundAttachment.ToString());
-            Assert.Equal(typeof(BackgroundAttachmentProperty), Keywords.BackgroundAttachment.GetType());
-        }
+        Assert.Equal("background-attachment", Keywords.BackgroundAttachment.ToString());
+        Assert.Equal(typeof(BackgroundAttachmentProperty), Keywords.BackgroundAttachment.GetType());
     }
 }

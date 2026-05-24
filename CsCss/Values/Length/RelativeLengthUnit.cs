@@ -1,20 +1,19 @@
-﻿namespace CsCss.Values.Length
+﻿namespace CsCss.Values.Length;
+
+public class RelativeLengthUnit : LengthUnit
 {
-    public class RelativeLengthUnit : LengthUnit
+    private RelativeLengthUnit(string u) : base(u)
     {
-        private RelativeLengthUnit(string u) : base(u)
-        {
 
-        }
-
-        internal static readonly RelativeLengthUnit Em = new RelativeLengthUnit("em");
-        internal static readonly RelativeLengthUnit Ex = new RelativeLengthUnit("ex");
-        internal static readonly RelativeLengthUnit Ch = new RelativeLengthUnit("ch");
-        internal static readonly RelativeLengthUnit Rem = new RelativeLengthUnit("rem");
-        internal static readonly RelativeLengthUnit Lh = new RelativeLengthUnit("lh");
-        internal static readonly RelativeLengthUnit Vw = new RelativeLengthUnit("vw");
-        internal static readonly RelativeLengthUnit Vh = new RelativeLengthUnit("vh");
-        internal static readonly RelativeLengthUnit VMin = new RelativeLengthUnit("vmin");
-        internal static readonly RelativeLengthUnit VMax = new RelativeLengthUnit("vmax");
     }
+
+    internal static readonly RelativeLengthUnit Em = new("em");
+    internal static readonly RelativeLengthUnit Ex = new("ex");
+    internal static readonly RelativeLengthUnit Ch = new("ch");
+    internal static readonly RelativeLengthUnit Rem = new("rem");
+    internal static readonly RelativeLengthUnit Lh = new("lh");
+    internal static readonly RelativeLengthUnit Vw = new("vw");
+    internal static readonly RelativeLengthUnit Vh = new("vh");
+    internal static readonly RelativeLengthUnit VMin = new("vmin");
+    internal static readonly RelativeLengthUnit VMax = new("vmax");
 }

@@ -1,9 +1,8 @@
-﻿namespace CsCss.Properties.BackgroundRepeat
-{
-    public sealed class BackgroundRepeatProperty : Property
-    {
-        private BackgroundRepeatProperty() : base("background-repeat") { }
+﻿namespace CsCss.Properties.BackgroundRepeat;
 
-        internal static readonly BackgroundRepeatProperty BackgroundRepeat = new BackgroundRepeatProperty();
-    }
+public sealed class BackgroundRepeatProperty : Property
+{
+    private BackgroundRepeatProperty() : base("background-repeat") { }
+
+    internal static readonly BackgroundRepeatProperty BackgroundRepeat = new();
 }

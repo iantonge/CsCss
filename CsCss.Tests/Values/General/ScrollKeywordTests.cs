@@ -1,15 +1,14 @@
 ﻿using CsCss.Values.General;
 using Xunit;
 
-namespace CsCss.Tests.Values.General
+namespace CsCss.Tests.Values.General;
+
+public class ScrollKeywordTests
 {
-    public class ScrollKeywordTests
+    [Fact]
+    public void RendersScrollKeyword()
     {
-        [Fact]
-        public void RendersScrollKeyword()
-        {
-            Assert.Equal("scroll", Scroll.ToString());
-            Assert.Equal(typeof(ScrollKeyword), Scroll.GetType());
-        }
+        Assert.Equal("scroll", Scroll.ToString());
+        Assert.Equal(typeof(ScrollKeyword), Scroll.GetType());
     }
 }

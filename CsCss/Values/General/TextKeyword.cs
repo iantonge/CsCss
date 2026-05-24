@@ -1,9 +1,8 @@
-﻿namespace CsCss.Values.General
-{
-    public sealed class TextKeyword : Value
-    {
-        private TextKeyword() : base("text") { }
+﻿namespace CsCss.Values.General;
 
-        internal static readonly TextKeyword Text = new TextKeyword();
-    }
+public sealed class TextKeyword : Value
+{
+    private TextKeyword() : base("text") { }
+
+    internal static readonly TextKeyword Text = new();
 }

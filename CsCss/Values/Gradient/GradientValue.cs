@@ -1,7 +1,6 @@
-﻿namespace CsCss.Values.Gradient
+﻿namespace CsCss.Values.Gradient;
+
+public sealed class GradientValue : Value
 {
-    public sealed class GradientValue : Value
-    {
-        internal GradientValue(string v) : base(v) { }
-    }
+    internal GradientValue(string v) : base(v) { }
 }

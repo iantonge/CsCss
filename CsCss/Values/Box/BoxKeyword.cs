@@ -1,11 +1,10 @@
-﻿namespace CsCss.Values.Box
-{
-    public sealed class BoxKeyword : Value
-    {
-        private BoxKeyword(string v) : base(v) { }
+﻿namespace CsCss.Values.Box;
 
-        internal static readonly BoxKeyword BorderBox = new BoxKeyword("border-box");
-        internal static readonly BoxKeyword PaddingBox = new BoxKeyword("padding-box");
-        internal static readonly BoxKeyword ContentBox = new BoxKeyword("content-box");
-    }
+public sealed class BoxKeyword : Value
+{
+    private BoxKeyword(string v) : base(v) { }
+
+    internal static readonly BoxKeyword BorderBox = new("border-box");
+    internal static readonly BoxKeyword PaddingBox = new("padding-box");
+    internal static readonly BoxKeyword ContentBox = new("content-box");
 }

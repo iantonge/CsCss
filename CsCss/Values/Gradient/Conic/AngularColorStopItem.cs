@@ -1,17 +1,10 @@
-﻿namespace CsCss.Values.Gradient.Conic
+﻿namespace CsCss.Values.Gradient.Conic;
+
+internal abstract class AngularColorStopItem
 {
-    internal abstract class AngularColorStopItem
-    {
-        private readonly string value;
+    private readonly string value;
 
-        protected AngularColorStopItem(string v)
-        {
-            value = v;
-        }
+    protected AngularColorStopItem(string v) => value = v;
 
-        public override string ToString()
-        {
-            return value;
-        }
-    }
+    public override string ToString() => value;
 }

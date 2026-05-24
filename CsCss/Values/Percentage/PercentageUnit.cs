@@ -1,11 +1,10 @@
-﻿namespace CsCss.Values.Percentage
-{
-    public class PercentageUnit : Unit
-    {
-        private PercentageUnit(string u) : base(u)
-        {
-        }
+﻿namespace CsCss.Values.Percentage;
 
-        internal static readonly PercentageUnit Percent = new PercentageUnit("%");
+public class PercentageUnit : Unit
+{
+    private PercentageUnit(string u) : base(u)
+    {
     }
+
+    internal static readonly PercentageUnit Percent = new("%");
 }

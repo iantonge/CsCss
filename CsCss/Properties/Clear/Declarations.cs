@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.Clear;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public ClearValue this[ClearProperty property]
     {
-        public ClearValue this[ClearProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

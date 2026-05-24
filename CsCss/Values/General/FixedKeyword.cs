@@ -1,9 +1,8 @@
-﻿namespace CsCss.Values.General
-{
-    public sealed class FixedKeyword : Value
-    {
-        private FixedKeyword() : base("fixed") {}
+﻿namespace CsCss.Values.General;
 
-        internal static readonly FixedKeyword Fixed = new FixedKeyword();
-    }
+public sealed class FixedKeyword : Value
+{
+    private FixedKeyword() : base("fixed") {}
+
+    internal static readonly FixedKeyword Fixed = new();
 }

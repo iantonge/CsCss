@@ -1,11 +1,10 @@
-﻿namespace CsCss.Values.Position
+﻿namespace CsCss.Values.Position;
+
+public sealed class VerticalPositionValue : PositionValue
 {
-    public sealed class VerticalPositionValue : PositionValue
-    {
-        private VerticalPositionValue(string v) : base(v) { }
+    private VerticalPositionValue(string v) : base(v) { }
 
-        internal static readonly VerticalPositionValue Top = new VerticalPositionValue("top");
+    internal static readonly VerticalPositionValue Top = new("top");
 
-        internal static readonly VerticalPositionValue Bottom = new VerticalPositionValue("bottom");
-    }
+    internal static readonly VerticalPositionValue Bottom = new("bottom");
 }

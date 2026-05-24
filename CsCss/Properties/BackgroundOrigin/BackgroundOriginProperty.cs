@@ -1,9 +1,8 @@
-﻿namespace CsCss.Properties.BackgroundOrigin
-{
-    public sealed class BackgroundOriginProperty : Property
-    {
-        private BackgroundOriginProperty() : base("background-origin") { }
+﻿namespace CsCss.Properties.BackgroundOrigin;
 
-        internal static readonly BackgroundOriginProperty BackgroundOrigin = new BackgroundOriginProperty();
-    }
+public sealed class BackgroundOriginProperty : Property
+{
+    private BackgroundOriginProperty() : base("background-origin") { }
+
+    internal static readonly BackgroundOriginProperty BackgroundOrigin = new();
 }

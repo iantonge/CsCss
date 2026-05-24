@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.Cursor;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public CursorValue this[CursorProperty property]
     {
-        public CursorValue this[CursorProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

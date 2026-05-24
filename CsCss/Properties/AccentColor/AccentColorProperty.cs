@@ -1,9 +1,8 @@
-﻿namespace CsCss.Properties.AccentColor
-{
-    public sealed class AccentColorProperty : Property
-    {
-        private AccentColorProperty() : base("accent-color") { }
+﻿namespace CsCss.Properties.AccentColor;
 
-        internal static readonly AccentColorProperty AccentColor = new AccentColorProperty();
-    }
+public sealed class AccentColorProperty : Property
+{
+    private AccentColorProperty() : base("accent-color") { }
+
+    internal static readonly AccentColorProperty AccentColor = new();
 }

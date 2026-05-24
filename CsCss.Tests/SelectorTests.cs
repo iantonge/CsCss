@@ -1,14 +1,13 @@
 ﻿using Xunit;
 
-namespace CsCss.Tests
+namespace CsCss.Tests;
+
+public class SelectorTests
 {
-    public class SelectorTests
+    [Fact]
+    public void CanConvertFromString()
     {
-        [Fact]
-        public void CanConvertFromString()
-        {
-            Selector selector = ".my-class";
-            Assert.Equal(".my-class", selector.ToString());
-        }
+        Selector selector = ".my-class";
+        Assert.Equal(".my-class", selector.ToString());
     }
 }

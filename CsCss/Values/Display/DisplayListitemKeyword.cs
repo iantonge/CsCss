@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CsCss.Values.Display
+namespace CsCss.Values.Display;
+
+public sealed class DisplayListitemKeyword : Value
 {
-    public sealed class DisplayListitemKeyword : Value
-    {
-        private DisplayListitemKeyword(string v) : base(v) { }
-    }
+    private DisplayListitemKeyword(string v) : base(v) { }
 }

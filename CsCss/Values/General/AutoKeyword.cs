@@ -1,9 +1,8 @@
-﻿namespace CsCss.Values.General
-{
-    public sealed class AutoKeyword : Value
-    {
-        private AutoKeyword() : base("auto") { }
+﻿namespace CsCss.Values.General;
 
-        internal static readonly AutoKeyword Auto = new AutoKeyword();
-    }
+public sealed class AutoKeyword : Value
+{
+    private AutoKeyword() : base("auto") { }
+
+    internal static readonly AutoKeyword Auto = new();
 }

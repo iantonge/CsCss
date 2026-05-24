@@ -1,19 +1,18 @@
 ﻿using System.Linq;
 using Xunit;
 
-namespace CsCss.Tests.Properties.BackgroundPosition
-{
-    public class DeclarationsTests
-    {
-        [Fact]
-        public void CanSetBackgroundColor()
-        {
-            var declarations = new Declarations()
-            {
-                [Keywords.BackgroundPosition] = 10.Px()
-            };
+namespace CsCss.Tests.Properties.BackgroundPosition;
 
-            Assert.Equal("background-position: 10px", declarations.ToStrings().Single());
-        }
+public class DeclarationsTests
+{
+    [Fact]
+    public void CanSetBackgroundColor()
+    {
+        var declarations = new Declarations()
+        {
+            [Keywords.BackgroundPosition] = 10.Px()
+        };
+
+        Assert.Equal("background-position: 10px", declarations.ToStrings().Single());
     }
 }

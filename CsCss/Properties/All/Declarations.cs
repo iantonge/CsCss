@@ -1,13 +1,12 @@
 ﻿using CsCss.Properties.All;
 using CsCss.Values.Global;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public GlobalKeyword this[AllProperty property]
     {
-        public GlobalKeyword this[AllProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

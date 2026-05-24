@@ -1,9 +1,8 @@
 ﻿using CsCss.Properties.AccentColor;
 
-namespace CsCss
+namespace CsCss;
+
+public static partial class Keywords
 {
-    public static partial class Keywords
-    {
-        public static readonly AccentColorProperty AccentColor = AccentColorProperty.AccentColor;
-    }
+    public static readonly AccentColorProperty AccentColor = AccentColorProperty.AccentColor;
 }

@@ -1,63 +1,62 @@
 ﻿using System.Linq;
 using Xunit;
 
-namespace CsCss.Tests.Properties.Border
+namespace CsCss.Tests.Properties.Border;
+
+public class DeclarationsTests
 {
-    public class DeclarationsTests
+    [Fact]
+    public void CanSetBorder()
     {
-        [Fact]
-        public void CanSetBorder()
+        var declarations = new Declarations()
         {
-            var declarations = new Declarations()
-            {
-                [Keywords.Border] = Red
-            };
+            [Keywords.Border] = Red
+        };
 
-            Assert.Equal("border: red", declarations.ToStrings().Single());
-        }
+        Assert.Equal("border: red", declarations.ToStrings().Single());
+    }
 
-        [Fact]
-        public void CanSetBorderTop()
+    [Fact]
+    public void CanSetBorderTop()
+    {
+        var declarations = new Declarations()
         {
-            var declarations = new Declarations()
-            {
-                [BorderTop] = Red
-            };
+            [BorderTop] = Red
+        };
 
-            Assert.Equal("border-top: red", declarations.ToStrings().Single());
-        }
+        Assert.Equal("border-top: red", declarations.ToStrings().Single());
+    }
 
-        [Fact]
-        public void CanSetBorderBottom()
+    [Fact]
+    public void CanSetBorderBottom()
+    {
+        var declarations = new Declarations()
         {
-            var declarations = new Declarations()
-            {
-                [BorderBottom] = Red
-            };
+            [BorderBottom] = Red
+        };
 
-            Assert.Equal("border-bottom: red", declarations.ToStrings().Single());
-        }
+        Assert.Equal("border-bottom: red", declarations.ToStrings().Single());
+    }
 
-        [Fact]
-        public void CanSetBorderLeft()
+    [Fact]
+    public void CanSetBorderLeft()
+    {
+        var declarations = new Declarations()
         {
-            var declarations = new Declarations()
-            {
-                [BorderLeft] = Red
-            };
+            [BorderLeft] = Red
+        };
 
-            Assert.Equal("border-left: red", declarations.ToStrings().Single());
-        }
+        Assert.Equal("border-left: red", declarations.ToStrings().Single());
+    }
 
-        [Fact]
-        public void CanSetBorderRight()
+    [Fact]
+    public void CanSetBorderRight()
+    {
+        var declarations = new Declarations()
         {
-            var declarations = new Declarations()
-            {
-                [BorderRight] = Red
-            };
+            [BorderRight] = Red
+        };
 
-            Assert.Equal("border-right: red", declarations.ToStrings().Single());
-        }
+        Assert.Equal("border-right: red", declarations.ToStrings().Single());
     }
 }

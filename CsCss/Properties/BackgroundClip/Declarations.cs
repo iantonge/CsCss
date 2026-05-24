@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.BackgroundClip;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public BackgroundClipValue this[BackgroundClipProperty property]
     {
-        public BackgroundClipValue this[BackgroundClipProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

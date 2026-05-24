@@ -1,15 +1,14 @@
 ﻿using CsCss.Properties.AlignSelf;
 using Xunit;
 
-namespace CsCss.Tests.Properties.AlignSelf
+namespace CsCss.Tests.Properties.AlignSelf;
+
+public class KeywordsTests
 {
-    public class KeywordsTests
+    [Fact]
+    public void RendersAlignContent()
     {
-        [Fact]
-        public void RendersAlignContent()
-        {
-            Assert.Equal("align-self", Keywords.AlignSelf.ToString());
-            Assert.Equal(typeof(AlignSelfProperty), Keywords.AlignSelf.GetType());
-        }
+        Assert.Equal("align-self", Keywords.AlignSelf.ToString());
+        Assert.Equal(typeof(AlignSelfProperty), Keywords.AlignSelf.GetType());
     }
 }

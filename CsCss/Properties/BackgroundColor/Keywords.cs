@@ -1,9 +1,8 @@
 ﻿using CsCss.Properties.BackgroundColor;
 
-namespace CsCss
+namespace CsCss;
+
+public static partial class Keywords
 {
-    public static partial class Keywords
-    {
-        public static readonly BackgroundColorProperty BackgroundColor = BackgroundColorProperty.BackgroundColor;
-    }
+    public static readonly BackgroundColorProperty BackgroundColor = BackgroundColorProperty.BackgroundColor;
 }

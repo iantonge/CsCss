@@ -1,19 +1,18 @@
 ﻿using System.Linq;
 using Xunit;
 
-namespace CsCss.Tests.Properties.BackgroundClip
-{
-    public class DeclarationsTests
-    {
-        [Fact]
-        public void CanSetBackgroundRepeatFromKeyword()
-        {
-            var declarations = new Declarations()
-            {
-                [Keywords.BackgroundClip] = BorderBox
-            };
+namespace CsCss.Tests.Properties.BackgroundClip;
 
-            Assert.Equal("background-clip: border-box", declarations.ToStrings().Single());
-        }
+public class DeclarationsTests
+{
+    [Fact]
+    public void CanSetBackgroundRepeatFromKeyword()
+    {
+        var declarations = new Declarations()
+        {
+            [Keywords.BackgroundClip] = BorderBox
+        };
+
+        Assert.Equal("background-clip: border-box", declarations.ToStrings().Single());
     }
 }

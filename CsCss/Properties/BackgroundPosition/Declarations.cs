@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.BackgroundPosition;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public BackgroundPositionValue this[BackgroundPositionProperty property]
     {
-        public BackgroundPositionValue this[BackgroundPositionProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

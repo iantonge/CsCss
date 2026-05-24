@@ -1,9 +1,8 @@
 ﻿using CsCss.Values.AnglePercentage;
 
-namespace CsCss.Values.Gradient.Conic
+namespace CsCss.Values.Gradient.Conic;
+
+internal class AngularTransitionHint : AngularColorStopItem
 {
-    internal class AngularTransitionHint : AngularColorStopItem
-    {
-        public AngularTransitionHint(AnglePercentageValue value) : base(value.ToString()) { }
-    }
+    public AngularTransitionHint(AnglePercentageValue value) : base(value.ToString()) { }
 }

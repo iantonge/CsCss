@@ -1,9 +1,8 @@
-﻿namespace CsCss.Properties.BackgroundPosition
-{
-    public sealed class BackgroundPositionProperty : Property
-    {
-        private BackgroundPositionProperty() : base("background-position") { }
+﻿namespace CsCss.Properties.BackgroundPosition;
 
-        internal static readonly BackgroundPositionProperty BackgroundPosition = new BackgroundPositionProperty();
-    }
+public sealed class BackgroundPositionProperty : Property
+{
+    private BackgroundPositionProperty() : base("background-position") { }
+
+    internal static readonly BackgroundPositionProperty BackgroundPosition = new();
 }

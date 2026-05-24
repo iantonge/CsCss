@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.Color;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public ColorValue this[ColorProperty property]
     {
-        public ColorValue this[ColorProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

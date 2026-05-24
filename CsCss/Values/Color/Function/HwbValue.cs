@@ -1,12 +1,11 @@
 ﻿using CsCss.Values.Percentage;
 
-namespace CsCss.Values.Color.Function
+namespace CsCss.Values.Color.Function;
+
+public sealed class HwbValue : ColorValue
 {
-    public sealed class HwbValue : ColorValue
+    internal HwbValue(HueValue hue, PercentageValue whiteness, PercentageValue blackness, AlphaValue? alpha)
+        : base($"hwb({hue} {whiteness} {blackness}{(alpha is null ? string.Empty : " / " + alpha)})")
     {
-        internal HwbValue(HueValue hue, PercentageValue whiteness, PercentageValue blackness, AlphaValue? alpha)
-            : base($"hwb({hue} {whiteness} {blackness}{(alpha is null ? string.Empty : " / " + alpha)})")
-        {
-        }
     }
 }

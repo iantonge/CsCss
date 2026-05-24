@@ -1,17 +1,10 @@
-﻿namespace CsCss.Values.Gradient
+﻿namespace CsCss.Values.Gradient;
+
+internal abstract class LinearColorStopItem
 {
-    internal abstract class LinearColorStopItem
-    {
-        private readonly string value;
+    private readonly string value;
 
-        protected LinearColorStopItem(string v)
-        {
-            value = v;
-        }
+    protected LinearColorStopItem(string v) => value = v;
 
-        public override string ToString()
-        {
-            return value;
-        }
-    }
+    public override string ToString() => value;
 }

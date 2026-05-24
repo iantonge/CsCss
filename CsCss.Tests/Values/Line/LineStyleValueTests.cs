@@ -1,15 +1,14 @@
 ﻿using CsCss.Values.Line;
 using Xunit;
 
-namespace CsCss.Tests.Values.Line
+namespace CsCss.Tests.Values.Line;
+
+public class LineStyleValueTests
 {
-    public class LineStyleValueTests
+    [Fact]
+    public void CanConvertFromNoneKeyword()
     {
-        [Fact]
-        public void CanConvertFromNoneKeyword()
-        {
-            LineStyleValue converted = None;
-            Assert.Equal("none", converted.ToString());
-        }
+        LineStyleValue converted = None;
+        Assert.Equal("none", converted.ToString());
     }
 }

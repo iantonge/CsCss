@@ -1,17 +1,16 @@
-﻿using CsCss.Values.General;
+﻿using System;
+using CsCss.Values.General;
 using CsCss.Values.Sizing;
-using System;
 using Xunit;
 
-namespace CsCss.Tests.Values.General
+namespace CsCss.Tests.Values.General;
+
+public class AutoKeywordTests
 {
-    public class AutoKeywordTests
+    [Fact]
+    public void RendersAutoKeyword()
     {
-        [Fact]
-        public void RendersAutoKeyword()
-        {
-            Assert.Equal("auto", Auto.ToString());
-            Assert.Equal(typeof(AutoKeyword), Auto.GetType());
-        }
+        Assert.Equal("auto", Auto.ToString());
+        Assert.Equal(typeof(AutoKeyword), Auto.GetType());
     }
 }

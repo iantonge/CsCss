@@ -1,17 +1,10 @@
-﻿namespace CsCss.Values
+﻿namespace CsCss.Values;
+
+public abstract class Value
 {
-    public abstract class Value
-    {
-        private readonly string value;
+    private readonly string value;
 
-        protected Value(string v)
-        {
-            value = v;
-        }
+    protected Value(string v) => value = v;
 
-        public override string ToString()
-        {
-            return value;
-        }
-    }
+    public override string ToString() => value;
 }

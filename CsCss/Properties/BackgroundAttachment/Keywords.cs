@@ -1,9 +1,8 @@
 ﻿using CsCss.Properties.BackgroundAttachment;
 
-namespace CsCss
+namespace CsCss;
+
+public static partial class Keywords
 {
-    public static partial class Keywords
-    {
-        public static readonly BackgroundAttachmentProperty BackgroundAttachment = BackgroundAttachmentProperty.BackgroundAttachment;
-    }
+    public static readonly BackgroundAttachmentProperty BackgroundAttachment = BackgroundAttachmentProperty.BackgroundAttachment;
 }

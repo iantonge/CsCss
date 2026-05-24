@@ -1,34 +1,27 @@
 ﻿using CsCss.Values.Percentage;
 
-namespace CsCss.Values.Color.Function
+namespace CsCss.Values.Color.Function;
+
+public sealed class RgbComponent
 {
-    public sealed class RgbComponent
+    private readonly string value;
+
+    private RgbComponent(string v) => value = v;
+
+    public override string ToString() => value;
+
+    public static implicit operator RgbComponent(int value)
     {
-        private readonly string value;
+        return new RgbComponent(value.ToString());
+    }
 
-        private RgbComponent(string v)
-        {
-            value = v;
-        }
+    public static implicit operator RgbComponent(double value)
+    {
+        return new RgbComponent(value.ToString());
+    }
 
-        public override string ToString()
-        {
-            return value;
-        }
-
-        public static implicit operator RgbComponent(int value)
-        {
-            return new RgbComponent(value.ToString());
-        }
-
-        public static implicit operator RgbComponent(double value)
-        {
-            return new RgbComponent(value.ToString());
-        }
-
-        public static implicit operator RgbComponent(PercentageValue value)
-        {
-            return new RgbComponent(value.ToString());
-        }
+    public static implicit operator RgbComponent(PercentageValue value)
+    {
+        return new RgbComponent(value.ToString());
     }
 }

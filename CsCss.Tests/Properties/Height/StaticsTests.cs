@@ -1,15 +1,14 @@
 ﻿using CsCss.Properties.Height;
 using Xunit;
 
-namespace CsCss.Tests.Properties.Height
+namespace CsCss.Tests.Properties.Height;
+
+public class KeywordsTests
 {
-    public class KeywordsTests
+    [Fact]
+    public void RendersBackgroundAttachment()
     {
-        [Fact]
-        public void RendersBackgroundAttachment()
-        {
-            Assert.Equal("height", Keywords.Height.ToString());
-            Assert.Equal(typeof(HeightProperty), Keywords.Height.GetType());
-        }
+        Assert.Equal("height", Keywords.Height.ToString());
+        Assert.Equal(typeof(HeightProperty), Keywords.Height.GetType());
     }
 }

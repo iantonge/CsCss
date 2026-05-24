@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.BackgroundRepeat;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public BackgroundRepeatValue this[BackgroundRepeatProperty property]
     {
-        public BackgroundRepeatValue this[BackgroundRepeatProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

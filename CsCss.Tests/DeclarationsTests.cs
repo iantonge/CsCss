@@ -1,26 +1,25 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 
-namespace CsCss.Tests
+namespace CsCss.Tests;
+
+public class DeclarationsTests
 {
-    public class DeclarationsTests
+    [Fact]
+    public void RendersDeclarations()
     {
-        [Fact]
-        public void RendersDeclarations()
+        var declarations = new Declarations()
         {
-            var declarations = new Declarations()
-            {
-                [Height] = 10.Px(),
-                [Color] = Red
-            };
+            [Height] = 10.Px(),
+            [Color] = Red
+        };
 
-            var expected = new List<string>()
-            {
-                "height: 10px",
-                "color: red"
-            };
+        List<string> expected = new()
+        {
+            "height: 10px",
+            "color: red"
+        };
 
-            Assert.Equal(expected, declarations.ToStrings());
-        }
+        Assert.Equal(expected, declarations.ToStrings());
     }
 }

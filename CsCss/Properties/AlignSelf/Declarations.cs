@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.AlignSelf;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public AlignSelfValue this[AlignSelfProperty property]
     {
-        public AlignSelfValue this[AlignSelfProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

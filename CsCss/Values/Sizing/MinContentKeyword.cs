@@ -1,9 +1,8 @@
-﻿namespace CsCss.Values.Sizing
-{
-    public sealed class MinContentKeyword : Value
-    {
-        private MinContentKeyword() : base("min-content") { }
+﻿namespace CsCss.Values.Sizing;
 
-        internal static readonly MinContentKeyword MinContent = new MinContentKeyword();
-    }
+public sealed class MinContentKeyword : Value
+{
+    private MinContentKeyword() : base("min-content") { }
+
+    internal static readonly MinContentKeyword MinContent = new();
 }

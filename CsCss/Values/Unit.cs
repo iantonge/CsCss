@@ -1,17 +1,10 @@
-﻿namespace CsCss.Values
+﻿namespace CsCss.Values;
+
+public abstract class Unit
 {
-    public abstract class Unit
-    {
-        private readonly string unit;
+    private readonly string unit;
 
-        protected Unit(string u)
-        {
-            unit = u;
-        }
+    protected Unit(string u) => unit = u;
 
-        public override string ToString()
-        {
-            return unit;
-        }
-    }
+    public override string ToString() => unit;
 }

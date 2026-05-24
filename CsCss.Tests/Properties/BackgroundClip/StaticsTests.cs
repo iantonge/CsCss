@@ -1,15 +1,14 @@
 ﻿using CsCss.Properties.BackgroundClip;
 using Xunit;
 
-namespace CsCss.Tests.Properties.BackgroundClip
+namespace CsCss.Tests.Properties.BackgroundClip;
+
+public class KeywordsTests
 {
-    public class KeywordsTests
+    [Fact]
+    public void RendersBackgroundRepeat()
     {
-        [Fact]
-        public void RendersBackgroundRepeat()
-        {
-            Assert.Equal("background-clip", Keywords.BackgroundClip.ToString());
-            Assert.Equal(typeof(BackgroundClipProperty), Keywords.BackgroundClip.GetType());
-        }
+        Assert.Equal("background-clip", Keywords.BackgroundClip.ToString());
+        Assert.Equal(typeof(BackgroundClipProperty), Keywords.BackgroundClip.GetType());
     }
 }

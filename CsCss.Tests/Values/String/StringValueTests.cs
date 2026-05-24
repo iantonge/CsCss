@@ -1,22 +1,21 @@
 ﻿using CsCss.Values.String;
 using Xunit;
 
-namespace CsCss.Tests.Values.Text.String
-{
-    public class StringValueTests
-    {
-        [Fact]
-        public void RendersStringValues()
-        {
-            var stringValue = new StringValue("test");
-            Assert.Equal("'test'", stringValue.ToString());
-        }
+namespace CsCss.Tests.Values.Text.String;
 
-        [Fact]
-        public void CanConvertFromString()
-        {
-            StringValue stringValue = "test";
-            Assert.Equal("'test'", stringValue.ToString());
-        }
+public class StringValueTests
+{
+    [Fact]
+    public void RendersStringValues()
+    {
+        var stringValue = new StringValue("test");
+        Assert.Equal("'test'", stringValue.ToString());
+    }
+
+    [Fact]
+    public void CanConvertFromString()
+    {
+        StringValue stringValue = "test";
+        Assert.Equal("'test'", stringValue.ToString());
     }
 }

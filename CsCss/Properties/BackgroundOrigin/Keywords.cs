@@ -1,9 +1,8 @@
 ﻿using CsCss.Properties.BackgroundOrigin;
 
-namespace CsCss
+namespace CsCss;
+
+public static partial class Keywords
 {
-    public static partial class Keywords
-    {
-        public static readonly BackgroundOriginProperty BackgroundOrigin = BackgroundOriginProperty.BackgroundOrigin;
-    }
+    public static readonly BackgroundOriginProperty BackgroundOrigin = BackgroundOriginProperty.BackgroundOrigin;
 }

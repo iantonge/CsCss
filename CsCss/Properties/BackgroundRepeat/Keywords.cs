@@ -1,9 +1,8 @@
 ﻿using CsCss.Properties.BackgroundRepeat;
 
-namespace CsCss
+namespace CsCss;
+
+public static partial class Keywords
 {
-    public static partial class Keywords
-    {
-        public static readonly BackgroundRepeatProperty BackgroundRepeat = BackgroundRepeatProperty.BackgroundRepeat;
-    }
+    public static readonly BackgroundRepeatProperty BackgroundRepeat = BackgroundRepeatProperty.BackgroundRepeat;
 }

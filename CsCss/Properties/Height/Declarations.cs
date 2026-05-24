@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.Height;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public HeightValue this[HeightProperty property]
     {
-        public HeightValue this[HeightProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

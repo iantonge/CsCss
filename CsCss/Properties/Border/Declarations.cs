@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.Border;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public BorderValue this[BorderProperty property]
     {
-        public BorderValue this[BorderProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

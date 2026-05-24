@@ -1,12 +1,11 @@
-﻿namespace CsCss.Values.Resolution
-{
-    public class ResolutionUnit : Unit
-    {
-        private ResolutionUnit(string u) : base(u) { }
+﻿namespace CsCss.Values.Resolution;
 
-        internal static readonly ResolutionUnit Dpi = new ResolutionUnit("dpi");
-        internal static readonly ResolutionUnit Dpcm = new ResolutionUnit("dpcm");
-        internal static readonly ResolutionUnit Dppx = new ResolutionUnit("dppx");
-        internal static readonly ResolutionUnit X = new ResolutionUnit("x");
-    }
+public class ResolutionUnit : Unit
+{
+    private ResolutionUnit(string u) : base(u) { }
+
+    internal static readonly ResolutionUnit Dpi = new("dpi");
+    internal static readonly ResolutionUnit Dpcm = new("dpcm");
+    internal static readonly ResolutionUnit Dppx = new("dppx");
+    internal static readonly ResolutionUnit X = new("x");
 }

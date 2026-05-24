@@ -1,9 +1,8 @@
-﻿namespace CsCss.Values.Length
+﻿namespace CsCss.Values.Length;
+
+public abstract class LengthUnit : Unit
 {
-    public abstract class LengthUnit : Unit
+    internal LengthUnit(string u) : base(u)
     {
-        internal LengthUnit(string u) : base(u)
-        {
-        }
     }
 }

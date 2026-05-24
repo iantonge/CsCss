@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.BackgroundAttachment;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public BackgroundAttachmentValue this[BackgroundAttachmentProperty property]
     {
-        public BackgroundAttachmentValue this[BackgroundAttachmentProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

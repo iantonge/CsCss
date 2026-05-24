@@ -1,12 +1,11 @@
 ﻿using CsCss.Properties.BackgroundOrigin;
 
-namespace CsCss
+namespace CsCss;
+
+public sealed partial class Declarations
 {
-    public sealed partial class Declarations
+    public BackgroundOriginValue this[BackgroundOriginProperty property]
     {
-        public BackgroundOriginValue this[BackgroundOriginProperty property]
-        {
-            set => declarations.Add((property, value));
-        }
+        set => declarations.Add((property, value));
     }
 }

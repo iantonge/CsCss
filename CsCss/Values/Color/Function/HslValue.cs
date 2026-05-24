@@ -1,12 +1,11 @@
 ﻿using CsCss.Values.Percentage;
 
-namespace CsCss.Values.Color.Function
+namespace CsCss.Values.Color.Function;
+
+public sealed class HslValue : ColorValue
 {
-    public sealed class HslValue : ColorValue
+    internal HslValue(HueValue hue, PercentageValue saturation, PercentageValue lightness)
+        : base($"hsl({hue},{saturation},{lightness})")
     {
-        internal HslValue(HueValue hue, PercentageValue saturation, PercentageValue lightness)
-            : base($"hsl({hue},{saturation},{lightness})")
-        {
-        }
     }
 }
