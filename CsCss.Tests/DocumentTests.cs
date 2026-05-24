@@ -5,6 +5,14 @@ namespace CsCss.Tests;
 public class DocumentTests
 {
     [Fact]
+    public void RendersEmptyDocument()
+    {
+        Document document = new();
+
+        Assert.Equal(string.Empty, document.ToString());
+    }
+
+    [Fact]
     public void RendersDocument()
     {
         Document document = new ()

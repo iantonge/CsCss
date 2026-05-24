@@ -33,6 +33,11 @@ public sealed class Document
             }
             sb.Append("\n}\n");
         }
+        if (sb.Length == 0)
+        {
+            return string.Empty;
+        }
+
         sb.Remove(sb.Length - 1, 1);
         return sb.ToString();
     }
