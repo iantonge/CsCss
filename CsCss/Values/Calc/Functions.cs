@@ -11,17 +11,17 @@ namespace CsCss;
 
 public static partial class Functions
 {
-    public static AngleValue Calc(CalcValue<AngleValue> calcValue) => new AngleValue($"calc({calcValue})");
+    public static AngleValue Calc(CalcValue<AngleValue> calcValue) => new($"calc({calcValue})");
 
-    public static LengthValue Calc(CalcValue<LengthValue> calcValue) => new LengthValue($"calc({calcValue})");
+    public static LengthValue Calc(CalcValue<LengthValue> calcValue) => new($"calc({calcValue})");
 
-    public static PercentageValue Calc(CalcValue<PercentageValue> calcValue) => new PercentageValue($"calc({calcValue})");
+    public static PercentageValue Calc(CalcValue<PercentageValue> calcValue) => new($"calc({calcValue})");
 
-    public static TimeValue Calc(CalcValue<TimeValue> calcValue) => new TimeValue($"calc({calcValue})");
+    public static TimeValue Calc(CalcValue<TimeValue> calcValue) => new($"calc({calcValue})");
 
-    public static LengthPercentageValue Calc(CalcValue<LengthPercentageValue> calcValue) => new LengthPercentageValue($"calc({calcValue})");
+    public static LengthPercentageValue Calc(CalcValue<LengthPercentageValue> calcValue) => new($"calc({calcValue})");
 
-    public static AnglePercentageValue Calc(CalcValue<AnglePercentageValue> calcValue) => new AnglePercentageValue($"calc({calcValue})");
+    public static AnglePercentageValue Calc(CalcValue<AnglePercentageValue> calcValue) => new($"calc({calcValue})");
 
-    public static TimePercentageValue Calc(CalcValue<TimePercentageValue> calcValue) => new TimePercentageValue($"calc({calcValue})");
+    public static TimePercentageValue Calc(CalcValue<TimePercentageValue> calcValue) => new($"calc({calcValue})");
 }

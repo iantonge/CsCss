@@ -10,12 +10,12 @@ public class TimePercentageValue : Value
 
     public static implicit operator TimePercentageValue(TimeValue value)
     {
-        return new TimePercentageValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator TimePercentageValue(PercentageValue value)
     {
-        return new TimePercentageValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static CalcSum<TimePercentageValue> operator +(TimePercentageValue a, TimePercentageValue b)

@@ -18,6 +18,6 @@ public sealed class LineStyleValue: Value
 
     public static implicit operator LineStyleValue(NoneKeyword value)
     {
-        return new LineStyleValue(value.ToString());
+        return new(value.ToString());
     }
 }

@@ -10,11 +10,11 @@ public class DirectionalBorderStyleValue : Value
 
     public static implicit operator DirectionalBorderStyleValue(GlobalKeyword value)
     {
-        return new DirectionalBorderStyleValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator DirectionalBorderStyleValue(LineStyleValue value)
     {
-        return new DirectionalBorderStyleValue(value.ToString());
+        return new(value.ToString());
     }
 }

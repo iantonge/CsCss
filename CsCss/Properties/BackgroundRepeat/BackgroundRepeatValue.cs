@@ -10,12 +10,12 @@ public class BackgroundRepeatValue : Value
 
     public static implicit operator BackgroundRepeatValue(GlobalKeyword value)
     {
-        return new BackgroundRepeatValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundRepeatValue(RepeatStyleKeyword value)
     {
-        return new BackgroundRepeatValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundRepeatValue((RepeatStyleKeyword horizontal, RepeatStyleKeyword vertical) value)
@@ -24,6 +24,6 @@ public class BackgroundRepeatValue : Value
             throw new ArgumentException("RepeatX may only be used with the one-value syntax");
         if (value.horizontal == RepeatStyleKeyword.RepeatY || value.vertical == RepeatStyleKeyword.RepeatY)
             throw new ArgumentException("RepeatY may only be used with the one-value syntax");
-        return new BackgroundRepeatValue($"{value.horizontal} {value.vertical}");
+        return new($"{value.horizontal} {value.vertical}");
     }
 }

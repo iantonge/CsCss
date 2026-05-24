@@ -10,11 +10,11 @@ public class BackgroundOriginValue : Value
 
     public static implicit operator BackgroundOriginValue(GlobalKeyword value)
     {
-        return new BackgroundOriginValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundOriginValue(BoxKeyword value)
     {
-        return new BackgroundOriginValue(value.ToString());
+        return new(value.ToString());
     }
 }

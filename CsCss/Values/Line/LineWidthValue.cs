@@ -12,6 +12,6 @@ public sealed class LineWidthValue : Value
 
     public static implicit operator LineWidthValue(LengthValue value)
     {
-        return new LineWidthValue(value.ToString());
+        return new(value.ToString());
     }
 }

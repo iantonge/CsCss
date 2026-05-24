@@ -11,31 +11,31 @@ public class BorderWidthValue : Value
 
     public static implicit operator BorderWidthValue(GlobalKeyword value)
     {
-        return new BorderWidthValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderWidthValue(LineWidthValue value)
     {
-        return new BorderWidthValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderWidthValue(LengthValue value)
     {
-        return new BorderWidthValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderWidthValue((LineWidthValue hValue, LineWidthValue vValue) value)
     {
-        return new BorderWidthValue($"{value.hValue} {value.vValue}");
+        return new($"{value.hValue} {value.vValue}");
     }
 
     public static implicit operator BorderWidthValue((LineWidthValue topValue, LineWidthValue vValue, LineWidthValue bottomValue) value)
     {
-        return new BorderWidthValue($"{value.topValue} {value.vValue} {value.bottomValue}");
+        return new($"{value.topValue} {value.vValue} {value.bottomValue}");
     }
 
     public static implicit operator BorderWidthValue((LineWidthValue topValue, LineWidthValue rightValue, LineWidthValue bottomValue, LineWidthValue leftValue) value)
     {
-        return new BorderWidthValue($"{value.topValue} {value.rightValue} {value.bottomValue} {value.leftValue}");
+        return new($"{value.topValue} {value.rightValue} {value.bottomValue} {value.leftValue}");
     }
 }

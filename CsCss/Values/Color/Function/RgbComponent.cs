@@ -12,16 +12,16 @@ public sealed class RgbComponent
 
     public static implicit operator RgbComponent(int value)
     {
-        return new RgbComponent(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator RgbComponent(double value)
     {
-        return new RgbComponent(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator RgbComponent(PercentageValue value)
     {
-        return new RgbComponent(value.ToString());
+        return new(value.ToString());
     }
 }

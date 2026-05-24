@@ -11,21 +11,21 @@ public class ClearValue : Value
 
     public static implicit operator ClearValue(GlobalKeyword value)
     {
-        return new ClearValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator ClearValue(NoneKeyword value)
     {
-        return new ClearValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator ClearValue(HorizontalPositionValue value)
     {
-        return new ClearValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator ClearValue(BothPositionValue value)
     {
-        return new ClearValue(value.ToString());
+        return new(value.ToString());
     }
 }

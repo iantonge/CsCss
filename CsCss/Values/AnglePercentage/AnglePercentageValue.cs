@@ -10,12 +10,12 @@ public class AnglePercentageValue : Value
 
     public static implicit operator AnglePercentageValue(AngleValue value)
     {
-        return new AnglePercentageValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AnglePercentageValue(PercentageValue value)
     {
-        return new AnglePercentageValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static CalcSum<AnglePercentageValue> operator +(AnglePercentageValue a, AnglePercentageValue b)

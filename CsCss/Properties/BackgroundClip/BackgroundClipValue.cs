@@ -12,16 +12,16 @@ public class BackgroundClipValue : Value
 
     public static implicit operator BackgroundClipValue(GlobalKeyword value)
     {
-        return new BackgroundClipValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundClipValue(BoxKeyword value)
     {
-        return new BackgroundClipValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundClipValue(TextKeyword value)
     {
-        return new BackgroundClipValue(value.ToString());
+        return new(value.ToString());
     }
 }

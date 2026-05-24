@@ -10,21 +10,21 @@ public sealed class BackgroundAttachmentValue : Value
 
     public static implicit operator BackgroundAttachmentValue(GlobalKeyword value)
     {
-        return new BackgroundAttachmentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundAttachmentValue(FixedKeyword value)
     {
-        return new BackgroundAttachmentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundAttachmentValue(LocalKeyword value)
     {
-        return new BackgroundAttachmentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundAttachmentValue(ScrollKeyword value)
     {
-        return new BackgroundAttachmentValue(value.ToString());
+        return new(value.ToString());
     }
 }

@@ -41,21 +41,21 @@ public sealed class CursorStyleKeyword : Value
 
     public static implicit operator CursorStyleKeyword(AutoKeyword value)
     {
-        return new CursorStyleKeyword(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator CursorStyleKeyword(NoneKeyword value)
     {
-        return new CursorStyleKeyword(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator CursorStyleKeyword(DefaultKeyword value)
     {
-        return new CursorStyleKeyword(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator CursorStyleKeyword(TextKeyword value)
     {
-        return new CursorStyleKeyword(value.ToString());
+        return new(value.ToString());
     }
 }

@@ -13,16 +13,16 @@ public class DirectionalBorderColorValue : Value
 
     public static implicit operator DirectionalBorderColorValue(GlobalKeyword value)
     {
-        return new DirectionalBorderColorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator DirectionalBorderColorValue(ColorValue value)
     {
-        return new DirectionalBorderColorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator DirectionalBorderColorValue(int value)
     {
-        return new DirectionalBorderColorValue($"#{value.ToString("X")}");
+        return new($"#{value.ToString("X")}");
     }
 }

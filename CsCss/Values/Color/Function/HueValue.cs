@@ -12,16 +12,16 @@ public sealed class HueValue
 
     public static implicit operator HueValue(int value)
     {
-        return new HueValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator HueValue(double value)
     {
-        return new HueValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator HueValue(AngleValue value)
     {
-        return new HueValue(value.ToString());
+        return new(value.ToString());
     }
 }

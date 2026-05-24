@@ -10,16 +10,16 @@ public class BackgroundColorValue : Value
 
     public static implicit operator BackgroundColorValue(GlobalKeyword value)
     {
-        return new BackgroundColorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundColorValue(ColorValue value)
     {
-        return new BackgroundColorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundColorValue(int value)
     {
-        return new BackgroundColorValue($"#{value.ToString("X")}");
+        return new($"#{value.ToString("X")}");
     }
 }

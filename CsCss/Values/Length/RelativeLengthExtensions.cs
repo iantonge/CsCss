@@ -4,39 +4,39 @@ namespace CsCss;
 
 public static class RelativeLengthExtensions
 {
-    public static LengthValue Em(this double input) => new LengthValue(input, RelativeLengthUnit.Em);
+    public static LengthValue Em(this double input) => new(input, RelativeLengthUnit.Em);
 
-    public static LengthValue Em(this int input) => new LengthValue(input, RelativeLengthUnit.Em);
+    public static LengthValue Em(this int input) => new(input, RelativeLengthUnit.Em);
 
-    public static LengthValue Ex(this double input) => new LengthValue(input, RelativeLengthUnit.Ex);
+    public static LengthValue Ex(this double input) => new(input, RelativeLengthUnit.Ex);
 
-    public static LengthValue Ex(this int input) => new LengthValue(input, RelativeLengthUnit.Ex);
+    public static LengthValue Ex(this int input) => new(input, RelativeLengthUnit.Ex);
 
-    public static LengthValue Ch(this double input) => new LengthValue(input, RelativeLengthUnit.Ch);
+    public static LengthValue Ch(this double input) => new(input, RelativeLengthUnit.Ch);
 
-    public static LengthValue Ch(this int input) => new LengthValue(input, RelativeLengthUnit.Ch);
+    public static LengthValue Ch(this int input) => new(input, RelativeLengthUnit.Ch);
 
-    public static LengthValue Rem(this double input) => new LengthValue(input, RelativeLengthUnit.Rem);
+    public static LengthValue Rem(this double input) => new(input, RelativeLengthUnit.Rem);
 
-    public static LengthValue Rem(this int input) => new LengthValue(input, RelativeLengthUnit.Rem);
+    public static LengthValue Rem(this int input) => new(input, RelativeLengthUnit.Rem);
 
-    public static LengthValue Lh(this double input) => new LengthValue(input, RelativeLengthUnit.Lh);
+    public static LengthValue Lh(this double input) => new(input, RelativeLengthUnit.Lh);
 
-    public static LengthValue Lh(this int input) => new LengthValue(input, RelativeLengthUnit.Lh);
+    public static LengthValue Lh(this int input) => new(input, RelativeLengthUnit.Lh);
 
-    public static LengthValue Vw(this double input) => new LengthValue(input, RelativeLengthUnit.Vw);
+    public static LengthValue Vw(this double input) => new(input, RelativeLengthUnit.Vw);
 
-    public static LengthValue Vw(this int input) => new LengthValue(input, RelativeLengthUnit.Vw);
+    public static LengthValue Vw(this int input) => new(input, RelativeLengthUnit.Vw);
 
-    public static LengthValue Vh(this double input) => new LengthValue(input, RelativeLengthUnit.Vh);
+    public static LengthValue Vh(this double input) => new(input, RelativeLengthUnit.Vh);
 
-    public static LengthValue Vh(this int input) => new LengthValue(input, RelativeLengthUnit.Vh);
+    public static LengthValue Vh(this int input) => new(input, RelativeLengthUnit.Vh);
 
-    public static LengthValue VMin(this double input) => new LengthValue(input, RelativeLengthUnit.VMin);
+    public static LengthValue VMin(this double input) => new(input, RelativeLengthUnit.VMin);
 
-    public static LengthValue VMin(this int input) => new LengthValue(input, RelativeLengthUnit.VMin);
+    public static LengthValue VMin(this int input) => new(input, RelativeLengthUnit.VMin);
 
-    public static LengthValue VMax(this double input) => new LengthValue(input, RelativeLengthUnit.VMax);
+    public static LengthValue VMax(this double input) => new(input, RelativeLengthUnit.VMax);
 
-    public static LengthValue VMax(this int input) => new LengthValue(input, RelativeLengthUnit.VMax);
+    public static LengthValue VMax(this int input) => new(input, RelativeLengthUnit.VMax);
 }

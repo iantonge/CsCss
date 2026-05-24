@@ -6,6 +6,6 @@ public class StringValue : Value
 
     public static implicit operator StringValue(string value)
     {
-        return new StringValue(value);
+        return new(value);
     }
 }

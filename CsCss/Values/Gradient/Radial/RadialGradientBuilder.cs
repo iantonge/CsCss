@@ -171,6 +171,6 @@ public sealed record RadialGradientBuilder : IRadialGradientBuilder
         }
         sb.Remove(sb.Length - 1, 1);
         sb.Append(")");
-        return new GradientValue(sb.ToString());
+        return new(sb.ToString());
     }
 }

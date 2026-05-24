@@ -12,16 +12,16 @@ public sealed class AlphaValue
 
     public static implicit operator AlphaValue(int value)
     {
-        return new AlphaValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlphaValue(double value)
     {
-        return new AlphaValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlphaValue(PercentageValue value)
     {
-        return new AlphaValue(value.ToString());
+        return new(value.ToString());
     }
 }

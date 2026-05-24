@@ -10,26 +10,26 @@ public class BorderStyleValue : Value
 
     public static implicit operator BorderStyleValue(GlobalKeyword value)
     {
-        return new BorderStyleValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderStyleValue(LineStyleValue value)
     {
-        return new BorderStyleValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderStyleValue((LineStyleValue hValue, LineStyleValue vValue) value)
     {
-        return new BorderStyleValue($"{value.hValue} {value.vValue}");
+        return new($"{value.hValue} {value.vValue}");
     }
 
     public static implicit operator BorderStyleValue((LineStyleValue topValue, LineStyleValue vValue, LineStyleValue bottomValue) value)
     {
-        return new BorderStyleValue($"{value.topValue} {value.vValue} {value.bottomValue}");
+        return new($"{value.topValue} {value.vValue} {value.bottomValue}");
     }
 
     public static implicit operator BorderStyleValue((LineStyleValue topValue, LineStyleValue rightValue, LineStyleValue bottomValue, LineStyleValue leftValue) value)
     {
-        return new BorderStyleValue($"{value.topValue} {value.rightValue} {value.bottomValue} {value.leftValue}");
+        return new($"{value.topValue} {value.rightValue} {value.bottomValue} {value.leftValue}");
     }
 }

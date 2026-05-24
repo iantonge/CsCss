@@ -9,16 +9,16 @@ public class ColorValue : Value
 
     public static implicit operator ColorValue(GlobalKeyword value)
     {
-        return new ColorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator ColorValue(Values.Color.ColorValue value)
     {
-        return new ColorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator ColorValue(int value)
     {
-        return new ColorValue($"#{value.ToString("X")}");
+        return new($"#{value.ToString("X")}");
     }
 }

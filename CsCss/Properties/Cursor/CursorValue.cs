@@ -13,41 +13,41 @@ public class CursorValue : Value
 
     public static implicit operator CursorValue(GlobalKeyword value)
     {
-        return new CursorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator CursorValue(AutoKeyword value)
     {
-        return new CursorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator CursorValue(NoneKeyword value)
     {
-        return new CursorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator CursorValue(DefaultKeyword value)
     {
-        return new CursorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator CursorValue(TextKeyword value)
     {
-        return new CursorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator CursorValue(CursorStyleKeyword value)
     {
-        return new CursorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator CursorValue((UrlValue url, CursorStyleKeyword keyword) value)
     {
-        return new CursorValue($"{value.url} {value.keyword}");
+        return new($"{value.url} {value.keyword}");
     }
 
     public static implicit operator CursorValue((UrlValue url, int x, int y, CursorStyleKeyword keyword) value)
     {
-        return new CursorValue($"{value.url} {value.x} {value.y} {value.keyword}");
+        return new($"{value.url} {value.x} {value.y} {value.keyword}");
     }
 }

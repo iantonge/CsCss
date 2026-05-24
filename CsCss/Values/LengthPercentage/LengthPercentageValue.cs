@@ -10,12 +10,12 @@ public class LengthPercentageValue : Value
 
     public static implicit operator LengthPercentageValue(LengthValue value)
     {
-        return new LengthPercentageValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator LengthPercentageValue(PercentageValue value)
     {
-        return new LengthPercentageValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static CalcSum<LengthPercentageValue> operator +(LengthPercentageValue a, LengthPercentageValue b)

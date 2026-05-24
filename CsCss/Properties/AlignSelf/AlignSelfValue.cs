@@ -16,56 +16,56 @@ public class AlignSelfValue : Value
 
     public static implicit operator AlignSelfValue(GlobalKeyword value)
     {
-        return new AlignSelfValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignSelfValue(AutoKeyword value)
     {
-        return new AlignSelfValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignSelfValue(NormalKeyword value)
     {
-        return new AlignSelfValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignSelfValue(StretchKeyword value)
     {
-        return new AlignSelfValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignSelfValue(BaselinePositionKeyword value)
     {
-        return new AlignSelfValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignSelfValue(CenterPositionValue value)
     {
-        return new AlignSelfValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignSelfValue(ContentPositionKeyword value)
     {
-        return new AlignSelfValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignSelfValue(SelfPositionKeyword value)
     {
-        return new AlignSelfValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignSelfValue((OverflowPositionKeyword overflowPosition, CenterPositionValue contentPosition) value)
     {
-        return new AlignSelfValue($"{value.overflowPosition} {value.contentPosition}");
+        return new($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignSelfValue((OverflowPositionKeyword overflowPosition, ContentPositionKeyword contentPosition) value)
     {
-        return new AlignSelfValue($"{value.overflowPosition} {value.contentPosition}");
+        return new($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignSelfValue((OverflowPositionKeyword overflowPosition, SelfPositionKeyword contentPosition) value)
     {
-        return new AlignSelfValue($"{value.overflowPosition} {value.contentPosition}");
+        return new($"{value.overflowPosition} {value.contentPosition}");
     }
 }

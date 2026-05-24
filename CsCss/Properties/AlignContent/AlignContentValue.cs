@@ -15,46 +15,46 @@ public class AlignContentValue : Value
 
     public static implicit operator AlignContentValue(NormalKeyword value)
     {
-        return new AlignContentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignContentValue(GlobalKeyword value)
     {
-        return new AlignContentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignContentValue(BaselinePositionKeyword value)
     {
-        return new AlignContentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignContentValue(ContentDistributionKeyword value)
     {
-        return new AlignContentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignContentValue(StretchKeyword value)
     {
-        return new AlignContentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignContentValue(CenterPositionValue value)
     {
-        return new AlignContentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignContentValue(ContentPositionKeyword value)
     {
-        return new AlignContentValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignContentValue((OverflowPositionKeyword overflowPosition, CenterPositionValue contentPosition) value)
     {
-        return new AlignContentValue($"{value.overflowPosition} {value.contentPosition}");
+        return new($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignContentValue((OverflowPositionKeyword overflowPosition, ContentPositionKeyword contentPosition) value)
     {
-        return new AlignContentValue($"{value.overflowPosition} {value.contentPosition}");
+        return new($"{value.overflowPosition} {value.contentPosition}");
     }
 }

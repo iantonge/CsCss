@@ -11,16 +11,16 @@ public class DirectionalBorderWidthValue : Value
 
     public static implicit operator DirectionalBorderWidthValue(GlobalKeyword value)
     {
-        return new DirectionalBorderWidthValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator DirectionalBorderWidthValue(LengthValue value)
     {
-        return new DirectionalBorderWidthValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator DirectionalBorderWidthValue(LineWidthValue value)
     {
-        return new DirectionalBorderWidthValue(value.ToString());
+        return new(value.ToString());
     }
 }

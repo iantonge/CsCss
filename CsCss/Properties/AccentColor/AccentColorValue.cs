@@ -10,21 +10,21 @@ public class AccentColorValue : Value
 
     public static implicit operator AccentColorValue(AutoKeyword value)
     {
-        return new AccentColorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AccentColorValue(GlobalKeyword value)
     {
-        return new AccentColorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AccentColorValue(Values.Color.ColorValue value)
     {
-        return new AccentColorValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AccentColorValue(int value)
     {
-        return new AccentColorValue($"#{value.ToString("X")}");
+        return new($"#{value.ToString("X")}");
     }
 }

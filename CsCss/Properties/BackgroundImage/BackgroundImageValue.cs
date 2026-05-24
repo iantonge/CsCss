@@ -12,21 +12,21 @@ public class BackgroundImageValue : Value
 
     public static implicit operator BackgroundImageValue(GlobalKeyword value)
     {
-        return new BackgroundImageValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundImageValue(NoneKeyword value)
     {
-        return new BackgroundImageValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundImageValue(UrlValue value)
     {
-        return new BackgroundImageValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BackgroundImageValue(GradientValue value)
     {
-        return new BackgroundImageValue(value.ToString());
+        return new(value.ToString());
     }
 }

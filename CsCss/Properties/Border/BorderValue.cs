@@ -13,56 +13,56 @@ public class BorderValue : Value
 
     public static implicit operator BorderValue(GlobalKeyword value)
     {
-        return new BorderValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderValue(LineWidthValue value)
     {
-        return new BorderValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderValue(LengthValue value)
     {
-        return new BorderValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderValue(LineStyleValue value)
     {
-        return new BorderValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderValue(NoneKeyword value)
     {
-        return new BorderValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderValue(ColorValue value)
     {
-        return new BorderValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator BorderValue(int value)
     {
-        return new BorderValue($"#{value.ToString("X")}");
+        return new($"#{value.ToString("X")}");
     }
 
     public static implicit operator BorderValue((LineWidthValue width, LineStyleValue style) value)
     {
-        return new BorderValue($"{value.width} {value.style}");
+        return new($"{value.width} {value.style}");
     }
 
     public static implicit operator BorderValue((LineWidthValue width, ColorValue color) value)
     {
-        return new BorderValue($"{value.width} {value.color}");
+        return new($"{value.width} {value.color}");
     }
 
     public static implicit operator BorderValue((LineWidthValue width, LineStyleValue style, ColorValue color) value)
     {
-        return new BorderValue($"{value.width} {value.style} {value.color}");
+        return new($"{value.width} {value.style} {value.color}");
     }
 
     public static implicit operator BorderValue((LineStyleValue style, ColorValue color) value)
     {
-        return new BorderValue($"{value.style} {value.color}");
+        return new($"{value.style} {value.color}");
     }
 }

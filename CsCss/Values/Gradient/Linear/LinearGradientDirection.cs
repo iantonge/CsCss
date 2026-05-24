@@ -12,7 +12,7 @@ public sealed class LinearGradientDirection
 
     public static implicit operator LinearGradientDirection(AngleValue value)
     {
-        return new LinearGradientDirection(value.ToString());
+        return new(value.ToString());
     }
 
     internal static readonly LinearGradientDirection ToLeftTop = new("to left top");

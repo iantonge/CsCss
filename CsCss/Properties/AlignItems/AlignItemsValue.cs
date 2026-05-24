@@ -16,51 +16,51 @@ public class AlignItemsValue : Value
 
     public static implicit operator AlignItemsValue(GlobalKeyword value)
     {
-        return new AlignItemsValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignItemsValue(NormalKeyword value)
     {
-        return new AlignItemsValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignItemsValue(StretchKeyword value)
     {
-        return new AlignItemsValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignItemsValue(BaselinePositionKeyword value)
     {
-        return new AlignItemsValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignItemsValue(CenterPositionValue value)
     {
-        return new AlignItemsValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignItemsValue(ContentPositionKeyword value)
     {
-        return new AlignItemsValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignItemsValue(SelfPositionKeyword value)
     {
-        return new AlignItemsValue(value.ToString());
+        return new(value.ToString());
     }
 
     public static implicit operator AlignItemsValue((OverflowPositionKeyword overflowPosition, CenterPositionValue contentPosition) value)
     {
-        return new AlignItemsValue($"{value.overflowPosition} {value.contentPosition}");
+        return new($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignItemsValue((OverflowPositionKeyword overflowPosition, ContentPositionKeyword contentPosition) value)
     {
-        return new AlignItemsValue($"{value.overflowPosition} {value.contentPosition}");
+        return new($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignItemsValue((OverflowPositionKeyword overflowPosition, SelfPositionKeyword contentPosition) value)
     {
-        return new AlignItemsValue($"{value.overflowPosition} {value.contentPosition}");
+        return new($"{value.overflowPosition} {value.contentPosition}");
     }
 }
