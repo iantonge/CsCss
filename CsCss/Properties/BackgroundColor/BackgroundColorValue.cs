@@ -20,6 +20,6 @@ public class BackgroundColorValue : Value
 
     public static implicit operator BackgroundColorValue(int value)
     {
-        return new BackgroundColorValue("#" + value.ToString("X"));
+        return new BackgroundColorValue($"#{value.ToString("X")}");
     }
 }

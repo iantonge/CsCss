@@ -25,6 +25,6 @@ public class AccentColorValue : Value
 
     public static implicit operator AccentColorValue(int value)
     {
-        return new AccentColorValue("#" + value.ToString("X"));
+        return new AccentColorValue($"#{value.ToString("X")}");
     }
 }

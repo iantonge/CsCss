@@ -43,26 +43,26 @@ public class BorderValue : Value
 
     public static implicit operator BorderValue(int value)
     {
-        return new BorderValue("#" + value.ToString("X"));
+        return new BorderValue($"#{value.ToString("X")}");
     }
 
     public static implicit operator BorderValue((LineWidthValue width, LineStyleValue style) value)
     {
-        return new BorderValue(value.width.ToString() + " " + value.style.ToString());
+        return new BorderValue($"{value.width} {value.style}");
     }
 
     public static implicit operator BorderValue((LineWidthValue width, ColorValue color) value)
     {
-        return new BorderValue(value.width.ToString() + " " + value.color.ToString());
+        return new BorderValue($"{value.width} {value.color}");
     }
 
     public static implicit operator BorderValue((LineWidthValue width, LineStyleValue style, ColorValue color) value)
     {
-        return new BorderValue(value.width.ToString() + " " + value.style.ToString() + " " + value.color.ToString());
+        return new BorderValue($"{value.width} {value.style} {value.color}");
     }
 
     public static implicit operator BorderValue((LineStyleValue style, ColorValue color) value)
     {
-        return new BorderValue(value.style.ToString() + " " + value.color.ToString());
+        return new BorderValue($"{value.style} {value.color}");
     }
 }

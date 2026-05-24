@@ -24,6 +24,6 @@ public class BackgroundRepeatValue : Value
             throw new ArgumentException("RepeatX may only be used with the one-value syntax");
         if (value.horizontal == RepeatStyleKeyword.RepeatY || value.vertical == RepeatStyleKeyword.RepeatY)
             throw new ArgumentException("RepeatY may only be used with the one-value syntax");
-        return new BackgroundRepeatValue(value.horizontal.ToString() + " " + value.vertical.ToString());
+        return new BackgroundRepeatValue($"{value.horizontal} {value.vertical}");
     }
 }

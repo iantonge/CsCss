@@ -34,12 +34,12 @@ public class BackgroundSizeValue : Value
 
     public static implicit operator BackgroundSizeValue((AutoKeyword width, AutoKeyword height) value)
     {
-        return new BackgroundSizeValue(value.width.ToString() + " " + value.height.ToString());
+        return new BackgroundSizeValue($"{value.width} {value.height}");
     }
 
     public static implicit operator BackgroundSizeValue((AutoKeyword width, LengthPercentageValue height) value)
     {
-        return new BackgroundSizeValue(value.width.ToString() + " " + value.height.ToString());
+        return new BackgroundSizeValue($"{value.width} {value.height}");
     }
 
     public static implicit operator BackgroundSizeValue(LengthValue value)
@@ -59,11 +59,11 @@ public class BackgroundSizeValue : Value
 
     public static implicit operator BackgroundSizeValue((LengthPercentageValue width, AutoKeyword height) value)
     {
-        return new BackgroundSizeValue(value.width.ToString() + " " + value.height.ToString());
+        return new BackgroundSizeValue($"{value.width} {value.height}");
     }
 
     public static implicit operator BackgroundSizeValue((LengthPercentageValue width, LengthPercentageValue height) value)
     {
-        return new BackgroundSizeValue(value.width.ToString() + " " + value.height.ToString());
+        return new BackgroundSizeValue($"{value.width} {value.height}");
     }
 }

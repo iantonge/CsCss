@@ -51,16 +51,16 @@ public class AlignItemsValue : Value
 
     public static implicit operator AlignItemsValue((OverflowPositionKeyword overflowPosition, CenterPositionValue contentPosition) value)
     {
-        return new AlignItemsValue(value.overflowPosition.ToString() + " " + value.contentPosition.ToString());
+        return new AlignItemsValue($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignItemsValue((OverflowPositionKeyword overflowPosition, ContentPositionKeyword contentPosition) value)
     {
-        return new AlignItemsValue(value.overflowPosition.ToString() + " " + value.contentPosition.ToString());
+        return new AlignItemsValue($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignItemsValue((OverflowPositionKeyword overflowPosition, SelfPositionKeyword contentPosition) value)
     {
-        return new AlignItemsValue(value.overflowPosition.ToString() + " " + value.contentPosition.ToString());
+        return new AlignItemsValue($"{value.overflowPosition} {value.contentPosition}");
     }
 }

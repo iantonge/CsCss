@@ -19,6 +19,6 @@ public class ColorValue : Value
 
     public static implicit operator ColorValue(int value)
     {
-        return new ColorValue("#" + value.ToString("X"));
+        return new ColorValue($"#{value.ToString("X")}");
     }
 }

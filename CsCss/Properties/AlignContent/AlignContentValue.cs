@@ -50,11 +50,11 @@ public class AlignContentValue : Value
 
     public static implicit operator AlignContentValue((OverflowPositionKeyword overflowPosition, CenterPositionValue contentPosition) value)
     {
-        return new AlignContentValue(value.overflowPosition.ToString() + " " + value.contentPosition.ToString());
+        return new AlignContentValue($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignContentValue((OverflowPositionKeyword overflowPosition, ContentPositionKeyword contentPosition) value)
     {
-        return new AlignContentValue(value.overflowPosition.ToString() + " " + value.contentPosition.ToString());
+        return new AlignContentValue($"{value.overflowPosition} {value.contentPosition}");
     }
 }

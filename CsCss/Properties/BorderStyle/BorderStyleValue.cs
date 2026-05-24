@@ -20,16 +20,16 @@ public class BorderStyleValue : Value
 
     public static implicit operator BorderStyleValue((LineStyleValue hValue, LineStyleValue vValue) value)
     {
-        return new BorderStyleValue(value.hValue.ToString() + " " + value.vValue.ToString());
+        return new BorderStyleValue($"{value.hValue} {value.vValue}");
     }
 
     public static implicit operator BorderStyleValue((LineStyleValue topValue, LineStyleValue vValue, LineStyleValue bottomValue) value)
     {
-        return new BorderStyleValue(value.topValue.ToString() + " " + value.vValue.ToString() + " " + value.bottomValue.ToString());
+        return new BorderStyleValue($"{value.topValue} {value.vValue} {value.bottomValue}");
     }
 
     public static implicit operator BorderStyleValue((LineStyleValue topValue, LineStyleValue rightValue, LineStyleValue bottomValue, LineStyleValue leftValue) value)
     {
-        return new BorderStyleValue(value.topValue.ToString() + " " + value.rightValue.ToString() + " " + value.bottomValue.ToString() + " " + value.leftValue.ToString());
+        return new BorderStyleValue($"{value.topValue} {value.rightValue} {value.bottomValue} {value.leftValue}");
     }
 }

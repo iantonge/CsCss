@@ -90,8 +90,8 @@ public sealed record ConicGradientBuilder : IConicGradientBuilder
         sb.Append(function);
         sb.Append("(");
         var gradientConfig = string.Join(" ", new string?[] {
-            from is null ? null : "from " + from.ToString(),
-            position is null ? null : "at " + position.ToString()
+            from is null ? null : $"from {from}",
+            position is null ? null : $"at {position}"
         }.Where(x => x is not null));
         if (!string.IsNullOrEmpty(gradientConfig))
         {

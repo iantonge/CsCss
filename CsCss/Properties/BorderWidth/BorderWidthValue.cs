@@ -26,16 +26,16 @@ public class BorderWidthValue : Value
 
     public static implicit operator BorderWidthValue((LineWidthValue hValue, LineWidthValue vValue) value)
     {
-        return new BorderWidthValue(value.hValue.ToString() + " " + value.vValue.ToString());
+        return new BorderWidthValue($"{value.hValue} {value.vValue}");
     }
 
     public static implicit operator BorderWidthValue((LineWidthValue topValue, LineWidthValue vValue, LineWidthValue bottomValue) value)
     {
-        return new BorderWidthValue(value.topValue.ToString() + " " + value.vValue.ToString() + " " + value.bottomValue.ToString());
+        return new BorderWidthValue($"{value.topValue} {value.vValue} {value.bottomValue}");
     }
 
     public static implicit operator BorderWidthValue((LineWidthValue topValue, LineWidthValue rightValue, LineWidthValue bottomValue, LineWidthValue leftValue) value)
     {
-        return new BorderWidthValue(value.topValue.ToString() + " " + value.rightValue.ToString() + " " + value.bottomValue.ToString() + " " + value.leftValue.ToString());
+        return new BorderWidthValue($"{value.topValue} {value.rightValue} {value.bottomValue} {value.leftValue}");
     }
 }

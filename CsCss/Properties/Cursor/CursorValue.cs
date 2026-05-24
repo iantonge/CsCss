@@ -43,11 +43,11 @@ public class CursorValue : Value
 
     public static implicit operator CursorValue((UrlValue url, CursorStyleKeyword keyword) value)
     {
-        return new CursorValue(value.url.ToString() + " " + value.keyword.ToString());
+        return new CursorValue($"{value.url} {value.keyword}");
     }
 
     public static implicit operator CursorValue((UrlValue url, int x, int y, CursorStyleKeyword keyword) value)
     {
-        return new CursorValue(value.url.ToString() + " " + value.x + " " + value.y + " " + value.keyword.ToString());
+        return new CursorValue($"{value.url} {value.x} {value.y} {value.keyword}");
     }
 }

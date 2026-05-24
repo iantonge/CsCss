@@ -23,6 +23,6 @@ public class DirectionalBorderColorValue : Value
 
     public static implicit operator DirectionalBorderColorValue(int value)
     {
-        return new DirectionalBorderColorValue("#" + value.ToString("X"));
+        return new DirectionalBorderColorValue($"#{value.ToString("X")}");
     }
 }

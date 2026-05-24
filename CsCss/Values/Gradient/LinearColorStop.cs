@@ -8,8 +8,8 @@ internal sealed class LinearColorStop : LinearColorStopItem
     internal LinearColorStop(ColorValue color) : base(color.ToString()) { }
 
     internal LinearColorStop(ColorValue color, LengthPercentageValue from)
-        : base(color.ToString() + " " + from.ToString()) { }
+        : base($"{color} {from}") { }
 
     internal LinearColorStop(ColorValue color, LengthPercentageValue from, LengthPercentageValue to)
-        : base(color.ToString() + " " + from.ToString() + " " + to.ToString()) { }
+        : base($"{color} {from} {to}") { }
 }

@@ -56,16 +56,16 @@ public class AlignSelfValue : Value
 
     public static implicit operator AlignSelfValue((OverflowPositionKeyword overflowPosition, CenterPositionValue contentPosition) value)
     {
-        return new AlignSelfValue(value.overflowPosition.ToString() + " " + value.contentPosition.ToString());
+        return new AlignSelfValue($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignSelfValue((OverflowPositionKeyword overflowPosition, ContentPositionKeyword contentPosition) value)
     {
-        return new AlignSelfValue(value.overflowPosition.ToString() + " " + value.contentPosition.ToString());
+        return new AlignSelfValue($"{value.overflowPosition} {value.contentPosition}");
     }
 
     public static implicit operator AlignSelfValue((OverflowPositionKeyword overflowPosition, SelfPositionKeyword contentPosition) value)
     {
-        return new AlignSelfValue(value.overflowPosition.ToString() + " " + value.contentPosition.ToString());
+        return new AlignSelfValue($"{value.overflowPosition} {value.contentPosition}");
     }
 }

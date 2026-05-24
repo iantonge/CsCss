@@ -158,7 +158,7 @@ public sealed record RadialGradientBuilder : IRadialGradientBuilder
             radius?.ToString(),
             horizontalRadius?.ToString(),
             verticalRadius?.ToString(),
-            position is null ? null : "at " + position.ToString()
+            position is null ? null : $"at {position}"
         }.Where(x => x is not null));
         if (!string.IsNullOrEmpty(gradientConfig))
         {

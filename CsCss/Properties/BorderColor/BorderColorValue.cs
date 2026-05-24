@@ -23,21 +23,21 @@ public class BorderColorValue : Value
 
     public static implicit operator BorderColorValue(int value)
     {
-        return new BorderColorValue("#" + value.ToString("X"));
+        return new BorderColorValue($"#{value.ToString("X")}");
     }
 
     public static implicit operator BorderColorValue((ColorValue hValue, ColorValue vValue) value)
     {
-        return new BorderColorValue(value.hValue.ToString() + " " + value.vValue.ToString());
+        return new BorderColorValue($"{value.hValue} {value.vValue}");
     }
 
     public static implicit operator BorderColorValue((ColorValue topValue, ColorValue vValue, ColorValue bottomValue) value)
     {
-        return new BorderColorValue(value.topValue.ToString() + " " + value.vValue.ToString() + " " + value.bottomValue.ToString());
+        return new BorderColorValue($"{value.topValue} {value.vValue} {value.bottomValue}");
     }
 
     public static implicit operator BorderColorValue((ColorValue topValue, ColorValue rightValue, ColorValue bottomValue, ColorValue leftValue) value)
     {
-        return new BorderColorValue(value.topValue.ToString() + " " + value.rightValue.ToString() + " " + value.bottomValue.ToString() + " " + value.leftValue.ToString());
+        return new BorderColorValue($"{value.topValue} {value.rightValue} {value.bottomValue} {value.leftValue}");
     }
 }
