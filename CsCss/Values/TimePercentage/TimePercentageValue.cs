@@ -19,50 +19,50 @@ public class TimePercentageValue : Value
     }
 
     public static CalcSum<TimePercentageValue> operator +(TimePercentageValue a, TimePercentageValue b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<TimePercentageValue> operator +(TimePercentageValue a, CalcSum<TimePercentageValue> b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<TimePercentageValue> operator +(TimePercentageValue a, CalcProduct<TimePercentageValue> b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<TimePercentageValue> operator +(CalcSum<TimePercentageValue> a, TimePercentageValue b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<TimePercentageValue> operator +(CalcProduct<TimePercentageValue> a, TimePercentageValue b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<TimePercentageValue> operator -(TimePercentageValue a, TimePercentageValue b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<TimePercentageValue> operator -(TimePercentageValue a, CalcSum<TimePercentageValue> b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<TimePercentageValue> operator -(TimePercentageValue a, CalcProduct<TimePercentageValue> b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<TimePercentageValue> operator -(CalcSum<TimePercentageValue> a, TimePercentageValue b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<TimePercentageValue> operator -(CalcProduct<TimePercentageValue> a, TimePercentageValue b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcProduct<TimePercentageValue> operator *(TimePercentageValue a, int b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<TimePercentageValue> operator *(TimePercentageValue a, double b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<TimePercentageValue> operator *(int a, TimePercentageValue b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<TimePercentageValue> operator *(double a, TimePercentageValue b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<TimePercentageValue> operator /(TimePercentageValue a, int b)
-        => new(a.ToString() + " / " + b.ToString());
+        => new($"{a} / {b}");
 
     public static CalcProduct<TimePercentageValue> operator /(TimePercentageValue a, double b)
-        => new(a.ToString() + " / " + b.ToString());
+        => new($"{a} / {b}");
 }

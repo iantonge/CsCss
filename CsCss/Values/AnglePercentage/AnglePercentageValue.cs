@@ -19,50 +19,50 @@ public class AnglePercentageValue : Value
     }
 
     public static CalcSum<AnglePercentageValue> operator +(AnglePercentageValue a, AnglePercentageValue b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<AnglePercentageValue> operator +(AnglePercentageValue a, CalcSum<AnglePercentageValue> b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<AnglePercentageValue> operator +(AnglePercentageValue a, CalcProduct<AnglePercentageValue> b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<AnglePercentageValue> operator +(CalcSum<AnglePercentageValue> a, AnglePercentageValue b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<AnglePercentageValue> operator +(CalcProduct<AnglePercentageValue> a, AnglePercentageValue b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<AnglePercentageValue> operator -(AnglePercentageValue a, AnglePercentageValue b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<AnglePercentageValue> operator -(AnglePercentageValue a, CalcSum<AnglePercentageValue> b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<AnglePercentageValue> operator -(AnglePercentageValue a, CalcProduct<AnglePercentageValue> b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<AnglePercentageValue> operator -(CalcSum<AnglePercentageValue> a, AnglePercentageValue b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<AnglePercentageValue> operator -(CalcProduct<AnglePercentageValue> a, AnglePercentageValue b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcProduct<AnglePercentageValue> operator *(AnglePercentageValue a, int b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<AnglePercentageValue> operator *(AnglePercentageValue a, double b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<AnglePercentageValue> operator *(int a, AnglePercentageValue b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<AnglePercentageValue> operator *(double a, AnglePercentageValue b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<AnglePercentageValue> operator /(AnglePercentageValue a, int b)
-        => new(a.ToString() + " / " + b.ToString());
+        => new($"{a} / {b}");
 
     public static CalcProduct<AnglePercentageValue> operator /(AnglePercentageValue a, double b)
-        => new(a.ToString() + " / " + b.ToString());
+        => new($"{a} / {b}");
 }

@@ -19,50 +19,50 @@ public class LengthPercentageValue : Value
     }
 
     public static CalcSum<LengthPercentageValue> operator +(LengthPercentageValue a, LengthPercentageValue b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<LengthPercentageValue> operator +(LengthPercentageValue a, CalcSum<LengthPercentageValue> b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<LengthPercentageValue> operator +(LengthPercentageValue a, CalcProduct<LengthPercentageValue> b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<LengthPercentageValue> operator +(CalcSum<LengthPercentageValue> a, LengthPercentageValue b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<LengthPercentageValue> operator +(CalcProduct<LengthPercentageValue> a, LengthPercentageValue b)
-        => new(a.ToString() + " + " + b.ToString());
+        => new($"{a} + {b}");
 
     public static CalcSum<LengthPercentageValue> operator -(LengthPercentageValue a, LengthPercentageValue b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<LengthPercentageValue> operator -(LengthPercentageValue a, CalcSum<LengthPercentageValue> b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<LengthPercentageValue> operator -(LengthPercentageValue a, CalcProduct<LengthPercentageValue> b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<LengthPercentageValue> operator -(CalcSum<LengthPercentageValue> a, LengthPercentageValue b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcSum<LengthPercentageValue> operator -(CalcProduct<LengthPercentageValue> a, LengthPercentageValue b)
-        => new(a.ToString() + " - " + b.ToString());
+        => new($"{a} - {b}");
 
     public static CalcProduct<LengthPercentageValue> operator *(LengthPercentageValue a, int b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<LengthPercentageValue> operator *(LengthPercentageValue a, double b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<LengthPercentageValue> operator *(int a, LengthPercentageValue b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<LengthPercentageValue> operator *(double a, LengthPercentageValue b)
-        => new(a.ToString() + " * " + b.ToString());
+        => new($"{a} * {b}");
 
     public static CalcProduct<LengthPercentageValue> operator /(LengthPercentageValue a, int b)
-        => new(a.ToString() + " / " + b.ToString());
+        => new($"{a} / {b}");
 
     public static CalcProduct<LengthPercentageValue> operator /(LengthPercentageValue a, double b)
-        => new(a.ToString() + " / " + b.ToString());
+        => new($"{a} / {b}");
 }
