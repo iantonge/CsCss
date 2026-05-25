@@ -10,9 +10,19 @@ namespace CsCss.Values.Percentage;
 
 public sealed class PercentageValue : Value
 {
+    internal double? Number { get; }
+
     internal PercentageValue(string v) : base(v) { }
-    internal PercentageValue(int number, PercentageUnit unit) : base($"{number}{unit}") { }
-    internal PercentageValue(double number, PercentageUnit unit) : base($"{number}{unit}") { }
+
+    internal PercentageValue(int number, PercentageUnit unit) : base($"{number}{unit}")
+    {
+        Number = number;
+    }
+
+    internal PercentageValue(double number, PercentageUnit unit) : base($"{number}{unit}")
+    {
+        Number = number;
+    }
 
     public static CalcSum<PercentageValue> operator +(PercentageValue a, PercentageValue b)
         => new($"{a} + {b}");

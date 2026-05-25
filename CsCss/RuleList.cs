@@ -2,7 +2,7 @@ using System.Text;
 
 namespace CsCss;
 
-public class RuleList
+public partial class RuleList
 {
     internal readonly List<CssRule> Rules;
 
