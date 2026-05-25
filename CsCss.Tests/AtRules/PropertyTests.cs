@@ -26,7 +26,7 @@ public class PropertyTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 
     [Fact]
@@ -57,7 +57,7 @@ public class PropertyTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 
     [Theory]

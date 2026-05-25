@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.All] = Unset
         };
 
-        Assert.Equal("all: unset", declarations.ToStrings().Single());
+        Assert.Equal(".test{all:unset;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

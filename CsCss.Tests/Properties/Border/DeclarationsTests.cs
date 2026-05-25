@@ -13,7 +13,7 @@ public class DeclarationsTests
             [Keywords.Border] = Red
         };
 
-        Assert.Equal("border: red", declarations.ToStrings().Single());
+        Assert.Equal(".test{border:red;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 
     [Fact]
@@ -24,7 +24,7 @@ public class DeclarationsTests
             [BorderTop] = Red
         };
 
-        Assert.Equal("border-top: red", declarations.ToStrings().Single());
+        Assert.Equal(".test{border-top:red;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 
     [Fact]
@@ -35,7 +35,7 @@ public class DeclarationsTests
             [BorderBottom] = Red
         };
 
-        Assert.Equal("border-bottom: red", declarations.ToStrings().Single());
+        Assert.Equal(".test{border-bottom:red;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 
     [Fact]
@@ -46,7 +46,7 @@ public class DeclarationsTests
             [BorderLeft] = Red
         };
 
-        Assert.Equal("border-left: red", declarations.ToStrings().Single());
+        Assert.Equal(".test{border-left:red;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 
     [Fact]
@@ -57,6 +57,6 @@ public class DeclarationsTests
             [BorderRight] = Red
         };
 
-        Assert.Equal("border-right: red", declarations.ToStrings().Single());
+        Assert.Equal(".test{border-right:red;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

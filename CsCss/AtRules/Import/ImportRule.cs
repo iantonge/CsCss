@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace CsCss.AtRules.Import;
 
 internal sealed class ImportRule : CssRule
@@ -13,11 +11,11 @@ internal sealed class ImportRule : CssRule
 
     internal override bool IsImportRule => true;
 
-    internal override void AppendTo(StringBuilder sb, int indentLevel)
+    internal override void WriteTo(CssWriter writer, int indentLevel)
     {
-        sb.Append(Indent(indentLevel));
-        sb.Append("@import ");
-        sb.Append(import);
-        sb.Append(';');
+        writer.WriteIndent(indentLevel);
+        writer.Write("@import ");
+        writer.Write(import.ToString());
+        writer.Write(';');
     }
 }

@@ -27,7 +27,7 @@ public class MediaTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 
     [Fact]
@@ -61,7 +61,7 @@ public class MediaTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 
     [Fact]
@@ -122,7 +122,7 @@ public class MediaTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 
     [Fact]

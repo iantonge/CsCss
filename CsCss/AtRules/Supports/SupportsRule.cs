@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace CsCss.AtRules.Supports;
 
 internal sealed class SupportsRule : CssRule
@@ -13,15 +11,20 @@ internal sealed class SupportsRule : CssRule
         this.rules = rules;
     }
 
-    internal override void AppendTo(StringBuilder sb, int indentLevel)
+    internal override void WriteTo(CssWriter writer, int indentLevel)
     {
-        sb.Append(Indent(indentLevel));
-        sb.Append("@supports ");
-        sb.Append(condition);
-        sb.Append(" {");
-        rules.AppendTo(sb, indentLevel + 1);
-        sb.Append('\n');
-        sb.Append(Indent(indentLevel));
-        sb.Append('}');
+        writer.WriteIndent(indentLevel);
+        writer.Write("@supports ");
+        writer.Write(condition.ToString());
+        writer.WriteSpace();
+        writer.Write('{');
+        if (rules.Rules.Count > 0)
+        {
+            writer.WriteLine();
+            rules.WriteTo(writer, indentLevel + 1);
+        }
+        writer.WriteLine();
+        writer.WriteIndent(indentLevel);
+        writer.Write('}');
     }
 }

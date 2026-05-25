@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.BackgroundPosition] = 10.Px()
         };
 
-        Assert.Equal("background-position: 10px", declarations.ToStrings().Single());
+        Assert.Equal(".test{background-position:10px;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

@@ -47,11 +47,5 @@ public sealed class FontFaceDescriptors
         }
     }
 
-    internal IEnumerable<string> ToStrings()
-    {
-        foreach (var descriptor in descriptors)
-        {
-            yield return $"{descriptor.descriptor}: {descriptor.value}";
-        }
-    }
+    internal IReadOnlyList<(Descriptor descriptor, Value value)> Items => descriptors;
 }

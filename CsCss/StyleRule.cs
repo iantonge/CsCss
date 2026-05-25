@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace CsCss;
 
 internal sealed class StyleRule : CssRule
@@ -13,20 +11,24 @@ internal sealed class StyleRule : CssRule
         this.declarations = declarations;
     }
 
-    internal override void AppendTo(StringBuilder sb, int indentLevel)
+    internal override void WriteTo(CssWriter writer, int indentLevel)
     {
-        sb.Append(Indent(indentLevel));
-        sb.Append(selector);
-        sb.Append(" {");
-        foreach (var declaration in declarations.ToStrings())
+        writer.WriteIndent(indentLevel);
+        writer.Write(selector.ToString());
+        writer.WriteSpace();
+        writer.Write('{');
+        foreach (var declaration in declarations.Items)
         {
-            sb.Append('\n');
-            sb.Append(Indent(indentLevel + 1));
-            sb.Append(declaration);
-            sb.Append(';');
+            writer.WriteLine();
+            writer.WriteIndent(indentLevel + 1);
+            writer.Write(declaration.property.ToString());
+            writer.Write(':');
+            writer.WriteSpace();
+            writer.Write(declaration.value.ToString());
+            writer.Write(';');
         }
-        sb.Append('\n');
-        sb.Append(Indent(indentLevel));
-        sb.Append('}');
+        writer.WriteLine();
+        writer.WriteIndent(indentLevel);
+        writer.Write('}');
     }
 }

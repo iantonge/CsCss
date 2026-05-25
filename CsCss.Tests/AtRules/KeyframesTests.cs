@@ -41,7 +41,7 @@ public class KeyframesTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 
     [Fact]
@@ -80,7 +80,7 @@ public class KeyframesTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 
     [Fact]

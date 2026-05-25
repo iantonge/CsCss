@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.AccentColor] = Rgb(150, 50.Percent(), 255)
         };
 
-        Assert.Equal("accent-color: rgb(150,50%,255)", declarations.ToStrings().Single());
+        Assert.Equal(".test{accent-color:rgb(150,50%,255);}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

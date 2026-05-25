@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.BackgroundOrigin] = BorderBox
         };
 
-        Assert.Equal("background-origin: border-box", declarations.ToStrings().Single());
+        Assert.Equal(".test{background-origin:border-box;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

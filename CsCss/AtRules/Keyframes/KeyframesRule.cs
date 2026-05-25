@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace CsCss.AtRules.Keyframes;
 
 internal sealed class KeyframesRule : CssRule
@@ -18,32 +16,37 @@ internal sealed class KeyframesRule : CssRule
         this.keyframes = keyframes;
     }
 
-    internal override void AppendTo(StringBuilder sb, int indentLevel)
+    internal override void WriteTo(CssWriter writer, int indentLevel)
     {
-        sb.Append(Indent(indentLevel));
-        sb.Append("@keyframes ");
-        sb.Append(name);
-        sb.Append(" {");
+        writer.WriteIndent(indentLevel);
+        writer.Write("@keyframes ");
+        writer.Write(name);
+        writer.WriteSpace();
+        writer.Write('{');
         foreach (var block in keyframes.Blocks)
         {
-            sb.Append('\n');
-            sb.Append(Indent(indentLevel + 1));
-            sb.Append(block.selector);
-            sb.Append(" {");
-            foreach (var declaration in block.declarations.ToStrings())
+            writer.WriteLine();
+            writer.WriteIndent(indentLevel + 1);
+            writer.Write(block.selector.ToString());
+            writer.WriteSpace();
+            writer.Write('{');
+            foreach (var declaration in block.declarations.Items)
             {
-                sb.Append('\n');
-                sb.Append(Indent(indentLevel + 2));
-                sb.Append(declaration);
-                sb.Append(';');
+                writer.WriteLine();
+                writer.WriteIndent(indentLevel + 2);
+                writer.Write(declaration.property.ToString());
+                writer.Write(':');
+                writer.WriteSpace();
+                writer.Write(declaration.value.ToString());
+                writer.Write(';');
             }
-            sb.Append('\n');
-            sb.Append(Indent(indentLevel + 1));
-            sb.Append('}');
+            writer.WriteLine();
+            writer.WriteIndent(indentLevel + 1);
+            writer.Write('}');
         }
-        sb.Append('\n');
-        sb.Append(Indent(indentLevel));
-        sb.Append('}');
+        writer.WriteLine();
+        writer.WriteIndent(indentLevel);
+        writer.Write('}');
     }
 
     private static bool IsValidName(string name)

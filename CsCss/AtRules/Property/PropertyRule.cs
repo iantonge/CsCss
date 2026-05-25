@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace CsCss.AtRules.Property;
 
 internal sealed class PropertyRule : CssRule
@@ -18,22 +16,26 @@ internal sealed class PropertyRule : CssRule
         this.descriptors = descriptors;
     }
 
-    internal override void AppendTo(StringBuilder sb, int indentLevel)
+    internal override void WriteTo(CssWriter writer, int indentLevel)
     {
-        sb.Append(Indent(indentLevel));
-        sb.Append("@property ");
-        sb.Append(name);
-        sb.Append(" {");
-        foreach (var descriptor in descriptors.ToStrings())
+        writer.WriteIndent(indentLevel);
+        writer.Write("@property ");
+        writer.Write(name);
+        writer.WriteSpace();
+        writer.Write('{');
+        foreach (var descriptor in descriptors.Items)
         {
-            sb.Append('\n');
-            sb.Append(Indent(indentLevel + 1));
-            sb.Append(descriptor);
-            sb.Append(';');
+            writer.WriteLine();
+            writer.WriteIndent(indentLevel + 1);
+            writer.Write(descriptor.descriptor.ToString());
+            writer.Write(':');
+            writer.WriteSpace();
+            writer.Write(descriptor.value.ToString());
+            writer.Write(';');
         }
-        sb.Append('\n');
-        sb.Append(Indent(indentLevel));
-        sb.Append('}');
+        writer.WriteLine();
+        writer.WriteIndent(indentLevel);
+        writer.Write('}');
     }
 
     private static bool IsValidCustomPropertyName(string name)

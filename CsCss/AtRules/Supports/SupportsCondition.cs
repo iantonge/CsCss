@@ -8,13 +8,13 @@ public sealed class SupportsCondition
 
     internal static SupportsCondition Declaration(Declarations declarations)
     {
-        var declarationStrings = declarations.ToStrings().ToList();
-        if (declarationStrings.Count != 1)
+        if (declarations.Items.Count != 1)
         {
             throw new ArgumentException("Supports declaration conditions require exactly one declaration.", nameof(declarations));
         }
 
-        return new($"({declarationStrings[0]})");
+        var declaration = declarations.Items[0];
+        return new($"({declaration.property}: {declaration.value})");
     }
 
     public static SupportsCondition operator !(SupportsCondition condition) => new($"not {condition}");

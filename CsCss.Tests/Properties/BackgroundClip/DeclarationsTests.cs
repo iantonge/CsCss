@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.BackgroundClip] = BorderBox
         };
 
-        Assert.Equal("background-clip: border-box", declarations.ToStrings().Single());
+        Assert.Equal(".test{background-clip:border-box;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

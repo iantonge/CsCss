@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Xunit;
+﻿using Xunit;
 
 namespace CsCss.Tests;
 
@@ -14,12 +13,6 @@ public class DeclarationsTests
             [Color] = Red
         };
 
-        List<string> expected = new()
-        {
-            "height: 10px",
-            "color: red"
-        };
-
-        Assert.Equal(expected, declarations.ToStrings());
+        Assert.Equal(".test{height:10px;color:red;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

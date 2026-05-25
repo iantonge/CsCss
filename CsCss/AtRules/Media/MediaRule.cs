@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace CsCss.AtRules.Media;
 
 internal sealed class MediaRule : CssRule
@@ -13,15 +11,20 @@ internal sealed class MediaRule : CssRule
         this.rules = rules;
     }
 
-    internal override void AppendTo(StringBuilder sb, int indentLevel)
+    internal override void WriteTo(CssWriter writer, int indentLevel)
     {
-        sb.Append(Indent(indentLevel));
-        sb.Append("@media ");
-        sb.Append(query);
-        sb.Append(" {");
-        rules.AppendTo(sb, indentLevel + 1);
-        sb.Append('\n');
-        sb.Append(Indent(indentLevel));
-        sb.Append('}');
+        writer.WriteIndent(indentLevel);
+        writer.Write("@media ");
+        writer.Write(query.ToString());
+        writer.WriteSpace();
+        writer.Write('{');
+        if (rules.Rules.Count > 0)
+        {
+            writer.WriteLine();
+            rules.WriteTo(writer, indentLevel + 1);
+        }
+        writer.WriteLine();
+        writer.WriteIndent(indentLevel);
+        writer.Write('}');
     }
 }

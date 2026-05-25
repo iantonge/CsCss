@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.BackgroundSize] = Keywords.Contain
         };
 
-        Assert.Equal("background-size: contain", declarations.ToStrings().Single());
+        Assert.Equal(".test{background-size:contain;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.AlignSelf] = Normal
         };
 
-        Assert.Equal("align-self: normal", declarations.ToStrings().Single());
+        Assert.Equal(".test{align-self:normal;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

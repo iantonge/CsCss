@@ -20,6 +20,18 @@ Document document = new()
 }
 ```
 
+Render a document with the default indented formatting:
+
+```csharp
+var css = document.ToCssString();
+```
+
+Or write directly to a `TextWriter` with the requested formatting:
+
+```csharp
+document.WriteTo(new CssWriter(writer, CssFormatting.Minified));
+```
+
 ## At-rules
 
 Keyframes are defined with the `Keyframes` at-rule token and keyframe selectors:

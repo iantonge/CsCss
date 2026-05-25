@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.BackgroundAttachment] = Keywords.Scroll
         };
 
-        Assert.Equal("background-attachment: scroll", declarations.ToStrings().Single());
+        Assert.Equal(".test{background-attachment:scroll;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

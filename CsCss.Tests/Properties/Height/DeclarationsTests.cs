@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.Height] = 10.Px()
         };
 
-        Assert.Equal("height: 10px", declarations.ToStrings().Single());
+        Assert.Equal(".test{height:10px;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

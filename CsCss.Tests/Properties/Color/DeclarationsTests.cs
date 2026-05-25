@@ -13,6 +13,6 @@ public class DeclarationsTests
             [Keywords.Color] = 0xFFFFFF
         };
 
-        Assert.Equal("color: #FFFFFF", declarations.ToStrings().Single());
+        Assert.Equal(".test{color:#FFFFFF;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

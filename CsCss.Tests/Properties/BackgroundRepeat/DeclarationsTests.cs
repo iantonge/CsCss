@@ -13,7 +13,7 @@ public class DeclarationsTests
             [Keywords.BackgroundRepeat] = Repeat
         };
 
-        Assert.Equal("background-repeat: repeat", declarations.ToStrings().Single());
+        Assert.Equal(".test{background-repeat:repeat;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 
     [Fact]
@@ -24,6 +24,6 @@ public class DeclarationsTests
             [Keywords.BackgroundRepeat] = (Space, NoRepeat)
         };
 
-        Assert.Equal("background-repeat: space no-repeat", declarations.ToStrings().Single());
+        Assert.Equal(".test{background-repeat:space no-repeat;}", new Document { [".test"] = declarations }.ToCssString(CssFormatting.Minified));
     }
 }

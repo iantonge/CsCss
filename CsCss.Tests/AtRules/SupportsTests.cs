@@ -29,7 +29,7 @@ public class SupportsTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 
     [Fact]
@@ -62,6 +62,6 @@ public class SupportsTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 }

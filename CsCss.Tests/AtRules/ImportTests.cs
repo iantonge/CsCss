@@ -13,7 +13,7 @@ public class ImportTests
             [Import] = Import.Url(Url("/reset.css"))
         };
 
-        Assert.Equal("@import url('/reset.css');", document.ToString());
+        Assert.Equal("@import url('/reset.css');", document.ToCssString());
     }
 
     [Fact]
@@ -24,7 +24,7 @@ public class ImportTests
             [Import] = Import.Url(Url("/theme.css")).Layer("theme").Media(Media.Width >= 768.Px())
         };
 
-        Assert.Equal("@import url('/theme.css') layer(theme) (width >= 768px);", document.ToString());
+        Assert.Equal("@import url('/theme.css') layer(theme) (width >= 768px);", document.ToCssString());
     }
 
     [Fact]
@@ -48,7 +48,7 @@ public class ImportTests
             }
             """;
 
-        Assert.Equal(expected, document.ToString());
+        Assert.Equal(expected, document.ToCssString());
     }
 
     [Fact]

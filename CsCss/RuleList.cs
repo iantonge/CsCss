@@ -1,4 +1,4 @@
-using System.Text;
+using System.Globalization;
 
 namespace CsCss;
 
@@ -18,23 +18,35 @@ public partial class RuleList
         }
     }
 
-    public override string ToString()
+    public void WriteTo(CssWriter writer)
     {
-        StringBuilder sb = new();
-        AppendTo(sb, 0);
-        return sb.ToString();
+        ArgumentNullException.ThrowIfNull(writer);
+
+        WriteTo(writer, 0);
     }
 
-    internal void AppendTo(StringBuilder sb, int indentLevel)
+    public string ToCssString(CssFormatting formatting = CssFormatting.Indented)
     {
-        foreach (var rule in Rules)
+        using StringWriter stringWriter = new(CultureInfo.InvariantCulture);
+        WriteTo(new CssWriter(stringWriter, formatting));
+        return stringWriter.ToString();
+    }
+
+#pragma warning disable CS0809
+    [Obsolete("Use ToCssString(...) or WriteTo(...).", true)]
+    public override string ToString() => throw new NotSupportedException("Use ToCssString(...) or WriteTo(...).");
+#pragma warning restore CS0809
+
+    internal void WriteTo(CssWriter writer, int indentLevel)
+    {
+        for (var i = 0; i < Rules.Count; i++)
         {
-            if (sb.Length > 0)
+            if (i > 0)
             {
-                sb.Append('\n');
+                writer.WriteLine();
             }
 
-            rule.AppendTo(sb, indentLevel);
+            Rules[i].WriteTo(writer, indentLevel);
         }
     }
 }
