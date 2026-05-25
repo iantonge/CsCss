@@ -1,6 +1,6 @@
 using CsCss.Values.Length;
 
-namespace CsCss.AtRules;
+namespace CsCss.AtRules.Media;
 
 public sealed class MediaFeature
 {

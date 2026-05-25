@@ -1,4 +1,4 @@
-namespace CsCss.AtRules;
+namespace CsCss.AtRules.Keyframes;
 
 public sealed class Keyframes
 {

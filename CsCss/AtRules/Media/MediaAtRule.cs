@@ -1,4 +1,4 @@
-namespace CsCss.AtRules;
+namespace CsCss.AtRules.Media;
 
 public sealed class MediaAtRule
 {

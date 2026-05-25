@@ -48,6 +48,8 @@ Document document = new()
 Media rules use a typed `MediaQuery` API rather than raw strings:
 
 ```csharp
+using CsCss.AtRules.Media;
+
 Document document = new()
 {
     [Media, MediaQuery.Width >= 768.Px()] = new()

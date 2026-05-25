@@ -88,7 +88,7 @@ public class KeyframesTests
     {
         Assert.Throws<ArgumentException>(() =>
         {
-            _ = new CsCss.AtRules.Keyframes()
+            _ = new CsCss.AtRules.Keyframes.Keyframes()
             {
                 [Functions.Calc(50.Percent() + 10.Percent())] = new()
             };
@@ -102,7 +102,7 @@ public class KeyframesTests
     {
         Assert.Throws<ArgumentOutOfRangeException>(() =>
         {
-            _ = new CsCss.AtRules.Keyframes()
+            _ = new CsCss.AtRules.Keyframes.Keyframes()
             {
                 [percentage.Percent()] = new()
             };

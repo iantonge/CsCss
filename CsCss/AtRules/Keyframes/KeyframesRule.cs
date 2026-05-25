@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace CsCss.AtRules;
+namespace CsCss.AtRules.Keyframes;
 
 internal sealed class KeyframesRule : CssRule
 {

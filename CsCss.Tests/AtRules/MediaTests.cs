@@ -1,4 +1,4 @@
-using CsCss.AtRules;
+using CsCss.AtRules.Media;
 using Xunit;
 
 namespace CsCss.Tests.AtRules;

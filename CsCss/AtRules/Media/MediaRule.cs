@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace CsCss.AtRules;
+namespace CsCss.AtRules.Media;
 
 internal sealed class MediaRule : CssRule
 {
