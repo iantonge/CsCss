@@ -62,4 +62,19 @@ Document document = new()
 };
 ```
 
-Broader media query grammar, descriptor rules such as `@font-face`, `@layer`, `@supports`, `@container`, and raw escape hatches are not implemented yet.
+Font faces use descriptor tokens scoped to `FontFace`:
+
+```csharp
+Document document = new()
+{
+    [FontFace] = new()
+    {
+        [FontFace.Family] = "Inter",
+        [FontFace.Src] = FontFace.Url(Url("/fonts/inter.woff2")).Format("woff2"),
+        [FontFace.Weight] = (100, 900),
+        [FontFace.Display] = FontFace.Swap
+    }
+};
+```
+
+Broader media query grammar, `@property`, `@layer`, `@supports`, `@container`, and raw escape hatches are not implemented yet.
