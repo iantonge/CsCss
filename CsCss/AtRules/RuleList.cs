@@ -11,4 +11,12 @@ public partial class RuleList
             Rules.Add(new KeyframesRule(name, value));
         }
     }
+
+    public RuleList this[MediaAtRule atRule, MediaQuery query]
+    {
+        init
+        {
+            Rules.Add(new MediaRule(query, value));
+        }
+    }
 }
