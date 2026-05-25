@@ -62,6 +62,18 @@ Document document = new()
 };
 ```
 
+Media queries can also be composed:
+
+```csharp
+[Media, Media.Screen & (Media.Width >= 768.Px()) & Media.Hover] = new()
+{
+    [".card"] = new()
+    {
+        [Height] = 20.Px()
+    }
+}
+```
+
 Font faces use descriptor tokens scoped to `FontFace`:
 
 ```csharp

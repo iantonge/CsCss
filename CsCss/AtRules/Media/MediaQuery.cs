@@ -6,5 +6,11 @@ public sealed class MediaQuery
 
     internal MediaQuery(string query) => this.query = query;
 
+    public static MediaQuery operator !(MediaQuery query) => new($"not {query}");
+
+    public static MediaQuery operator &(MediaQuery left, MediaQuery right) => new($"{left} and {right}");
+
+    public static MediaQuery operator |(MediaQuery left, MediaQuery right) => new($"{left}, {right}");
+
     public override string ToString() => query;
 }
