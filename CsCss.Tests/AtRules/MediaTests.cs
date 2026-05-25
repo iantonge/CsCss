@@ -160,9 +160,34 @@ public class MediaTests
     [Fact]
     public void RendersDiscreteMediaFeature()
     {
-        Assert.Equal("(orientation: portrait)", Media.Orientation["portrait"].ToString());
-        Assert.Equal("(hover: hover)", Media.Hover["hover"].ToString());
-        Assert.Equal("(pointer: coarse)", Media.Pointer["coarse"].ToString());
-        Assert.Equal("(prefers-reduced-motion: no-preference)", Media.PrefersReducedMotion["no-preference"].ToString());
+        Assert.Equal("(orientation: portrait)", Media.Orientation.Portrait.ToString());
+        Assert.Equal("(hover: hover)", Media.Hover.Hover.ToString());
+        Assert.Equal("(pointer: coarse)", Media.Pointer.Coarse.ToString());
+        Assert.Equal("(prefers-reduced-motion: no-preference)", Media.PrefersReducedMotion.NoPreference.ToString());
+    }
+
+    [Fact]
+    public void RendersAdditionalDiscreteMediaFeatures()
+    {
+        Assert.Equal("(any-hover: none)", Media.AnyHover.None.ToString());
+        Assert.Equal("(any-pointer: fine)", Media.AnyPointer.Fine.ToString());
+        Assert.Equal("(color-gamut: rec2020)", Media.ColorGamut.Rec2020.ToString());
+        Assert.Equal("(display-mode: minimal-ui)", Media.DisplayMode.MinimalUi.ToString());
+        Assert.Equal("(dynamic-range: high)", Media.DynamicRange.High.ToString());
+        Assert.Equal("(environment-blending: additive)", Media.EnvironmentBlending.Additive.ToString());
+        Assert.Equal("(forced-colors: active)", Media.ForcedColors.Active.ToString());
+        Assert.Equal("(inverted-colors: inverted)", Media.InvertedColors.Inverted.ToString());
+        Assert.Equal("(nav-controls: back)", Media.NavControls.Back.ToString());
+        Assert.Equal("(overflow-block: optional-paged)", Media.OverflowBlock.OptionalPaged.ToString());
+        Assert.Equal("(overflow-inline: scroll)", Media.OverflowInline.Scroll.ToString());
+        Assert.Equal("(prefers-color-scheme: dark)", Media.PrefersColorScheme.Dark.ToString());
+        Assert.Equal("(prefers-contrast: more)", Media.PrefersContrast.More.ToString());
+        Assert.Equal("(prefers-reduced-data: reduce)", Media.PrefersReducedData.Reduce.ToString());
+        Assert.Equal("(prefers-reduced-transparency: no-preference)", Media.PrefersReducedTransparency.NoPreference.ToString());
+        Assert.Equal("(scan: progressive)", Media.Scan.Progressive.ToString());
+        Assert.Equal("(scripting: initial-only)", Media.Scripting.InitialOnly.ToString());
+        Assert.Equal("(update: fast)", Media.Update.Fast.ToString());
+        Assert.Equal("(video-color-gamut: p3)", Media.VideoColorGamut.P3.ToString());
+        Assert.Equal("(video-dynamic-range: standard)", Media.VideoDynamicRange.Standard.ToString());
     }
 }

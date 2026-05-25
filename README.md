@@ -65,7 +65,7 @@ Document document = new()
 Media queries can also be composed:
 
 ```csharp
-[Media, Media.Screen & Media.Width.Between(768.Px(), 1200.Px()) & Media.Hovered] = new()
+[Media, Media.Screen & Media.Width.Between(768.Px(), 1200.Px()) & Media.Hover.Hover] = new()
 {
     [".card"] = new()
     {

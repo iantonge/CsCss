@@ -22,27 +22,69 @@ public sealed class MediaAtRule
 
     public MediaQuery Print { get; } = new("print");
 
-    public DiscreteMediaFeature Hover { get; } = new("hover");
+    public HoverMediaFeature Hover { get; } = new("hover");
 
-    public DiscreteMediaFeature Pointer { get; } = new("pointer");
+    public PointerMediaFeature Pointer { get; } = new("pointer");
 
-    public DiscreteMediaFeature PrefersReducedMotion { get; } = new("prefers-reduced-motion");
+    public PointerMediaFeature AnyPointer { get; } = new("any-pointer");
 
-    public DiscreteMediaFeature Orientation { get; } = new("orientation");
+    public HoverMediaFeature AnyHover { get; } = new("any-hover");
 
-    public MediaQuery Hovered { get; } = new("(hover: hover)");
+    public ReducedPreferenceMediaFeature PrefersReducedMotion { get; } = new("prefers-reduced-motion");
 
-    public MediaQuery NoHover { get; } = new("(hover: none)");
+    public OrientationMediaFeature Orientation { get; } = new("orientation");
 
-    public MediaQuery FinePointer { get; } = new("(pointer: fine)");
+    public ColorGamutMediaFeature ColorGamut { get; } = new("color-gamut");
 
-    public MediaQuery CoarsePointer { get; } = new("(pointer: coarse)");
+    public DisplayModeMediaFeature DisplayMode { get; } = new("display-mode");
 
-    public MediaQuery ReducedMotion { get; } = new("(prefers-reduced-motion: reduce)");
+    public DynamicRangeMediaFeature DynamicRange { get; } = new("dynamic-range");
 
-    public MediaQuery NoMotionPreference { get; } = new("(prefers-reduced-motion: no-preference)");
+    public EnvironmentBlendingMediaFeature EnvironmentBlending { get; } = new("environment-blending");
 
-    public MediaQuery Landscape { get; } = new("(orientation: landscape)");
+    public ForcedColorsMediaFeature ForcedColors { get; } = new("forced-colors");
 
-    public MediaQuery Portrait { get; } = new("(orientation: portrait)");
+    public InvertedColorsMediaFeature InvertedColors { get; } = new("inverted-colors");
+
+    public NavControlsMediaFeature NavControls { get; } = new("nav-controls");
+
+    public OverflowBlockMediaFeature OverflowBlock { get; } = new("overflow-block");
+
+    public OverflowInlineMediaFeature OverflowInline { get; } = new("overflow-inline");
+
+    public ColorSchemeMediaFeature PrefersColorScheme { get; } = new("prefers-color-scheme");
+
+    public ContrastMediaFeature PrefersContrast { get; } = new("prefers-contrast");
+
+    public ContrastMediaFeature Contrast => PrefersContrast;
+
+    public ReducedPreferenceMediaFeature PrefersReducedData { get; } = new("prefers-reduced-data");
+
+    public ReducedPreferenceMediaFeature PrefersReducedTransparency { get; } = new("prefers-reduced-transparency");
+
+    public ScanMediaFeature Scan { get; } = new("scan");
+
+    public ScriptingMediaFeature Scripting { get; } = new("scripting");
+
+    public UpdateMediaFeature Update { get; } = new("update");
+
+    public ColorGamutMediaFeature VideoColorGamut { get; } = new("video-color-gamut");
+
+    public DynamicRangeMediaFeature VideoDynamicRange { get; } = new("video-dynamic-range");
+
+    public MediaQuery Hovered => Hover.Hover;
+
+    public MediaQuery NoHover => Hover.None;
+
+    public MediaQuery FinePointer => Pointer.Fine;
+
+    public MediaQuery CoarsePointer => Pointer.Coarse;
+
+    public MediaQuery ReducedMotion => PrefersReducedMotion.Reduce;
+
+    public MediaQuery NoMotionPreference => PrefersReducedMotion.NoPreference;
+
+    public MediaQuery Landscape => Orientation.Landscape;
+
+    public MediaQuery Portrait => Orientation.Portrait;
 }
