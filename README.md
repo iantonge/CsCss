@@ -77,4 +77,18 @@ Document document = new()
 };
 ```
 
-Broader media query grammar, `@property`, `@layer`, `@supports`, `@container`, and raw escape hatches are not implemented yet.
+Registered custom properties use descriptor tokens and syntax helpers scoped to `Property`:
+
+```csharp
+Document document = new()
+{
+    [Property, "--brand-color"] = new()
+    {
+        [Property.Syntax] = Property.Color,
+        [Property.Inherits] = false,
+        [Property.InitialValue] = Red
+    }
+};
+```
+
+Broader media query grammar, `@layer`, `@supports`, `@container`, and raw escape hatches are not implemented yet.
