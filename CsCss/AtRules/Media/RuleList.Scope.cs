@@ -4,11 +4,11 @@ namespace CsCss;
 
 public partial class RuleList
 {
-    public RuleList this[MediaAtRule atRule, MediaQuery query]
+    public RuleList this[MediaRuleScope media]
     {
         init
         {
-            Rules.Add(new MediaRule(query, value));
+            Rules.Add(new MediaRule(media.Query, value));
         }
     }
 }

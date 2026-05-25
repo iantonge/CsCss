@@ -1,4 +1,6 @@
+using CsCss.AtRules.Media;
 using Xunit;
+using static CsCss.AtRuleFunctions;
 
 namespace CsCss.Tests.AtRules;
 
@@ -9,7 +11,7 @@ public class SupportsTests
     {
         Document document = new()
         {
-            [Supports, Supports.Declaration(new()
+            [Supports(new()
             {
                 [Color] = Red
             })] = new()
@@ -37,9 +39,9 @@ public class SupportsTests
     {
         Document document = new()
         {
-            [Media, Media.Width >= 768.Px()] = new()
+            [Media(MediaFeatures.Width >= 768.Px())] = new()
             {
-                [Supports, Supports.Declaration(new()
+                [Supports(new()
                 {
                     [Color] = Red
                 })] = new()

@@ -1,4 +1,5 @@
 using System;
+using CsCss.AtRules.Media;
 using Xunit;
 
 namespace CsCss.Tests.AtRules;
@@ -21,7 +22,7 @@ public class ImportTests
     {
         Document document = new()
         {
-            [Import] = Import.Url(Url("/theme.css")).Layer("theme").Media(Media.Width >= 768.Px())
+            [Import] = Import.Url(Url("/theme.css")).Layer("theme").Media(MediaFeatures.Width >= 768.Px())
         };
 
         Assert.Equal("@import url('/theme.css') layer(theme) (width >= 768px);", document.ToCssString());

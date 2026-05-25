@@ -61,10 +61,11 @@ Media rules use a typed `MediaQuery` API rather than raw strings:
 
 ```csharp
 using CsCss.AtRules.Media;
+using static CsCss.AtRuleFunctions;
 
 Document document = new()
 {
-    [Media, Media.Width >= 768.Px()] = new()
+    [Media(MediaFeatures.Width >= 768.Px())] = new()
     {
         [".card"] = new()
         {
@@ -77,7 +78,7 @@ Document document = new()
 Media queries can also be composed:
 
 ```csharp
-[Media, Media.Screen & Media.Width.Between(768.Px(), 1200.Px()) & Media.Hover.Hover] = new()
+[Media(MediaFeatures.Screen & MediaFeatures.Width.Between(768.Px(), 1200.Px()) & MediaFeatures.Hover.Hover)] = new()
 {
     [".card"] = new()
     {
@@ -122,7 +123,7 @@ Document document = new()
 {
     [Import] = Import.Url(Url("/reset.css")),
     [Import] = Import.Url(Url("/theme.css")).Layer("theme"),
-    [Import] = Import.Url(Url("/wide.css")).Media(Media.Width >= 768.Px()),
+    [Import] = Import.Url(Url("/wide.css")).Media(MediaFeatures.Width >= 768.Px()),
     [".card"] = new()
     {
         [Color] = Red
@@ -133,12 +134,11 @@ Document document = new()
 Supports rules use typed declaration conditions:
 
 ```csharp
+using static CsCss.AtRuleFunctions;
+
 Document document = new()
 {
-    [Supports, Supports.Declaration(new()
-    {
-        [Color] = Red
-    })] = new()
+    [Supports(new() { [Color] = Red }).Or(new() { [Height] = 10.Px() })] = new()
     {
         [".card"] = new()
         {

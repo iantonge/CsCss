@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using static CsCss.AtRuleFunctions;
 
 namespace CsCss.Tests.AtRules;
 
@@ -8,7 +9,7 @@ public class SupportsConditionTests
     [Fact]
     public void RendersDeclarationCondition()
     {
-        var condition = Supports.Declaration(new()
+        var condition = Supports(new()
         {
             [Color] = Red
         });
@@ -19,7 +20,7 @@ public class SupportsConditionTests
     [Fact]
     public void RendersLengthDeclarationCondition()
     {
-        var condition = Supports.Declaration(new()
+        var condition = Supports(new()
         {
             [Height] = 10.Px()
         });
@@ -30,10 +31,10 @@ public class SupportsConditionTests
     [Fact]
     public void RendersNegatedCondition()
     {
-        var condition = !Supports.Declaration(new()
+        var condition = Supports(new()
         {
             [Color] = Red
-        });
+        }).Not();
 
         Assert.Equal("not (color: red)", condition.ToString());
     }
@@ -41,10 +42,10 @@ public class SupportsConditionTests
     [Fact]
     public void RendersAndCondition()
     {
-        var condition = Supports.Declaration(new()
+        var condition = Supports(new()
         {
             [Color] = Red
-        }) & Supports.Declaration(new()
+        }).And(new()
         {
             [Height] = 10.Px()
         });
@@ -55,10 +56,10 @@ public class SupportsConditionTests
     [Fact]
     public void RendersOrCondition()
     {
-        var condition = Supports.Declaration(new()
+        var condition = Supports(new()
         {
             [Color] = Red
-        }) | Supports.Declaration(new()
+        }).Or(new()
         {
             [Height] = 10.Px()
         });
@@ -67,15 +68,34 @@ public class SupportsConditionTests
     }
 
     [Fact]
+    public void RendersGroupedMixedCondition()
+    {
+        var condition = Supports(new()
+        {
+            [Color] = Red
+        }).And(
+            Supports(new()
+            {
+                [Height] = 10.Px()
+            }).Or(new()
+            {
+                [Color] = Blue
+            })
+        );
+
+        Assert.Equal("(color: red) and ((height: 10px) or (color: blue))", condition.ToString());
+    }
+
+    [Fact]
     public void RejectsEmptyDeclarationCondition()
     {
-        Assert.Throws<ArgumentException>(() => Supports.Declaration(new()));
+        Assert.Throws<ArgumentException>(() => Supports(new()));
     }
 
     [Fact]
     public void RejectsMultipleDeclarationCondition()
     {
-        Assert.Throws<ArgumentException>(() => Supports.Declaration(new()
+        Assert.Throws<ArgumentException>(() => Supports(new()
         {
             [Color] = Red,
             [Height] = 10.Px()
