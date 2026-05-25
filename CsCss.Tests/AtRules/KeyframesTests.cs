@@ -12,7 +12,7 @@ public class KeyframesTests
         {
             [Keyframes, "fade-in"] = new()
             {
-                [From] = new()
+                [Keyframes.From] = new()
                 {
                     [Color] = Red
                 },
@@ -20,7 +20,7 @@ public class KeyframesTests
                 {
                     [Color] = Blue
                 },
-                [To] = new()
+                [Keyframes.To] = new()
                 {
                     [Color] = Red
                 }
@@ -55,7 +55,7 @@ public class KeyframesTests
             },
             [Keyframes, "fade-in"] = new()
             {
-                [From] = new()
+                [Keyframes.From] = new()
                 {
                     [Color] = Red
                 }

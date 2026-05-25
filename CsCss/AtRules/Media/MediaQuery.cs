@@ -6,7 +6,5 @@ public sealed class MediaQuery
 
     internal MediaQuery(string query) => this.query = query;
 
-    public static MediaFeature Width { get; } = new("width");
-
     public override string ToString() => query;
 }

@@ -29,7 +29,7 @@ Document document = new()
 {
     [Keyframes, "fade-in"] = new()
     {
-        [From] = new()
+        [Keyframes.From] = new()
         {
             [Color] = Red
         },
@@ -37,7 +37,7 @@ Document document = new()
         {
             [Color] = Blue
         },
-        [To] = new()
+        [Keyframes.To] = new()
         {
             [Color] = Red
         }
@@ -52,7 +52,7 @@ using CsCss.AtRules.Media;
 
 Document document = new()
 {
-    [Media, MediaQuery.Width >= 768.Px()] = new()
+    [Media, Media.Width >= 768.Px()] = new()
     {
         [".card"] = new()
         {

@@ -10,7 +10,7 @@ public class MediaTests
     {
         Document document = new()
         {
-            [Media, MediaQuery.Width >= 768.Px()] = new()
+            [Media, Media.Width >= 768.Px()] = new()
             {
                 [".card"] = new()
                 {
@@ -47,7 +47,7 @@ public class MediaTests
 
         Document document = new()
         {
-            [Media, MediaQuery.Width >= 768.Px()] = rules
+            [Media, Media.Width >= 768.Px()] = rules
         };
 
         var expected = """
