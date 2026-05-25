@@ -67,7 +67,7 @@ public class MediaTests
     [Fact]
     public void RendersAndMediaQuery()
     {
-        var query = Media.Screen & (Media.Width >= 768.Px()) & Media.Hover;
+        var query = Media.Screen & (Media.Width >= 768.Px()) & Media.Hovered;
 
         Assert.Equal("screen and (width >= 768px) and (hover: hover)", query.ToString());
     }
@@ -95,7 +95,7 @@ public class MediaTests
         Assert.Equal("screen", Media.Screen.ToString());
         Assert.Equal("print", Media.Print.ToString());
         Assert.Equal("(hover: none)", Media.NoHover.ToString());
-        Assert.Equal("(pointer: fine)", Media.Pointer.ToString());
+        Assert.Equal("(pointer: fine)", Media.FinePointer.ToString());
         Assert.Equal("(prefers-reduced-motion: reduce)", Media.ReducedMotion.ToString());
         Assert.Equal("(orientation: landscape)", Media.Landscape.ToString());
     }
@@ -105,7 +105,7 @@ public class MediaTests
     {
         Document document = new()
         {
-            [Media, Media.Screen & (Media.Width >= 768.Px()) & Media.Hover] = new()
+            [Media, Media.Screen & (Media.Width >= 768.Px()) & Media.Hovered] = new()
             {
                 [".card"] = new()
                 {
@@ -123,5 +123,46 @@ public class MediaTests
             """;
 
         Assert.Equal(expected, document.ToString());
+    }
+
+    [Fact]
+    public void RendersEqualityMediaQuery()
+    {
+        var query = Media.Width == 768.Px();
+
+        Assert.Equal("(width = 768px)", query.ToString());
+    }
+
+    [Fact]
+    public void RendersTwoSidedRangeMediaQuery()
+    {
+        var query = Media.Width.Between(400.Px(), 700.Px());
+
+        Assert.Equal("(400px <= width <= 700px)", query.ToString());
+    }
+
+    [Fact]
+    public void RendersBooleanMediaFeature()
+    {
+        MediaQuery query = Media.Color;
+
+        Assert.Equal("(color)", query.ToString());
+    }
+
+    [Fact]
+    public void RendersIntegerRangeMediaFeature()
+    {
+        var query = Media.Color >= 8;
+
+        Assert.Equal("(color >= 8)", query.ToString());
+    }
+
+    [Fact]
+    public void RendersDiscreteMediaFeature()
+    {
+        Assert.Equal("(orientation: portrait)", Media.Orientation["portrait"].ToString());
+        Assert.Equal("(hover: hover)", Media.Hover["hover"].ToString());
+        Assert.Equal("(pointer: coarse)", Media.Pointer["coarse"].ToString());
+        Assert.Equal("(prefers-reduced-motion: no-preference)", Media.PrefersReducedMotion["no-preference"].ToString());
     }
 }

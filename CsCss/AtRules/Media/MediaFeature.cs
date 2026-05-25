@@ -1,18 +1,12 @@
-using CsCss.Values.Length;
-
 namespace CsCss.AtRules.Media;
 
-public sealed class MediaFeature
+public abstract class MediaFeature
 {
     private readonly string name;
 
-    internal MediaFeature(string name) => this.name = name;
+    protected MediaFeature(string name) => this.name = name;
 
-    public static MediaQuery operator >=(MediaFeature feature, LengthValue value) => new($"({feature.name} >= {value})");
+    public string Name => name;
 
-    public static MediaQuery operator <=(MediaFeature feature, LengthValue value) => new($"({feature.name} <= {value})");
-
-    public static MediaQuery operator >(MediaFeature feature, LengthValue value) => new($"({feature.name} > {value})");
-
-    public static MediaQuery operator <(MediaFeature feature, LengthValue value) => new($"({feature.name} < {value})");
+    public static implicit operator MediaQuery(MediaFeature feature) => new($"({feature.Name})");
 }
