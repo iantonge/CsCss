@@ -106,4 +106,22 @@ Document document = new()
 };
 ```
 
-Broader media query grammar, `@layer`, `@supports`, `@container`, `@charset`, and raw escape hatches are not implemented.
+Supports rules use typed declaration conditions:
+
+```csharp
+Document document = new()
+{
+    [Supports, Supports.Declaration(new()
+    {
+        [Color] = Red
+    })] = new()
+    {
+        [".card"] = new()
+        {
+            [Height] = 10.Px()
+        }
+    }
+};
+```
+
+Broader media query grammar, `@layer`, `@container`, `@charset`, and raw escape hatches are not implemented.
