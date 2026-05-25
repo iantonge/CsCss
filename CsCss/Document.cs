@@ -1,6 +1,6 @@
 ﻿namespace CsCss;
 
-public sealed class Document : RuleList
+public sealed partial class Document : RuleList
 {
     public Document() { }
 

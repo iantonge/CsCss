@@ -91,4 +91,19 @@ Document document = new()
 };
 ```
 
-Broader media query grammar, `@layer`, `@supports`, `@container`, and raw escape hatches are not implemented yet.
+Imports are document-only and must appear before all non-import rules:
+
+```csharp
+Document document = new()
+{
+    [Import] = Import.Url(Url("/reset.css")),
+    [Import] = Import.Url(Url("/theme.css")).Layer("theme"),
+    [Import] = Import.Url(Url("/wide.css")).Media(Media.Width >= 768.Px()),
+    [".card"] = new()
+    {
+        [Color] = Red
+    }
+};
+```
+
+Broader media query grammar, `@layer`, `@supports`, `@container`, `@charset`, and raw escape hatches are not implemented.
